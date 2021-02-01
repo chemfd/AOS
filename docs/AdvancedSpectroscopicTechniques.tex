@@ -1,0 +1,175 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={CH3/40227 Advanced Spectroscopic Techniques},
+  pdfauthor={Fiona Dickinson},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{CH3/40227 Advanced Spectroscopic Techniques}
+\author{Fiona Dickinson}
+\date{2021-02-01}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{ch340227-advanced-spectroscopic-techniques}{%
+\chapter*{CH3/40227 Advanced Spectroscopic Techniques}\label{ch340227-advanced-spectroscopic-techniques}}
+\addcontentsline{toc}{chapter}{CH3/40227 Advanced Spectroscopic Techniques}
+
+\hypertarget{welcome-preliminary-infomation}{%
+\section*{Welcome \& Preliminary Infomation}\label{welcome-preliminary-infomation}}
+\addcontentsline{toc}{section}{Welcome \& Preliminary Infomation}
+
+Welcome to the coursepage for CH30227 \& CH40227 Advanced Spectroscopic Techniques. The notes have been prepared in a package called BookDown for RStudio so that the equations are accessible to screen readers. However, by providing the notes as a .html webpage I can also embed short videos to further describe some of the topics. Further you can download the material in a format that suits you (either pdf or epub) to view offline, or change the way this document appears for ease of reading.
+
+The course is entirely taught by Dr Fiona Dickinson.
+
+\hypertarget{prerequisite-knowledge}{%
+\subsection*{Prerequisite knowledge}\label{prerequisite-knowledge}}
+\addcontentsline{toc}{subsection}{Prerequisite knowledge}
+
+The course relies extensively on concepts from CH30129 (or CH30217) Photochemistry as well as material from the spectroscopy section of CH10137/8, and the quantum mechanics of CH20151/2. However more generic skills, such as experiment planning, and drawing conclusions on data will form an important strand to this course.
+
+\hypertarget{assessment-for-this-course}{%
+\subsection*{Assessment for this course}\label{assessment-for-this-course}}
+\addcontentsline{toc}{subsection}{Assessment for this course}
+
+The course is assessed by a `1 hour' exam, this is to say it should take an hour to complete, exam details will be shared centrally later in the semester.
+
+The exam format will contain 2 x 25 mark questions. The questions will likely contain two or more of the following: data to examine, description of a spectrometer or spectrometer component, and design of experiments.
+
+\hypertarget{feedback-for-this-course}{%
+\subsection*{Feedback for this course}\label{feedback-for-this-course}}
+\addcontentsline{toc}{subsection}{Feedback for this course}
+
+Much of the work will be peer based in small groups, and you will provide feedback to each other. In wrapping up these discussions I will also provide feedback to discussions.
+
+I appreciate your understanding that feedback may be delayed during these uncertain times as I have childcare responsibilities.
+
+I will not provide model answers for past exam questions, this is because there will be multiple ways in which marks may be achieved. Instead I will happily provide feedback on your attempts at past papers. All I ask is:
+
+\begin{itemize}
+\tightlist
+\item
+  papers are received in good time
+\item
+  when you attempt papers you try and replicate the exam conditions (i.e.~do it alone, in one sitting in a limited period)
+\item
+  you do not submit more than one past paper at a time (I am happy to go through more than one feedback cycle, but want you to reflect on the feedback you have received)
+\item
+  you highlight sections where you particularly want feedback
+\item
+  you provide the file as a .pdf, with the file name containing your username, the year of paper attempted and the unit code
+\item
+  please space out work enough so that I can write feedback
+\end{itemize}
+
+\hypertarget{week-1-tasks}{%
+\section*{Week 1 tasks}\label{week-1-tasks}}
+\addcontentsline{toc}{section}{Week 1 tasks}
+
+I set a number of week 1 tasks.
+
+\begin{itemize}
+\item
+  For the `spectrometer components document' on Teams, please divide the work between you, and write a few sentences (and include figures if relevant) for your chosen component(s). This is a shared document and is hosted on Teams because I can't work out how to do it on Moodle\ldots{} (the CH40227 class will act as editors to this body or work).
+\item
+  Think about the spectroscopic techniques you have used previously (you should all have used at least one of UV/vis, IR and fluorescence), think about what components may have been in the `beige box' and how these differ between different spectrometers\ldots{}
+\item
+  Remember to let me know if you want particular groups in the zoom chat C(CH30227 only)
+\end{itemize}
+
+\hypertarget{report-errors}{%
+\section*{Report errors}\label{report-errors}}
+\addcontentsline{toc}{section}{Report errors}
+
+If you spot any errors, please message me in Teams or (if this works), report on the error log below
+
+Loading\ldots{}
+
+\hypertarget{edit-log}{%
+\section*{Edit log}\label{edit-log}}
+\addcontentsline{toc}{section}{Edit log}
+
+Initial commit 010221
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
