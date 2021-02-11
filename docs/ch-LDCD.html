@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>CH3/40227 Advanced Spectroscopic Techniques</title>
+  <title>Chapter 2 LD (linear dichroism) and CD (circular dichroism) | CH3/40227 Advanced Spectroscopic Techniques</title>
   <meta name="description" content="Advanced Spectroscopic Techniques" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="CH3/40227 Advanced Spectroscopic Techniques" />
+  <meta property="og:title" content="Chapter 2 LD (linear dichroism) and CD (circular dichroism) | CH3/40227 Advanced Spectroscopic Techniques" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="chemfd/CH3040227" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="CH3/40227 Advanced Spectroscopic Techniques" />
+  <meta name="twitter:title" content="Chapter 2 LD (linear dichroism) and CD (circular dichroism) | CH3/40227 Advanced Spectroscopic Techniques" />
   
   <meta name="twitter:description" content="Advanced Spectroscopic Techniques" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="ch-UVvisfluorIR.html"/>
 
-<link rel="next" href="ch-UVvisfluorIR.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -116,60 +116,38 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">CH3/40227 Advanced Spectroscopic Techniques</h1>
-<p class="author"><em>Fiona Dickinson</em></p>
-<p class="date"><em>2021-02-11</em></p>
+<div id="ch:LDCD" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> LD (linear dichroism) and CD (circular dichroism)</h1>
+<div id="sec:LD" class="section level2">
+<h2><span class="header-section-number">2.1</span> Linear dichroism</h2>
+<p>If we consider the Beer-Lambert law, we have previously said that one of the assumptions of this law is that absorbers are distributed randomly in solution… however, when we look at dichroism techniques, they are actively looking at only exciting molecules aligned with the polarisation.</p>
+<p>You will recall that light is only absorbed by a molecule when the polarisation of the light is aligned with the transition dipole moment.</p>
+<p>Light is only absorbed by a molecule if the polarisation of the light aligns with the transition dipole moment on the molecule. Figure <a href="ch-LDCD.html#fig:CS2">2.1</a> shows CS<sub>2</sub> a simple linear molecule - where the transition dipole moment runs along the long axis of the molecule.</p>
+<div class="figure" style="text-align: center"><span id="fig:CS2"></span>
+<img src="images/CS2.png" alt="Carbon disulfide (CS~2~) is a linear molecule -  due to the shape of the molecule there is a transition dipole which runs down the length of the long axis. Light aligned such that the electric field runs parallel with the long axis of the molecule E~||~ will be absorbed, light which in which the electric field runs perpendicular to the long axis of the molecule E~⊥~ will not be absorbed." width="60%" />
+<p class="caption">
+Figure 2.1: Carbon disulfide (CS<sub>2</sub>) is a linear molecule - due to the shape of the molecule there is a transition dipole which runs down the length of the long axis. Light aligned such that the electric field runs parallel with the long axis of the molecule E<sub>||</sub> will be absorbed, light which in which the electric field runs perpendicular to the long axis of the molecule E<sub>⊥</sub> will not be absorbed.
+</p>
 </div>
-<div id="ch340227-advanced-spectroscopic-techniques" class="section level1 unnumbered">
-<h1>CH3/40227 Advanced Spectroscopic Techniques</h1>
-<div id="welcome-preliminary-infomation" class="section level2 unnumbered">
-<h2>Welcome &amp; Preliminary Infomation</h2>
-<p>Welcome to the coursepage for CH30227 &amp; CH40227 Advanced Spectroscopic Techniques. The notes have been prepared in a package called BookDown for RStudio so that the equations are accessible to screen readers. However, by providing the notes as a .html webpage I can also embed short videos to further describe some of the topics. Further you can download the material in a format that suits you (either pdf or epub) to view offline, or change the way this document appears for ease of reading.</p>
-<p>The course is entirely taught by Dr Fiona Dickinson.</p>
-<div id="prerequisite-knowledge" class="section level3 unnumbered">
-<h3>Prerequisite knowledge</h3>
-<p>The course relies extensively on concepts from CH30129 (or CH30217) Photochemistry as well as material from the spectroscopy section of CH10137/8, and the quantum mechanics of CH20151/2. However more generic skills, such as experiment planning, and drawing conclusions on data will form an important strand to this course.</p>
+<p>For more complicated molecules each of the transitions from the HOMO, HOMO-1 to the LUMO <em>etc.</em> occur with different transition dipole moments across the chromophore, figure @ref{fig:adenosine}. Each transition is only excited when light is aligned with that transition; in most cases this isn’t something we need to consider as most incident light we consider is isotropic, but alignment of transition dipoles (either between light and molecules - or between two different molecules) is an important consideration.</p>
+<div class="figure" style="text-align: center"><span id="fig:adenosine"></span>
+<img src="images/adenosine.png" alt="The three lowest energy transitions of adenosine each indicated with their transition dipole moment (all in the plane of the molecule, calculated values).These match with the observed spectrum with a weak transition around 310 nm, a much stronger transition around 260 nm and a third transition starting at the edge of the measured spectrum. Spectrum Adapted from OMLC ( https:// omlc.org/spectra/PhotochemCAD/html/033.html), 31st October 2018" width="100%" />
+<p class="caption">
+Figure 2.2: The three lowest energy transitions of adenosine each indicated with their transition dipole moment (all in the plane of the molecule, calculated values).These match with the observed spectrum with a weak transition around 310 nm, a much stronger transition around 260 nm and a third transition starting at the edge of the measured spectrum. Spectrum Adapted from OMLC ( <a href="https://" class="uri">https://</a> omlc.org/spectra/PhotochemCAD/html/033.html), 31st October 2018
+</p>
 </div>
-<div id="assessment-for-this-course" class="section level3 unnumbered">
-<h3>Assessment for this course</h3>
-<p>The course is assessed by a ‘1 hour’ exam, this is to say it should take an hour to complete, exam details will be shared centrally later in the semester.</p>
-<p>The exam format will contain 2 x 25 mark questions. The questions will likely contain two or more of the following: data to examine, description of a spectrometer or spectrometer component, and design of experiments.</p>
+<p>As already discussed the transition dipole moment is derived from the difference in electron density of the ground and excited state.</p>
+<p>Linear dichroism uses linearly polarised light and is a measure of the difference in absorbance of the sample between plane polarised light parallel and perpendicular to a reference axis (equation <a href="ch-LDCD.html#eq:LD">(2.1)</a>, figure <a href="ch-LDCD.html#fig:LD">2.3</a>).</p>
+<p><span class="math display" id="eq:LD">\[\begin{equation}
+LD = A_{\parallel} - A_{\perp}
+\tag{2.1}
+\end{equation}\]</span></p>
+<div class="figure" style="text-align: center"><span id="fig:LD"></span>
+<img src="images/LD.png" alt="A generic LD spectrum to illustrate features of a sample with regions of the spectrum showing a postive LD. An isotropic sample would show 0 LD." width="60%" />
+<p class="caption">
+Figure 2.3: A generic LD spectrum to illustrate features of a sample with regions of the spectrum showing a postive LD. An isotropic sample would show 0 LD.
+</p>
 </div>
-<div id="feedback-for-this-course" class="section level3 unnumbered">
-<h3>Feedback for this course</h3>
-<p>Much of the work will be peer based in small groups, and you will provide feedback to each other. In wrapping up these discussions I will also provide feedback to discussions.</p>
-<p>I appreciate your understanding that feedback may be delayed during these uncertain times as I have childcare responsibilities.</p>
-<p>I will not provide model answers for past exam questions, this is because there will be multiple ways in which marks may be achieved. Instead I will happily provide feedback on your attempts at past papers. All I ask is:</p>
-<ul>
-<li>papers are received in good time</li>
-<li>when you attempt papers you try and replicate the exam conditions (i.e. do it alone, in one sitting in a limited period)</li>
-<li>you do not submit more than one past paper at a time (I am happy to go through more than one feedback cycle, but want you to reflect on the feedback you have received)</li>
-<li>you highlight sections where you particularly want feedback</li>
-<li>you provide the file as a .pdf, with the file name containing your username, the year of paper attempted and the unit code</li>
-<li>please space out work enough so that I can write feedback</li>
-</ul>
-</div>
-</div>
-<div id="week-1-tasks" class="section level2 unnumbered">
-<h2>Week 1 tasks</h2>
-<p>I set a number of week 1 tasks.</p>
-<ul>
-<li><p>For the ‘spectrometer components document’ on Teams, please divide the work between you, and write a few sentences (and include figures if relevant) for your chosen component(s). This is a shared document and is hosted on Teams because I can’t work out how to do it on Moodle… (the CH40227 class will act as editors to this body or work).</p></li>
-<li><p>Think about the spectroscopic techniques you have used previously (you should all have used at least one of UV/vis, IR and fluorescence), think about what components may have been in the ‘beige box’ and how these differ between different spectrometers…</p></li>
-<li><p>Remember to let me know if you want particular groups in the zoom chat (CH30227 only)</p></li>
-</ul>
-</div>
-<div id="report-errors" class="section level2 unnumbered">
-<h2>Report errors</h2>
-<p>If you spot any errors, please message me in Teams or (if this works), report on the error log below</p>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc83b-C0FsgDr5eQxvT-2NWwEtvOEwYU1WbLE4j53wWfUDIXQ/viewform?embedded=true" width="640" height="1242" frameborder="0" marginheight="0" marginwidth="0">
-Loading…
-</iframe>
-</div>
-<div id="edit-log" class="section level2 unnumbered">
-<h2>Edit log</h2>
-<p>Initial commit 010221</p>
 
 </div>
 </div>
@@ -178,8 +156,8 @@ Loading…
           </div>
         </div>
       </div>
+<a href="ch-UVvisfluorIR.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="ch-UVvisfluorIR.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

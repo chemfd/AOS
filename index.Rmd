@@ -55,7 +55,7 @@ I set a number of week 1 tasks.
 
 - Think about the spectroscopic techniques you have used previously (you should all have used at least one of UV/vis, IR and fluorescence), think about what components may have been in the 'beige box' and how these differ between different spectrometers...
 
-- Remember to let me know if you want particular groups in the zoom chat C(CH30227 only)
+- Remember to let me know if you want particular groups in the zoom chat (CH30227 only)
 
 
 ## Report errors {-}

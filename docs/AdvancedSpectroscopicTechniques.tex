@@ -80,7 +80,7 @@
 
 \title{CH3/40227 Advanced Spectroscopic Techniques}
 \author{Fiona Dickinson}
-\date{2021-02-01}
+\date{2021-02-11}
 
 \begin{document}
 \maketitle
@@ -153,7 +153,7 @@ I set a number of week 1 tasks.
 \item
   Think about the spectroscopic techniques you have used previously (you should all have used at least one of UV/vis, IR and fluorescence), think about what components may have been in the `beige box' and how these differ between different spectrometers\ldots{}
 \item
-  Remember to let me know if you want particular groups in the zoom chat C(CH30227 only)
+  Remember to let me know if you want particular groups in the zoom chat (CH30227 only)
 \end{itemize}
 
 \hypertarget{report-errors}{%
@@ -169,6 +169,574 @@ Loading\ldots{}
 \addcontentsline{toc}{section}{Edit log}
 
 Initial commit 010221
+
+\hypertarget{ch:UVvisfluorIR}{%
+\chapter{Basic Spectroscopies}\label{ch:UVvisfluorIR}}
+
+\hypertarget{sec:UV}{%
+\section{UV/Vis}\label{sec:UV}}
+
+\hypertarget{the-beer-lambert-law}{%
+\subsection{The Beer-Lambert Law}\label{the-beer-lambert-law}}
+
+The intensity of incident light (\(I_0\)) passing through a sample falls exponentially, this is described by the Beer-Lambert Law. The empirical equation (equation \eqref{eq:BeerLambert}, figure \ref{fig:BeerLambert}) implies that the probability of a photon being absorbed at any point is the same (much like first order kinetics), and the amount of the total absorption depends upon the the concentration of the sample, c, and the `path length', l.
+
+The amount of absorbance, A, is dependent upon the wavelength of the incident light, and the constant of proportionality, \(\varepsilon\) (here called the molar extinction coefficient), is consequently also wavelength dependent.
+
+\begin{equation}
+\log \frac{I_0}{I}=A=\varepsilon cl
+\label{eq:BeerLambert}
+\end{equation}
+
+The wavelength of a particular value of the molar exctinction coefficient is often represted as a subscript, \(\varepsilon _\lambda\)
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{images/BeerLambert} 
+
+}
+
+\caption{The decay of intensity of monochromatic incident light through a uniformly absorbing medium. The decay follows an exponential pattern as elucidated in the Beer-Lambert equation.}\label{fig:BeerLambert}
+\end{figure}
+
+The Beer-Lambert law makes a number of assumptions, and this exponential decay of the intensity of light is an important factor.When using the Beer-Lambert law you consider the intensity of the incident radiation, there is an assumption that the intensity of the radiation reaching each part of the sample does not deviate much from this. Hence high absorbing samples tend to show strong deviation from the Beer-Lambert's linear relationship.
+
+The Beer-Lambert law also has to make a number of other `reasonable' considerations:
+
+\begin{itemize}
+\tightlist
+\item
+  The solutions is well mixed, and absorbers are homogeneously distributed in solution.
+\item
+  The absorbers do not scatter radiation (all particles will Rayleigh and Raman scatter but this is normally considerably less intense than absorption). Consequently solutions should be optically transparent as optically opaque solutions (such as colloidal solutions) have considerably stronger scattering.
+\item
+  The absorbers acts independently of each other, this means solutions need to be at a reasonably low concentration (typically less than 0.01 M, or maybe even less depending on the species) so as to avoid electrostatic or \(\pi\) stacking interactions between the chromophores.This is in part important because light is only absorbed when the polarisation of the light is aligned with the transition dipole moment.
+\item
+  The incident radiation is collimated, and each photon should pass through the same path length.
+\item
+  The sample holder (cuvette) is optically `pure' such that reflections are avoided (linked to the assumption above).
+\item
+  The incident radiation is monochromatic, or at the very least has a band width more narrow than the band width of the absorbing transition (this is usually not an issue for molecular systems as bandwidths are usually 10s or more of nm wide, but for atomic or ion spectroscopy where bandwidths are \textless0.02 nm this is a factor which must be carefully considered.
+\item
+  The incident radiation does not noticeably affect the concentration of the ground state, in other words the amount of excited states generated must be kept small as when we are talking about the absorption of a chromophore the concentration of that chromophore that appears in the Beer-Lambert equation is the ground state concentration.
+\item
+  There is no measurable emission from the sample.
+\end{itemize}
+
+\hypertarget{sec:usingUV}{%
+\subsection{Using UV/Vis}\label{sec:usingUV}}
+
+These assumptions become important as we start to consider more complicated techniques than the most basic absorption spectrometery, however to ensure we are following these limits on the Beer-Lambert law it is rare for spectroscopists to work with sample absorbances above 0.1 (the point where \textasciitilde20 \% of the light is absorbed).
+
+To do this either the path length (\(l\)) is reduced or the concentration (\(c\)) of the sample is reduced.
+
+UV/vis is simplest to use on solution based systems as the assumption that the transition dipole moments are randomly aligned (the use of non-randomly aligned transition dipole moments is the basis of the technique linear dichroism (LD)).
+
+\hypertarget{sec:UVinstrument}{%
+\subsection{The UV/Vis instrument}\label{sec:UVinstrument}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/UVvis} 
+
+}
+
+\caption{The UV/Visible spectrophotometer consists of a source of light, wavelength selector, cell holder and detector, however the complexity of each of these is very much dependent upon the instrument used.}\label{fig:UV}
+\end{figure}
+
+Figure \ref{fig:UV} shows the schematic of a `dual beam' UV/Vis spectrophotometer, this would be a higher end instrument.
+
+The most basic versions (and the version you may have used in the lab) are single beam instruments, whereby \(I_0\) is determined indirectly. Some instruments use a `blank path' which does not allow for a `blank' reference cuvette, to allow light to reach the detector, in this case it is a single detector for both paths, with the beam of light beign selected by use of a rotaing chopper. Historically photodiodes were used as the detectors, however the use of `echelle' (2-dimensional) diffraction gratings have increasingly meant that CCDs may be used for optaining the whole spectrum instantly.
+
+The use of a heating block for the sample means that a range of interesting studies may occur from the melting of DNA and proteins (see CH30129/CH30217 notes on hypochromicity), and the temperature dependent release of drug molecules. However, this feature again is only on higher end instruments.
+
+\hypertarget{sec:fluorimeter}{%
+\section{Fluorimeters}\label{sec:fluorimeter}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/UVvis} 
+
+}
+
+\caption{A fluorimeter consists of a source of light, wavelength selector, cell holder and detector, however, just like with UV/Vis instruments the complexity of each of these is very much dependent upon the instrument used.}\label{fig:fluorimeter}
+\end{figure}
+
+Figure \ref{fig:fluorimeter} shows the schematic of higher end fluorimeter with scanning monochromators for both the excitation and emission. Some lower end instruments may use band pass filters to select a `single' excitation (and emission) wavelength, or else use a diode as an excitation source. The university uses both of these instrument types in the teaching labs, with the diode instrument using a two dimensional echelle grating such that the full emission spectrum is recorded `instantly'. The CCD detector is considerably less sensitive than the PMT, but the cost is considerably lower and so they are used in some instruments.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{images/sat} 
+
+}
+
+\caption{The detectors in fluorimeters may be easily saturated showing a deviation from the linear (Beer-Lambert) relationship you would expect with increasing concentration, this same effect is also seen as you increase the applied potential on the PMT or increase the slitwidth or integration time.}\label{fig:sat}
+\end{figure}
+
+The detectors in fluorescence spectrometers are easily over saturated (figure @ref\{fig:sat\}), therefore it is important to ensure that the response remains within the linear region of the instrument. To do this there are a number of ways that the signal may be reduced, these include:
+
+\begin{itemize}
+\tightlist
+\item
+  reducing the applied potential on the PMT
+\item
+  closing either the emission and/or excitation slits
+\item
+  reducing the concentration of the sample
+\item
+  reducing the path length of the sample
+\item
+  reducing the integration time (the time each `sample' is gathered for)
+\item
+  change the excitation wavelength
+\end{itemize}
+
+PMTs are less sensitive at long wavelengths and so `corrections' are usually used in this wavelength regime.
+
+Emission light is recorded at 90º to the incident wavelength radiation to minimise optical artifacts and to separate out the emission from the intense excitation beam. The are usually scattering signals in the emission (from both Raman (inelastically scattered) and frequency halved elastic scattering) these are usually only observed at low fluorescence intensities.
+
+\hypertarget{emission-fluorimetery}{%
+\subsection{Emission fluorimetery}\label{emission-fluorimetery}}
+
+When we are talking about fluorescence spectroscopy we are talking about emitted photons, whether they are fluorescent photons, or phosphorescent photons.
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{\label{tab:phototrans} The excitation and decay pathways in molecules.}\tabularnewline
+\toprule
+\endhead
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+\emph{`Allowed transitions'}\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+Singlet-singlet absorption Singlet-singlet emission\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+fluorescence\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\(S_0 + h \nu \longrightarrow S_1\) \(S_1 \longrightarrow S_0 + h \nu '\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+\emph{`Forbidden transitions'}\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+Singlet-triplet absorption Triplet-singlet emission\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+phosphorescence\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\(S_0 + h \nu \longrightarrow T_1\) \(T_1 \longrightarrow S_0 + h \nu ''\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+\emph{`Other transitions'}\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+Internal conversion \strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+(vibrational relaxation) (vibrational relaxation)\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\(S_1 \longrightarrow S_0 + heat\) \(S_1 \longrightarrow T_1 + heat\) \(T_1 \longrightarrow S_0 + heat\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+\emph{Other pathways}\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright
+Quenching of excited state Chemistry from excited state\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.26\columnwidth}\raggedright
+\(S_1 + Q \longrightarrow S_0 + Q +heat\) \(S_1 + Q \longrightarrow S_0 + Q^\ast +heat\) \(T_1 + Q \longrightarrow S_0 + Q +heat\) \(T_1 + Q \longrightarrow S_0 + Q^\ast +heat\) \(S_1 \longrightarrow\) new/changed molecule\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Any process that has either emission or scattering of a photon can be seen in the fluorimeter, however scatting is usually considerably weaker and is only an issue at very low emission intensities.
+
+When we think about fluorescence spectroscopy it is usually steady state (constant illumination)emission mode that we think of. In this technique the excitation wavelength is fixed and the emission is scanned.
+
+It is a difficult technique to quantify, and so if comparing samples the same settings (slit width, PMT voltage, \(\lambda_{ex}\), scan rate) should be used, and the absorbance of each sample noted at \(\lambda_{ex}\).
+
+The wavelength of emmission is calibrated using a water Raman. This is useful as it doesn't matter the purity of the water, and any excitation wavelength may be used (although if 350 nm (\(\lambda\)\textsubscript{max,em} = 397 nm) is available this is frequently used for no other reason than tradition). The Raman is an inelastic scattering and so always appears at a well defined wavelength (equation @ref\{eq:waterRaman\}).
+
+\begin{equation}
+\frac{1}{\lambda_{\textrm{em, µm}}}=\frac{1}{\lambda_{\textrm{ex, µm}}}-0.340 \textrm{ µm}^{-1}
+\label{eq:waterRaman}
+\end{equation}
+
+Figure @ref\{fig:slitwidth\} shows the effect of slit width of the appearance of a water Raman calibration spectrum, the peak is Gaussian in profile and relatively intense so narrow slit widths may be used. This peak can overlay on the emission spectrum, but can manually be removed if necessary.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{images/waterRaman} 
+
+}
+
+\caption{The Gaussian profile of a water Raman spectrum used to calibrate the emission wavlength in fluorimeters.}\label{fig:waterRaman}
+\end{figure}
+
+Increasing the integration time improves the signal to noise ratio, but the signal only improves relative to the noise in a \(\sqrt{n}\) ratio, so as the integration time increases by four, the signal to noise ratio increases by 2.
+
+\hypertarget{excitation-spectroscopy}{%
+\subsection{Excitation spectroscopy}\label{excitation-spectroscopy}}
+
+More on this technique will be discussed later in the course, but it is a measure of how the emission intensity varies with the excitaiton (or absorbance) of the sample - the technique can show where the excited states in a system come from.
+
+What we do know though is that the emission intensity is very dependent upon the wavelength you excite, as the amount of absorption (and therefore excited states generated) is very dependent on wavelength (figure @ref\{fig:normabs\}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{images/normabs} 
+
+}
+
+\caption{The intensity of emission depends upon the amount of absorption at the excitation wavelength, however if each of these emission spectra, of rhodamine 6G (right), are divided by the amount of absorbance (left), then the normalised emission is the same in each case.}\label{fig:normabs}
+\end{figure}
+
+The intensity of the source varies a lot with wavelength, and so the excitation detector is used to `normalise' the emission intensity against the intensity of light generating the excited states.
+
+\hypertarget{questions}{%
+\section{Questions}\label{questions}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Why are emission spectra recorded at 90º to the incident light?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  emission intensity is most intense normal (at 90º) to the excitation source
+\item
+  90º is the best angle to separate the Raman signal from the emission signal
+\item
+  it is a good angle to ensure no excitation light makes it to the emission detector
+\item
+  it reduces the amount to reabsorption of light by minimising the path length
+\item
+  it maximises internal reflections, ensuring the most emission from the sample
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Which of the following is not an assumption of the Beer-Lambert law?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The absorbing molecules must be homogeneously distributed in solution
+\item
+  Incident radiation must be normal to the transition dipole of the molecule
+\item
+  The absorbers must act independently of each other
+\item
+  The incident radiation must be collimated (parallel rays) and pass through the same path length
+\item
+  The incident radiation must have a band width that is more narrow than the absorbing transition
+\item
+  The intensity of incident light must be low to ensure the population of an excited state is negligible
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Why does a molecule absorb light; what conditions are needed?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  only the energy gap ΔE matters
+\item
+  only the intensity of light matters, with enough light it will always absorb
+\item
+  the extinction coefficient governs how much light will be absorbed
+\item
+  the energy gap and polarisation of the electromagnetic field matter
+\item
+  the solvent molecules must be aligned with the magnetic field
+\item
+  only the polarisation of the magnetic field matters
+\end{enumerate}
+
+\hypertarget{answers}{%
+\section{Answers}\label{answers}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Why are emission spectra recorded at 90º to the incident light?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  emission intensity is most intense normal (at 90º) to the excitation source
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Fluorescence should be isotropic in the steady state so no angle has a higher emission intensity
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  90º is the best angle to separate the Raman signal from the emission signal
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Raman like emission is isotropic - the only way you can separate them is using time resolved methods, but Raman is usually considerably less intense than the emission signal.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  { it is a good angle to ensure no excitation light makes it to the emission detector }
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Incident light passes straight through, any other angle which can separate this would be fine, but 90º is usually used because of the shape of the cuvettes (square)
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  { it reduces the amount to reabsorption of light by minimising the path length}
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  This is called the inner filter effect - it can be a problem, and recording at 90º will minimise the path length but the best thing to do is ensure that the concentration, or intensity of incident light (slit width) is reduced
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  it maximises internal reflections, ensuring the most emission from the sample
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  In a square cuvette it should minimise the effect of internal reflections, this is not something we want as we are assuming the light only travels through the sample once
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Which of the following is not an assumption of the Beer-Lambert law?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The absorbing molecules must be homogeneously distributed in solution
+\item
+  { Incident radiation must be normal to the transition dipole of the molecule }
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  This statement is the exact opposite of being homogeneously distributed, only molecules with the transition dipole moment aligned correctly will absorb, but it shouldn't be that all molecules are aligned
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  The absorbers must act independently of each other
+  d.The incident radiation must be collimated (parallel rays) and pass through the same path length
+\item
+  The incident radiation must have a band width that is more narrow than the absorbing transition
+\item
+  The intensity of incident light must be low to ensure the population of an excited state is negligible
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Why does a molecule absorb light; what conditions are needed?
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  only the energy gap ΔE matters
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  It matters, it isn't the only thing\ldots{}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  only the intensity of light matters, with enough light it will always absorb
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Nope\ldots{} more power doesn't work, although you can get some cool non-linear two photon effects with enough power it still has to be the right energy
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  the extinction coefficient governs how much light will be absorbed
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Yes, but it isn't a condition required
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  { the energy gap and polarisation of the electromagnetic field matter }
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Yes the energy gap (wavelength) needs to be appropriate, but the transition dipole moment of that transition of the chromophore must be aligned with the polarisation of the EM light
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  the solvent molecules must be aligned with the magnetic field
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  The solvent has nothing to do with the transition dipole, it may affect ΔE
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  only the polarisation of the magnetic field matters
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Again, it matters that the transition dipole moment and the polarisation of light are matched but for UV/Vis the incident light should be unpolarised
+\end{itemize}
+
+\hypertarget{ch:LDCD}{%
+\chapter{LD (linear dichroism) and CD (circular dichroism)}\label{ch:LDCD}}
+
+\hypertarget{sec:LD}{%
+\section{Linear dichroism}\label{sec:LD}}
+
+If we consider the Beer-Lambert law, we have previously said that one of the assumptions of this law is that absorbers are distributed randomly in solution\ldots{} however, when we look at dichroism techniques, they are actively looking at only exciting molecules aligned with the polarisation.
+
+You will recall that light is only absorbed by a molecule when the polarisation of the light is aligned with the transition dipole moment.
+
+Light is only absorbed by a molecule if the polarisation of the light aligns with the transition dipole moment on the molecule. Figure \ref{fig:CS2} shows CS\textsubscript{2} a simple linear molecule - where the transition dipole moment runs along the long axis of the molecule.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/CS2} 
+
+}
+
+\caption{Carbon disulfide (CS~2~) is a linear molecule -  due to the shape of the molecule there is a transition dipole which runs down the length of the long axis. Light aligned such that the electric field runs parallel with the long axis of the molecule E~||~ will be absorbed, light which in which the electric field runs perpendicular to the long axis of the molecule E~⊥~ will not be absorbed.}\label{fig:CS2}
+\end{figure}
+
+For more complicated molecules each of the transitions from the HOMO, HOMO-1 to the LUMO \emph{etc.} occur with different transition dipole moments across the chromophore, figure @ref\{fig:adenosine\}. Each transition is only excited when light is aligned with that transition; in most cases this isn't something we need to consider as most incident light we consider is isotropic, but alignment of transition dipoles (either between light and molecules - or between two different molecules) is an important consideration.
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/adenosine} 
+
+}
+
+\caption{The three lowest energy transitions of adenosine each indicated with their transition dipole moment (all in the plane of the molecule, calculated values).These match with the observed spectrum with a weak transition around 310 nm, a much stronger transition around 260 nm and a third transition starting at the edge of the measured spectrum. Spectrum Adapted from OMLC ( https:// omlc.org/spectra/PhotochemCAD/html/033.html), 31st October 2018}\label{fig:adenosine}
+\end{figure}
+
+As already discussed the transition dipole moment is derived from the difference in electron density of the ground and excited state.
+
+Linear dichroism uses linearly polarised light and is a measure of the difference in absorbance of the sample between plane polarised light parallel and perpendicular to a reference axis (equation \eqref{eq:LD}, figure \ref{fig:LD}).
+
+\begin{equation}
+LD = A_{\parallel} - A_{\perp}
+\label{eq:LD}
+\end{equation}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/LD} 
+
+}
+
+\caption{A generic LD spectrum to illustrate features of a sample with regions of the spectrum showing a postive LD. An isotropic sample would show 0 LD.}\label{fig:LD}
+\end{figure}
 
   \bibliography{book.bib,packages.bib}
 
