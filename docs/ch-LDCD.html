@@ -24,7 +24,7 @@
 <meta name="author" content="Fiona Dickinson" />
 
 
-<meta name="date" content="2021-02-11" />
+<meta name="date" content="2021-02-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -95,6 +95,11 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="ch-LDCD.html"><a href="ch-LDCD.html"><i class="fa fa-check"></i><b>2</b> LD (linear dichroism) and CD (circular dichroism)</a><ul>
 <li class="chapter" data-level="2.1" data-path="ch-LDCD.html"><a href="ch-LDCD.html#sec:LD"><i class="fa fa-check"></i><b>2.1</b> Linear dichroism</a></li>
+<li class="chapter" data-level="2.2" data-path="ch-LDCD.html"><a href="ch-LDCD.html#circular-dichroism"><i class="fa fa-check"></i><b>2.2</b> Circular Dichroism</a></li>
+<li class="chapter" data-level="2.3" data-path="ch-LDCD.html"><a href="ch-LDCD.html#induced-dichroism"><i class="fa fa-check"></i><b>2.3</b> Induced Dichroism</a></li>
+<li class="chapter" data-level="2.4" data-path="ch-LDCD.html"><a href="ch-LDCD.html#workshop-task"><i class="fa fa-check"></i><b>2.4</b> Workshop task</a></li>
+<li class="chapter" data-level="2.5" data-path="ch-UVvisfluorIR.html"><a href="ch-UVvisfluorIR.html#questions"><i class="fa fa-check"></i><b>2.5</b> Questions</a></li>
+<li class="chapter" data-level="2.6" data-path="ch-UVvisfluorIR.html"><a href="ch-UVvisfluorIR.html#answers"><i class="fa fa-check"></i><b>2.6</b> Answers</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -120,6 +125,8 @@
 <h1><span class="header-section-number">Chapter 2</span> LD (linear dichroism) and CD (circular dichroism)</h1>
 <div id="sec:LD" class="section level2">
 <h2><span class="header-section-number">2.1</span> Linear dichroism</h2>
+<iframe width="749" height="562" src="https://www.youtube.com/embed/D-fpt94OtUc?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 <p>If we consider the Beer-Lambert law, we have previously said that one of the assumptions of this law is that absorbers are distributed randomly in solution… however, when we look at dichroism techniques, they are actively looking at only exciting molecules aligned with the polarisation.</p>
 <p>You will recall that light is only absorbed by a molecule when the polarisation of the light is aligned with the transition dipole moment.</p>
 <p>Light is only absorbed by a molecule if the polarisation of the light aligns with the transition dipole moment on the molecule. Figure <a href="ch-LDCD.html#fig:CS2">2.1</a> shows CS<sub>2</sub> a simple linear molecule - where the transition dipole moment runs along the long axis of the molecule.</p>
@@ -148,6 +155,103 @@ LD = A_{\parallel} - A_{\perp}
 Figure 2.3: A generic LD spectrum to illustrate features of a sample with regions of the spectrum showing a postive LD. An isotropic sample would show 0 LD.
 </p>
 </div>
+<p>So if we consider a simple molecular system, that of CS<sub>2</sub> (figure <a href="ch-LDCD.html#fig:CS2">2.1</a>, then light which is polarised in alignment with the long axis of the molecule, <span class="math inline">\(E_{\parallel}\)</span>, (which is aligned with the transition dipole moment on the molecule) will be absorbed, whereas light normal to this, <span class="math inline">\(E_{perp}\)</span>, will be transmitted as light is passed through the sample. Our dichroism, <span class="math inline">\(LD\)</span>, is the difference between these two absorbance values.</p>
+<p>This is how polaroid film works where there is a large transition dipole moment along one axis, and a negligable transition dipole along the orthoganol axis.</p>
+<p>Adenosine (figure <a href="ch-LDCD.html#fig:adenosine">2.2</a>) is a more typical example, this is an example of a molecule with different transition dipole moments, each with a particular energy and polarisation. We can observe that the different dipole moments absorb more strongly at if we can allign our structure somehow, like in a crystal…</p>
+<p>We can relate the linear dichroism to the angle from the reference axis as follows (equation @ref:LDiso):</p>
+<p><span class="math display" id="eq:LDiso">\[\begin{equation}
+LD = \frac{3}{2}A_{\textrm{iso}}S(3 \cos^2 \alpha - 1)
+\tag{2.2}
+\end{equation}\]</span></p>
+<p>The LD spectrophotometer looks a lot like the UV/vis (figure <a href="ch-LDCD.html#fig:LDspec">2.4</a>), however we need to add a two position polarising filter (horizontal and vertical), again just like with the UV there is a blank path (or a dummy blank path and a chopper), with similar light sources to the UV/vis (Xe arc and <sup>2</sup>D<sub>2</sub> arc), with the detector again usually being a photodiode.</p>
+<div class="figure" style="text-align: center"><span id="fig:LDspec"></span>
+<img src="images/LDspec.png" alt="A blck diagram of a LD spectrometer including the two position polarising filter." width="60%" />
+<p class="caption">
+Figure 2.4: A blck diagram of a LD spectrometer including the two position polarising filter.
+</p>
+</div>
+<p>If the sample is solution based it will be isotropic unless there is something to help align the molecules, and consequently there will be no LD signal detected. Consequently there needs to be some form of smple alignment, which is usually achieved in one of two methods (figure @ref{fig:LDcell}):</p>
+<ul>
+<li>small molecules are embedded in a polymer film, which is then stretched in a single direction, this then coaligns the small molecules along the direction of the stretch</li>
+<li>large molecules (such as polymers, DNA and proteins) can be aligned <em>via</em> laminar flow. In this case the cuvette is a hollow cylinder with an internal bar which rotates rapidly, this causes laminar flow</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:LDcell"></span>
+<img src="images/LDcell.png" alt="In order to show an LD signal there needs to be some alignment of the molecules, two methods are usually used, embedding the molecules in a polymer film and stretching the film, such that the molecules are pulled into alignment (top), or laminar flow, whereby a thin film of solvent is rapidly stired and the molecules align with this flow (like stirring spagetti (bottom)" width="60%" />
+<p class="caption">
+Figure 2.5: In order to show an LD signal there needs to be some alignment of the molecules, two methods are usually used, embedding the molecules in a polymer film and stretching the film, such that the molecules are pulled into alignment (top), or laminar flow, whereby a thin film of solvent is rapidly stired and the molecules align with this flow (like stirring spagetti (bottom)
+</p>
+</div>
+</div>
+<div id="circular-dichroism" class="section level2">
+<h2><span class="header-section-number">2.2</span> Circular Dichroism</h2>
+<iframe width="749" height="562" src="https://www.youtube.com/embed/P3U9Hhs_eTc?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<div id="induced-dichroism" class="section level2">
+<h2><span class="header-section-number">2.3</span> Induced Dichroism</h2>
+<p>Some molecules may themselves not show either LD or CD themselves, but they may have induced dichroism because they are bound to a molecule which does.</p>
+<p>An example of this would be small dye molecules such as YO-Pro-1 (see photochemisry notes and the later workshop materials) which is a small fluorescent dye molecule which binds to DNA. This molecule itself is achrial, and if introduced into LD with laminar flow is too small to align and so the LD should also be zero. However, when bound to DNA both an LD and CD is observed from the sample because it is now in an environment big enough to align with the laminar flow, and</p>
+</div>
+<div id="workshop-task" class="section level2">
+<h2><span class="header-section-number">2.4</span> Workshop task</h2>
+<p>You will find some slides containing absorbance, LD and CD of YO-Pro-1 and it’s dimer YOYO-1 on Moodle under the CD and LD, alongside these are some questions I want you to think about and answer when looking at the spectra. You should think about general trends and not be too hung up about individual spectra.</p>
+<p>When we meet in our next LOIL we will discuss this case study and I will be breaking you into your selected (or assigned) break out groups to discuss our ideas further, we will then wrap up the session.</p>
+</div>
+<div id="questions" class="section level2">
+<h2><span class="header-section-number">2.5</span> Questions</h2>
+<ol style="list-style-type: decimal">
+<li>If a molecule is illuminated with polarised light, for it to absorb light:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>only the energy gap ΔE matters</li>
+<li>only the intensity of light matters, with enough light it will always absorb</li>
+<li>the extinction coefficient governs how much light will be absorbed</li>
+<li>the energy gap and the orientation of the transition dipole moment matter</li>
+<li>the solvent molecules must be aligned with the magnetic field</li>
+<li>only the polarisation of the magnetic field matters</li>
+</ol>
+</div>
+<div id="answers" class="section level2">
+<h2><span class="header-section-number">2.6</span> Answers</h2>
+<ol style="list-style-type: decimal">
+<li>If a molecule is illuminated with polarised light, for it to absorb light:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>only the energy gap ΔE matters</li>
+</ol>
+<ul>
+<li>Again, it matters, it isn’t the only thing…</li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>only the intensity of light matters, with enough light it will always absorb</li>
+</ol>
+<ul>
+<li>Still not true</li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>the extinction coefficient governs how much light will be absorbed</li>
+</ol>
+<ul>
+<li>It does, but it isn’t what matters most it just says how much light will be absorbed</li>
+</ul>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>the energy gap and the orientation of the transition dipole moment matter</li>
+</ol>
+<ul>
+<li>This is the one</li>
+</ul>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>the solvent molecules must be aligned with the magnetic field</li>
+</ol>
+<ul>
+<li>Still drivel</li>
+</ul>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>only the polarisation of the magnetic field matters</li>
+</ol>
+<ul>
+<li>This time this one matters, but it isn’t the only thing…</li>
+</ul>
 
 </div>
 </div>

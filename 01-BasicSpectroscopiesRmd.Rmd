@@ -1,5 +1,7 @@
 # Basic Spectroscopies {#ch:UVvisfluorIR}
 
+Please scroll to the bottom to find a summary video on UV/vis and fluroescence spectroscopy.
+
 ## UV/Vis {#sec:UV}
 
 ### The Beer-Lambert Law
@@ -130,6 +132,8 @@ knitr::include_graphics("images/normabs.png")
 ```
 
 The intensity of the source varies a lot with wavelength, and so the excitation detector is used to 'normalise' the emission intensity against the intensity of light generating the excited states.
+
+<iframe width="749" height="421" src="https://www.youtube.com/embed/kx8-nB6D1lU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Questions
 

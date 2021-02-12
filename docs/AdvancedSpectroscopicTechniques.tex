@@ -80,7 +80,7 @@
 
 \title{CH3/40227 Advanced Spectroscopic Techniques}
 \author{Fiona Dickinson}
-\date{2021-02-11}
+\date{2021-02-12}
 
 \begin{document}
 \maketitle
@@ -172,6 +172,8 @@ Initial commit 010221
 
 \hypertarget{ch:UVvisfluorIR}{%
 \chapter{Basic Spectroscopies}\label{ch:UVvisfluorIR}}
+
+Please scroll to the bottom to find a summary video on UV/vis and fluroescence spectroscopy.
 
 \hypertarget{sec:UV}{%
 \section{UV/Vis}\label{sec:UV}}
@@ -737,6 +739,186 @@ LD = A_{\parallel} - A_{\perp}
 
 \caption{A generic LD spectrum to illustrate features of a sample with regions of the spectrum showing a postive LD. An isotropic sample would show 0 LD.}\label{fig:LD}
 \end{figure}
+
+So if we consider a simple molecular system, that of CS\textsubscript{2} (figure \ref{fig:CS2}, then light which is polarised in alignment with the long axis of the molecule, \(E_{\parallel}\), (which is aligned with the transition dipole moment on the molecule) will be absorbed, whereas light normal to this, \(E_{perp}\), will be transmitted as light is passed through the sample. Our dichroism, \(LD\), is the difference between these two absorbance values.
+
+This is how polaroid film works where there is a large transition dipole moment along one axis, and a negligable transition dipole along the orthoganol axis.
+
+Adenosine (figure \ref{fig:adenosine}) is a more typical example, this is an example of a molecule with different transition dipole moments, each with a particular energy and polarisation. We can observe that the different dipole moments absorb more strongly at if we can allign our structure somehow, like in a crystal\ldots{}
+
+We can relate the linear dichroism to the angle from the reference axis as follows (equation @ref:LDiso):
+
+\begin{equation}
+LD = \frac{3}{2}A_{\textrm{iso}}S(3 \cos^2 \alpha - 1)
+\label{eq:LDiso}
+\end{equation}
+
+The LD spectrophotometer looks a lot like the UV/vis (figure \ref{fig:LDspec}), however we need to add a two position polarising filter (horizontal and vertical), again just like with the UV there is a blank path (or a dummy blank path and a chopper), with similar light sources to the UV/vis (Xe arc and \textsuperscript{2}D\textsubscript{2} arc), with the detector again usually being a photodiode.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/LDspec} 
+
+}
+
+\caption{A blck diagram of a LD spectrometer including the two position polarising filter.}\label{fig:LDspec}
+\end{figure}
+
+If the sample is solution based it will be isotropic unless there is something to help align the molecules, and consequently there will be no LD signal detected. Consequently there needs to be some form of smple alignment, which is usually achieved in one of two methods (figure @ref\{fig:LDcell\}):
+
+\begin{itemize}
+\tightlist
+\item
+  small molecules are embedded in a polymer film, which is then stretched in a single direction, this then coaligns the small molecules along the direction of the stretch
+\item
+  large molecules (such as polymers, DNA and proteins) can be aligned \emph{via} laminar flow. In this case the cuvette is a hollow cylinder with an internal bar which rotates rapidly, this causes laminar flow
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/LDcell} 
+
+}
+
+\caption{In order to show an LD signal there needs to be some alignment of the molecules, two methods are usually used, embedding the molecules in a polymer film and stretching the film, such that the molecules are pulled into alignment (top), or laminar flow, whereby a thin film of solvent is rapidly stired and the molecules align with this flow (like stirring spagetti (bottom)}\label{fig:LDcell}
+\end{figure}
+
+\hypertarget{circular-dichroism}{%
+\section{Circular Dichroism}\label{circular-dichroism}}
+
+\hypertarget{induced-dichroism}{%
+\section{Induced Dichroism}\label{induced-dichroism}}
+
+Some molecules may themselves not show either LD or CD themselves, but they may have induced dichroism because they are bound to a molecule which does.
+
+An example of this would be small dye molecules such as YO-Pro-1 (see photochemisry notes and the later workshop materials) which is a small fluorescent dye molecule which binds to DNA. This molecule itself is achrial, and if introduced into LD with laminar flow is too small to align and so the LD should also be zero. However, when bound to DNA both an LD and CD is observed from the sample because it is now in an environment big enough to align with the laminar flow, and
+
+\hypertarget{workshop-task}{%
+\section{Workshop task}\label{workshop-task}}
+
+You will find some slides containing absorbance, LD and CD of YO-Pro-1 and it's dimer YOYO-1 on Moodle under the CD and LD, alongside these are some questions I want you to think about and answer when looking at the spectra. You should think about general trends and not be too hung up about individual spectra.
+
+When we meet in our next LOIL we will discuss this case study and I will be breaking you into your selected (or assigned) break out groups to discuss our ideas further, we will then wrap up the session.
+
+\hypertarget{questions}{%
+\section{Questions}\label{questions}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If a molecule is illuminated with polarised light, for it to absorb light:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  only the energy gap ΔE matters
+\item
+  only the intensity of light matters, with enough light it will always absorb
+\item
+  the extinction coefficient governs how much light will be absorbed
+\item
+  the energy gap and the orientation of the transition dipole moment matter
+\item
+  the solvent molecules must be aligned with the magnetic field
+\item
+  only the polarisation of the magnetic field matters
+\end{enumerate}
+
+\hypertarget{answers}{%
+\section{Answers}\label{answers}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If a molecule is illuminated with polarised light, for it to absorb light:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  only the energy gap ΔE matters
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Again, it matters, it isn't the only thing\ldots{}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  only the intensity of light matters, with enough light it will always absorb
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Still not true
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  the extinction coefficient governs how much light will be absorbed
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  It does, but it isn't what matters most it just says how much light will be absorbed
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  the energy gap and the orientation of the transition dipole moment matter
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  This is the one
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  the solvent molecules must be aligned with the magnetic field
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Still drivel
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  only the polarisation of the magnetic field matters
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  This time this one matters, but it isn't the only thing\ldots{}
+\end{itemize}
 
   \bibliography{book.bib,packages.bib}
 
