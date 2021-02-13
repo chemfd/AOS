@@ -80,7 +80,7 @@
 
 \title{CH3/40227 Advanced Spectroscopic Techniques}
 \author{Fiona Dickinson}
-\date{2021-02-12}
+\date{2021-02-13}
 
 \begin{document}
 \maketitle
@@ -168,6 +168,7 @@ Loading\ldots{}
 \section*{Edit log}\label{edit-log}}
 \addcontentsline{toc}{section}{Edit log}
 
+Chapters 1 \& 2 130221
 Initial commit 010221
 
 \hypertarget{ch:UVvisfluorIR}{%
@@ -753,6 +754,13 @@ LD = \frac{3}{2}A_{\textrm{iso}}S(3 \cos^2 \alpha - 1)
 \label{eq:LDiso}
 \end{equation}
 
+The reduced LD, \(LD^r\) is often used as it is concentration indpendent and so differences in the spectrum are easily observed:
+
+\begin{equation}
+LD = \frac{A_{\parallel} - A_{\perp}}{A_\textrm{iso}} \frac{3}{2}S(3 \cos^2 \alpha - 1)
+\label{eq:LDred}
+\end{equation}
+
 The LD spectrophotometer looks a lot like the UV/vis (figure \ref{fig:LDspec}), however we need to add a two position polarising filter (horizontal and vertical), again just like with the UV there is a blank path (or a dummy blank path and a chopper), with similar light sources to the UV/vis (Xe arc and \textsuperscript{2}D\textsubscript{2} arc), with the detector again usually being a photodiode.
 
 \begin{figure}
@@ -761,7 +769,7 @@ The LD spectrophotometer looks a lot like the UV/vis (figure \ref{fig:LDspec}), 
 
 }
 
-\caption{A blck diagram of a LD spectrometer including the two position polarising filter.}\label{fig:LDspec}
+\caption{A block diagram of a LD spectrometer including the two position polarising filter.}\label{fig:LDspec}
 \end{figure}
 
 If the sample is solution based it will be isotropic unless there is something to help align the molecules, and consequently there will be no LD signal detected. Consequently there needs to be some form of smple alignment, which is usually achieved in one of two methods (figure @ref\{fig:LDcell\}):
@@ -786,45 +794,186 @@ If the sample is solution based it will be isotropic unless there is something t
 \hypertarget{circular-dichroism}{%
 \section{Circular Dichroism}\label{circular-dichroism}}
 
+Circular dichroism uses circularly polarised light and looks at the difference between the absorption of left and right hand polarised light. It is much like the use of polarimetry to look at R- and S- enantiomers, but we are combining it with UV, in that a spectrum is scanned and the CD measured over a range of wavelengths.
+
+An excel resource has been provided on moodle (under `Other Resources') to try to help you understand how two plane waves may be combined to generate circularly polarised light.
+
+To generate circularly polarised light two orthogonal paths of monochromatic light is passed through a birefringent material (a material with two different refractive indicies depending on the crystal plane). This retards one wave more than the other and when they combine they are out of phase and so combine to form circularly or eliptically polarised light. Calcite is an example of a birefringent material.
+
+The phase offset will depend upon the thickness of the waveplate, the thickness of this plate can be changed by applying an alternating current causing a change in crystal shape due to teh piezoelectric effect. The bigger the potential difference the bigger the change in the size of the crystal, consequently the crystal can always be adjusted (no matter the wavelength) so that the resultant waves are always π/2 (for a quarter wave plate), or π (for a half wave plate) different in phase. This crystal oscillation is caused by a device called the photoelastic modulator.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/CD} 
+
+}
+
+\caption{A block diagram of a CD spectrometer including the coupled monochromator and photoelastic modulator.}\label{fig:CD}
+\end{figure}
+
+In each 50 Hz cycle we get a measurement of -λ/4 (L) and +λ/4 (R) light. After passing through a sample the R \& L circularly polarised light become eliptical (and when we deconvolute the horizontal and vertical waves are no longer of equal amplitude) these combine to give the CD (equation \ref{fig:CD}).
+
+\begin{equation}
+CD = A_{\textrm{L}} - A_{\textrm{R}}
+\label{eq:CD}
+\end{equation}
+
+It should be noted that there is a difference of opinion as to what reference frame constitutes left and right as far as the polarisation of light goes, papers will always state their convention.
+
 \hypertarget{induced-dichroism}{%
 \section{Induced Dichroism}\label{induced-dichroism}}
 
 Some molecules may themselves not show either LD or CD themselves, but they may have induced dichroism because they are bound to a molecule which does.
 
-An example of this would be small dye molecules such as YO-Pro-1 (see photochemisry notes and the later workshop materials) which is a small fluorescent dye molecule which binds to DNA. This molecule itself is achrial, and if introduced into LD with laminar flow is too small to align and so the LD should also be zero. However, when bound to DNA both an LD and CD is observed from the sample because it is now in an environment big enough to align with the laminar flow, and
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/DNAbinders} 
+
+}
+
+\caption{The DNA binders ethidium bromide (left) which intercalates between the base pairs of DNA, and Hoechst 33258 (right) which binds in the minor groove of DNA, by curving around the tertiary structure}\label{fig:DNAbinders}
+\end{figure}
+
+An example of this would be small dye molecules such as YO-Pro-1 (see photochemisry notes and the later workshop materials, and those listed in figure \ref{fig:DNAbinders} which is a small fluorescent dye molecule which binds to DNA. This molecule itself is achrial, and if introduced into LD with laminar flow is too small to align and so the LD should also be zero. However, when bound to DNA both an LD and CD is observed from the sample because it is now in an environment big enough to align with the laminar flow, and the DNA tertiary structure is chiral and so the dye is binding into a chrial environment and therefore an induced CD is also observed.
+
+For induced LD, if the molecule remains in free solution the transition dipoles are aligned isotopically and no LD is observed. However if we look at binding to DNA as an example, if the molecule intercalates the transition dipole moment will be \emph{more} aligned to be perpendicular to the long axis of the molecule and will therefore display a negative LD. If the molecule has a transition dipole moment principally aligned with the long axis of the molecule then it will display a positive LD (figure @ref\{fig:inducedLD\}).
+
+We can determine the binding angle (with a few added assumptions) by using equation @ref\{eq:LDiso\}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/inducedLD} 
+
+}
+
+\caption{Small molecules under laminar flow are too small to align and so they are aranged isotropically and therefore no LD is observed, however on binding to macromolecules such as DNA the species display an induced LD}\label{fig:inducedLD}
+\end{figure}
+
+CD may show `unwinding' (less chirality in the sample) indicating an intercalation of a molecule between the bases of DNA.
+
+Behaviour like this can tell us a lot about drugs binding to biological molecules, in a manner which is relatively quick and simple.
 
 \hypertarget{workshop-task}{%
 \section{Workshop task}\label{workshop-task}}
 
 You will find some slides containing absorbance, LD and CD of YO-Pro-1 and it's dimer YOYO-1 on Moodle under the CD and LD, alongside these are some questions I want you to think about and answer when looking at the spectra. You should think about general trends and not be too hung up about individual spectra.
 
-When we meet in our next LOIL we will discuss this case study and I will be breaking you into your selected (or assigned) break out groups to discuss our ideas further, we will then wrap up the session.
+When we meet in our next LOIL we will discuss this case study and I will be breaking you into your selected (or assigned) break out groups to discuss our ideas further, we will then wrap up the session with you sharing your group thoughts (so think about nominating a spokesperson).
+
+I do not expect you to know a lot about DNA, just know the following:
+- DNA has a negatively charged backbone
+- By intercalating between the basepais the DNA has to stretch (get longer) and unwind slighly
+- A helix repeats about once every 10 bases, with the bases separated by the van der Waals distance (3.4 Å)
+- The bases are about about 86º to the long axis of the molecule
 
 \hypertarget{questions}{%
 \section{Questions}\label{questions}}
 
+These questions can be used to check your understanding of the material, beware I periodically include star trek inspired technobabble in the distractors\ldots{}
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   If a molecule is illuminated with polarised light, for it to absorb light:
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    only the energy gap ΔE matters
+  \item
+    only the intensity of light matters, with enough light it will always absorb
+  \item
+    the extinction coefficient governs how much light will be absorbed
+  \item
+    the energy gap and the orientation of the transition dipole moment matter
+  \item
+    the solvent molecules must be aligned with the magnetic field
+  \item
+    only the polarisation of the magnetic field matters
+  \end{enumerate}
+\item
+  For a molecule to display CD absorption then:
 \end{enumerate}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  only the energy gap ΔE matters
+  it must first be excited with polarised light
 \item
-  only the intensity of light matters, with enough light it will always absorb
+  it must be able to be aligned with the electric field
 \item
-  the extinction coefficient governs how much light will be absorbed
+  it must have an inversion centre, i
 \item
-  the energy gap and the orientation of the transition dipole moment matter
+  the instantaneous transition dipole moment must be circularly polarised
 \item
-  the solvent molecules must be aligned with the magnetic field
+  the molecule must display a quadrupole in both magnetic and electric fields
 \item
-  only the polarisation of the magnetic field matters
+  there must be chirality in the molecule
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  For a chromophore to display induced CD absorption then:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  there must be a strong matrix coupling element between the chromophore and the molecule to which it is binding
+\item
+  the chromophore must have a chiral centre
+\item
+  the instantaneous dipole on the chromophore must interact with the electric field of the molecule to which it is binding
+\item
+  the absorption wavelengths of both the chromophore and chiral molecule must overlap
+\item
+  there must be a strong overlap integral between the emission of the chiral molecule and the absorption of the molecule to which it is binding
+\item
+  it must be free in solution
+\item
+  the chromophore must be bound in such a way to a chiral molecule that it takes on chiral optical properties
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  If a molecule has an absorbance and LD as shown below then:
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/LDquestion} 
+
+}
+
+\caption{Isotopic absorbance (top) and LD (bottom)}\label{fig:LDquestion}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the molecule is isotropically distributed in solution
+\item
+  there is only a single transition within the molecule
+\item
+  the molecule is principally aligned parallel to the plane of polarised light
+\item
+  the molecule is principally aligned perpendicular to the plane of polarised light
+\item
+  the transition moments are aligned more parallel to the plane of polarised light
+\item
+  the transition moments are aligned more perpendicular to the plane of polarised light
+\item
+  the sample is degrading under UV light
 \end{enumerate}
 
 \hypertarget{answers}{%
@@ -918,6 +1067,307 @@ When we meet in our next LOIL we will discuss this case study and I will be brea
 \tightlist
 \item
   This time this one matters, but it isn't the only thing\ldots{}
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  For a molecule to display CD absorption then:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it must first be excited with polarised light
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  If it was first excited with polarised light we would be looking at a transient species not the ground state
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  it must be able to be aligned with the electric field
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  For a molecule to absorb there must be alignment of the transition dipole moment with the incident light, but nothing in particular with the CD is unique
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  it must have an inversion centre, i
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  If a molecule has an inversion centre it is NOT chiral
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  the instantaneous transition dipole moment must be circularly polarised
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  the molecule must display a quadrupole in both magnetic and electric fields
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer - oooh two!
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  there must be chirality in the molecule
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Yup - CD only works with chiral molecules (or molecules in a chiral environment (induced CD))
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  For a chromophore to display induced CD absorption then:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  there must be a strong matrix coupling element between the chromophore and the molecule to which it is binding
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  the chromophore must have a chiral centre
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  This will display CD not induced CD
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  the instantaneous dipole on the chromophore must interact with the electric field of the molecule to which it is binding
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  This would be a dipole induced dipole interaction - back to first year bonding theory
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  the absorption wavelengths of both the chromophore and chiral molecule must overlap
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  No reason for this to be true, if they are it would just complicate the spectrum
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  there must be a strong overlap integral between the emission of the chiral molecule and the absorption of the molecule to which it is binding
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Nope, no reason for this to be true
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  it must be free in solution
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  No induced CD if free in solution
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  the chromophore must be bound in such a way to a chiral molecule that it takes on chiral optical properties
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  Yes the chiral choromophore must be in a chiral environment
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  If a molecule has an absorbance and LD as shown below then:
+\end{enumerate}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the molecule is isotropically distributed in solution
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  the LD would be 0
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  there is only a single transition within the molecule
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  this is more likely to be observed by multiple distinct bands in the spectrum
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  the molecule is principally aligned parallel to the plane of polarised light
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  the transition dipole in the molecule has to be aligned with the plane of polarised to absorb
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  the molecule is principally aligned perpendicular to the plane of polarised light
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  ditto
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  the transition moments are aligned more parallel to the plane of polarised light
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  this would have a postive LD
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  the transition moments are aligned more perpendicular to the plane of polarised light
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  yes this one
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  the sample is degrading under UV light
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  gibberish
 \end{itemize}
 
   \bibliography{book.bib,packages.bib}

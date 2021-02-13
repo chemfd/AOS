@@ -69,4 +69,5 @@ If you spot any errors, please message me in Teams or (if this works), report on
 
 ## Edit log {-}
 
+Chapters 1 & 2 130221
 Initial commit 010221

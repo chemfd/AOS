@@ -24,7 +24,7 @@
 <meta name="author" content="Fiona Dickinson" />
 
 
-<meta name="date" content="2021-02-12" />
+<meta name="date" content="2021-02-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,11 +163,16 @@ Figure 2.3: A generic LD spectrum to illustrate features of a sample with region
 LD = \frac{3}{2}A_{\textrm{iso}}S(3 \cos^2 \alpha - 1)
 \tag{2.2}
 \end{equation}\]</span></p>
+<p>The reduced LD, <span class="math inline">\(LD^r\)</span> is often used as it is concentration indpendent and so differences in the spectrum are easily observed:</p>
+<p><span class="math display" id="eq:LDred">\[\begin{equation}
+LD = \frac{A_{\parallel} - A_{\perp}}{A_\textrm{iso}} \frac{3}{2}S(3 \cos^2 \alpha - 1)
+\tag{2.3}
+\end{equation}\]</span></p>
 <p>The LD spectrophotometer looks a lot like the UV/vis (figure <a href="ch-LDCD.html#fig:LDspec">2.4</a>), however we need to add a two position polarising filter (horizontal and vertical), again just like with the UV there is a blank path (or a dummy blank path and a chopper), with similar light sources to the UV/vis (Xe arc and <sup>2</sup>D<sub>2</sub> arc), with the detector again usually being a photodiode.</p>
 <div class="figure" style="text-align: center"><span id="fig:LDspec"></span>
-<img src="images/LDspec.png" alt="A blck diagram of a LD spectrometer including the two position polarising filter." width="60%" />
+<img src="images/LDspec.png" alt="A block diagram of a LD spectrometer including the two position polarising filter." width="60%" />
 <p class="caption">
-Figure 2.4: A blck diagram of a LD spectrometer including the two position polarising filter.
+Figure 2.4: A block diagram of a LD spectrometer including the two position polarising filter.
 </p>
 </div>
 <p>If the sample is solution based it will be isotropic unless there is something to help align the molecules, and consequently there will be no LD signal detected. Consequently there needs to be some form of smple alignment, which is usually achieved in one of two methods (figure @ref{fig:LDcell}):</p>
@@ -184,24 +189,61 @@ Figure 2.5: In order to show an LD signal there needs to be some alignment of th
 </div>
 <div id="circular-dichroism" class="section level2">
 <h2><span class="header-section-number">2.2</span> Circular Dichroism</h2>
+<p>Circular dichroism uses circularly polarised light and looks at the difference between the absorption of left and right hand polarised light. It is much like the use of polarimetry to look at R- and S- enantiomers, but we are combining it with UV, in that a spectrum is scanned and the CD measured over a range of wavelengths.</p>
+<p>An excel resource has been provided on moodle (under ‘Other Resources’) to try to help you understand how two plane waves may be combined to generate circularly polarised light.</p>
 <iframe width="749" height="562" src="https://www.youtube.com/embed/P3U9Hhs_eTc?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+<p>To generate circularly polarised light two orthogonal paths of monochromatic light is passed through a birefringent material (a material with two different refractive indicies depending on the crystal plane). This retards one wave more than the other and when they combine they are out of phase and so combine to form circularly or eliptically polarised light. Calcite is an example of a birefringent material.</p>
+<p>The phase offset will depend upon the thickness of the waveplate, the thickness of this plate can be changed by applying an alternating current causing a change in crystal shape due to teh piezoelectric effect. The bigger the potential difference the bigger the change in the size of the crystal, consequently the crystal can always be adjusted (no matter the wavelength) so that the resultant waves are always π/2 (for a quarter wave plate), or π (for a half wave plate) different in phase. This crystal oscillation is caused by a device called the photoelastic modulator.</p>
+<div class="figure" style="text-align: center"><span id="fig:CD"></span>
+<img src="images/CD.png" alt="A block diagram of a CD spectrometer including the coupled monochromator and photoelastic modulator." width="60%" />
+<p class="caption">
+Figure 2.6: A block diagram of a CD spectrometer including the coupled monochromator and photoelastic modulator.
+</p>
+</div>
+<p>In each 50 Hz cycle we get a measurement of -λ/4 (L) and +λ/4 (R) light. After passing through a sample the R &amp; L circularly polarised light become eliptical (and when we deconvolute the horizontal and vertical waves are no longer of equal amplitude) these combine to give the CD (equation <a href="ch-LDCD.html#fig:CD">2.6</a>).</p>
+<p><span class="math display" id="eq:CD">\[\begin{equation}
+CD = A_{\textrm{L}} - A_{\textrm{R}}
+\tag{2.4}
+\end{equation}\]</span></p>
+<p>It should be noted that there is a difference of opinion as to what reference frame constitutes left and right as far as the polarisation of light goes, papers will always state their convention.</p>
 </div>
 <div id="induced-dichroism" class="section level2">
 <h2><span class="header-section-number">2.3</span> Induced Dichroism</h2>
 <p>Some molecules may themselves not show either LD or CD themselves, but they may have induced dichroism because they are bound to a molecule which does.</p>
-<p>An example of this would be small dye molecules such as YO-Pro-1 (see photochemisry notes and the later workshop materials) which is a small fluorescent dye molecule which binds to DNA. This molecule itself is achrial, and if introduced into LD with laminar flow is too small to align and so the LD should also be zero. However, when bound to DNA both an LD and CD is observed from the sample because it is now in an environment big enough to align with the laminar flow, and</p>
+<div class="figure" style="text-align: center"><span id="fig:DNAbinders"></span>
+<img src="images/DNAbinders.png" alt="The DNA binders ethidium bromide (left) which intercalates between the base pairs of DNA, and Hoechst 33258 (right) which binds in the minor groove of DNA, by curving around the tertiary structure" width="60%" />
+<p class="caption">
+Figure 2.7: The DNA binders ethidium bromide (left) which intercalates between the base pairs of DNA, and Hoechst 33258 (right) which binds in the minor groove of DNA, by curving around the tertiary structure
+</p>
+</div>
+<p>An example of this would be small dye molecules such as YO-Pro-1 (see photochemisry notes and the later workshop materials, and those listed in figure <a href="ch-LDCD.html#fig:DNAbinders">2.7</a> which is a small fluorescent dye molecule which binds to DNA. This molecule itself is achrial, and if introduced into LD with laminar flow is too small to align and so the LD should also be zero. However, when bound to DNA both an LD and CD is observed from the sample because it is now in an environment big enough to align with the laminar flow, and the DNA tertiary structure is chiral and so the dye is binding into a chrial environment and therefore an induced CD is also observed.</p>
+<p>For induced LD, if the molecule remains in free solution the transition dipoles are aligned isotopically and no LD is observed. However if we look at binding to DNA as an example, if the molecule intercalates the transition dipole moment will be <em>more</em> aligned to be perpendicular to the long axis of the molecule and will therefore display a negative LD. If the molecule has a transition dipole moment principally aligned with the long axis of the molecule then it will display a positive LD (figure @ref{fig:inducedLD}).</p>
+<p>We can determine the binding angle (with a few added assumptions) by using equation @ref{eq:LDiso}.</p>
+<div class="figure" style="text-align: center"><span id="fig:inducedLD"></span>
+<img src="images/inducedLD.png" alt="Small molecules under laminar flow are too small to align and so they are aranged isotropically and therefore no LD is observed, however on binding to macromolecules such as DNA the species display an induced LD" width="60%" />
+<p class="caption">
+Figure 2.8: Small molecules under laminar flow are too small to align and so they are aranged isotropically and therefore no LD is observed, however on binding to macromolecules such as DNA the species display an induced LD
+</p>
+</div>
+<p>CD may show ‘unwinding’ (less chirality in the sample) indicating an intercalation of a molecule between the bases of DNA.</p>
+<p>Behaviour like this can tell us a lot about drugs binding to biological molecules, in a manner which is relatively quick and simple.</p>
 </div>
 <div id="workshop-task" class="section level2">
 <h2><span class="header-section-number">2.4</span> Workshop task</h2>
 <p>You will find some slides containing absorbance, LD and CD of YO-Pro-1 and it’s dimer YOYO-1 on Moodle under the CD and LD, alongside these are some questions I want you to think about and answer when looking at the spectra. You should think about general trends and not be too hung up about individual spectra.</p>
-<p>When we meet in our next LOIL we will discuss this case study and I will be breaking you into your selected (or assigned) break out groups to discuss our ideas further, we will then wrap up the session.</p>
+<p>When we meet in our next LOIL we will discuss this case study and I will be breaking you into your selected (or assigned) break out groups to discuss our ideas further, we will then wrap up the session with you sharing your group thoughts (so think about nominating a spokesperson).</p>
+<p>I do not expect you to know a lot about DNA, just know the following:
+- DNA has a negatively charged backbone
+- By intercalating between the basepais the DNA has to stretch (get longer) and unwind slighly
+- A helix repeats about once every 10 bases, with the bases separated by the van der Waals distance (3.4 Å)
+- The bases are about about 86º to the long axis of the molecule</p>
 </div>
 <div id="questions" class="section level2">
 <h2><span class="header-section-number">2.5</span> Questions</h2>
+<p>These questions can be used to check your understanding of the material, beware I periodically include star trek inspired technobabble in the distractors…</p>
 <ol style="list-style-type: decimal">
-<li>If a molecule is illuminated with polarised light, for it to absorb light:</li>
-</ol>
+<li><p>If a molecule is illuminated with polarised light, for it to absorb light:</p>
 <ol style="list-style-type: lower-alpha">
 <li>only the energy gap ΔE matters</li>
 <li>only the intensity of light matters, with enough light it will always absorb</li>
@@ -209,6 +251,46 @@ Figure 2.5: In order to show an LD signal there needs to be some alignment of th
 <li>the energy gap and the orientation of the transition dipole moment matter</li>
 <li>the solvent molecules must be aligned with the magnetic field</li>
 <li>only the polarisation of the magnetic field matters</li>
+</ol></li>
+<li><p>For a molecule to display CD absorption then:</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>it must first be excited with polarised light</li>
+<li>it must be able to be aligned with the electric field</li>
+<li>it must have an inversion centre, i</li>
+<li>the instantaneous transition dipole moment must be circularly polarised</li>
+<li>the molecule must display a quadrupole in both magnetic and electric fields</li>
+<li>there must be chirality in the molecule</li>
+</ol>
+<ol start="3" style="list-style-type: decimal">
+<li>For a chromophore to display induced CD absorption then:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>there must be a strong matrix coupling element between the chromophore and the molecule to which it is binding</li>
+<li>the chromophore must have a chiral centre</li>
+<li>the instantaneous dipole on the chromophore must interact with the electric field of the molecule to which it is binding</li>
+<li>the absorption wavelengths of both the chromophore and chiral molecule must overlap</li>
+<li>there must be a strong overlap integral between the emission of the chiral molecule and the absorption of the molecule to which it is binding</li>
+<li>it must be free in solution</li>
+<li>the chromophore must be bound in such a way to a chiral molecule that it takes on chiral optical properties</li>
+</ol>
+<ol start="4" style="list-style-type: decimal">
+<li>If a molecule has an absorbance and LD as shown below then:</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:LDquestion"></span>
+<img src="images/LDquestion.png" alt="Isotopic absorbance (top) and LD (bottom)" width="60%" />
+<p class="caption">
+Figure 2.9: Isotopic absorbance (top) and LD (bottom)
+</p>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li>the molecule is isotropically distributed in solution</li>
+<li>there is only a single transition within the molecule</li>
+<li>the molecule is principally aligned parallel to the plane of polarised light</li>
+<li>the molecule is principally aligned perpendicular to the plane of polarised light</li>
+<li>the transition moments are aligned more parallel to the plane of polarised light</li>
+<li>the transition moments are aligned more perpendicular to the plane of polarised light</li>
+<li>the sample is degrading under UV light</li>
 </ol>
 </div>
 <div id="answers" class="section level2">
@@ -251,6 +333,135 @@ Figure 2.5: In order to show an LD signal there needs to be some alignment of th
 </ol>
 <ul>
 <li>This time this one matters, but it isn’t the only thing…</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>For a molecule to display CD absorption then:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>it must first be excited with polarised light</li>
+</ol>
+<ul>
+<li>If it was first excited with polarised light we would be looking at a transient species not the ground state</li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>it must be able to be aligned with the electric field</li>
+</ol>
+<ul>
+<li>For a molecule to absorb there must be alignment of the transition dipole moment with the incident light, but nothing in particular with the CD is unique</li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>it must have an inversion centre, i</li>
+</ol>
+<ul>
+<li>If a molecule has an inversion centre it is NOT chiral</li>
+</ul>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>the instantaneous transition dipole moment must be circularly polarised</li>
+</ol>
+<ul>
+<li>Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer</li>
+</ul>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>the molecule must display a quadrupole in both magnetic and electric fields</li>
+</ol>
+<ul>
+<li>Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer - oooh two!</li>
+</ul>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>there must be chirality in the molecule</li>
+</ol>
+<ul>
+<li>Yup - CD only works with chiral molecules (or molecules in a chiral environment (induced CD))</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>For a chromophore to display induced CD absorption then:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>there must be a strong matrix coupling element between the chromophore and the molecule to which it is binding</li>
+</ol>
+<ul>
+<li>Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer</li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>the chromophore must have a chiral centre</li>
+</ol>
+<ul>
+<li>This will display CD not induced CD</li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>the instantaneous dipole on the chromophore must interact with the electric field of the molecule to which it is binding</li>
+</ol>
+<ul>
+<li>This would be a dipole induced dipole interaction - back to first year bonding theory</li>
+</ul>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>the absorption wavelengths of both the chromophore and chiral molecule must overlap</li>
+</ol>
+<ul>
+<li>No reason for this to be true, if they are it would just complicate the spectrum</li>
+</ul>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>there must be a strong overlap integral between the emission of the chiral molecule and the absorption of the molecule to which it is binding</li>
+</ol>
+<ul>
+<li>Nope, no reason for this to be true</li>
+</ul>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>it must be free in solution</li>
+</ol>
+<ul>
+<li>No induced CD if free in solution</li>
+</ul>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>the chromophore must be bound in such a way to a chiral molecule that it takes on chiral optical properties</li>
+</ol>
+<ul>
+<li>Yes the chiral choromophore must be in a chiral environment</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>If a molecule has an absorbance and LD as shown below then:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>the molecule is isotropically distributed in solution</li>
+</ol>
+<ul>
+<li>the LD would be 0</li>
+</ul>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>there is only a single transition within the molecule</li>
+</ol>
+<ul>
+<li>this is more likely to be observed by multiple distinct bands in the spectrum</li>
+</ul>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>the molecule is principally aligned parallel to the plane of polarised light</li>
+</ol>
+<ul>
+<li>the transition dipole in the molecule has to be aligned with the plane of polarised to absorb</li>
+</ul>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>the molecule is principally aligned perpendicular to the plane of polarised light</li>
+</ol>
+<ul>
+<li>ditto</li>
+</ul>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>the transition moments are aligned more parallel to the plane of polarised light</li>
+</ol>
+<ul>
+<li>this would have a postive LD</li>
+</ul>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>the transition moments are aligned more perpendicular to the plane of polarised light</li>
+</ol>
+<ul>
+<li>yes this one</li>
+</ul>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>the sample is degrading under UV light</li>
+</ol>
+<ul>
+<li>gibberish</li>
 </ul>
 
 </div>

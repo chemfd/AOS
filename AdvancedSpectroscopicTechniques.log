@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.24)  12 FEB 2021 17:39
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.24)  13 FEB 2021 01:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1198,43 +1198,64 @@ CULAR DICHROISM)
 
 [20]
 File: images/LDspec.png Graphic file (type QTm)
-<use  "images/LDspec.png" > [21]
+<use  "images/LDspec.png" >
 File: images/LDcell.png Graphic file (type QTm)
-<use  "images/LDcell.png" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
+<use  "images/LDcell.png" > [21]
 Overfull \hbox (23.08342pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 22 \TU/lmr/m/sl/10 CHAPTER 2.  LD (LINEAR DICHROISM) AND CD (CIR
 CULAR DICHROISM)
  []
 
-[22] [23]
-No file AdvancedSpectroscopicTechniques.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 925.
-
+[22]
+Missing character: There is no π in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no π in font [lmroman10-regular]:mapping=tex-text;!
+File: images/CD.png Graphic file (type QTm)
+<use  "images/CD.png" >
+Missing character: There is no λ in font [lmroman10-regular]:mapping=tex-text;!
+Missing character: There is no λ in font [lmroman10-regular]:mapping=tex-text;!
+File: images/DNAbinders.png Graphic file (type QTm)
+<use  "images/DNAbinders.png" > [23]
+File: images/inducedLD.png Graphic file (type QTm)
+<use  "images/inducedLD.png" >
 Overfull \hbox (23.08342pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 24 \TU/lmr/m/sl/10 CHAPTER 2.  LD (LINEAR DICHROISM) AND CD (CIR
 CULAR DICHROISM)
  []
 
-[24]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 925.
+[24] [25]
+File: images/LDquestion.png Graphic file (type QTm)
+<use  "images/LDquestion.png" >
+Overfull \hbox (23.08342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 26 \TU/lmr/m/sl/10 CHAPTER 2.  LD (LINEAR DICHROISM) AND CD (CIR
+CULAR DICHROISM)
+ []
+
+[26] [27]
+Overfull \hbox (23.08342pt too wide) has occurred while \output is active
+\TU/lmr/m/n/10 28 \TU/lmr/m/sl/10 CHAPTER 2.  LD (LINEAR DICHROISM) AND CD (CIR
+CULAR DICHROISM)
+ []
+
+[28]
+No file AdvancedSpectroscopicTechniques.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1375.
+[29]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1375.
 (./AdvancedSpectroscopicTechniques.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 925.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 925.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1375.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1375.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 925.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1375.
  ) 
 Here is how much of TeX's memory you used:
- 24754 strings out of 493005
- 441872 string characters out of 6134596
- 644379 words of memory out of 5000000
- 28456 multiletter control sequences out of 15000+600000
+ 24768 strings out of 493005
+ 442066 string characters out of 6134596
+ 645131 words of memory out of 5000000
+ 28466 multiletter control sequences out of 15000+600000
  9977 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,7n,120p,10426b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,7n,120p,10426b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on AdvancedSpectroscopicTechniques.pdf (24 pages).
+Output written on AdvancedSpectroscopicTechniques.pdf (29 pages).
