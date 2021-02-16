@@ -42,7 +42,7 @@ These assumptions become important as we start to consider more complicated tech
 
 To do this either the path length ($l$) is reduced or the concentration ($c$) of the sample is reduced.
 
-UV/vis is simplest to use on solution based systems as the assumption that the transition dipole moments are randomly aligned (the use of non-randomly aligned transition dipole moments is the basis of the technique linear dichroism (LD)).
+UV/vis is simplest to use on solution based systems as one of the assumptions of the Beer-Lambert law is that the transition dipole moments are randomly aligned. The use of non-randomly aligned transition dipole moments is the basis of the technique linear dichroism (LD) \@ref(sec:LD).
 
 ### The UV/Vis instrument {#sec:UVinstrument}
 
