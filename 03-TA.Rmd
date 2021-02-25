@@ -1,0 +1,5 @@
+# TA Transient Absorption {#ch:TA}
+
+Transient absorption is a technique which looks at the absorption of an excited state (and consequently also the loss (or bleaching) of the ground state). The technique is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using ~infra~-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps & fs time domains.
+
+<iframe width="784" height="588" src="https://www.youtube.com/embed/bOY0vrLZIkQ?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
