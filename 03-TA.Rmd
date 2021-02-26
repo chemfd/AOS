@@ -1,5 +1,73 @@
 # TA Transient Absorption {#ch:TA}
 
-Transient absorption is a technique which looks at the absorption of an excited state (and consequently also the loss (or bleaching) of the ground state). The technique is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using ~infra~-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps & fs time domains.
+Transient absorption is a technique which looks at the absorption of an excited state (and consequently also the loss (or bleaching) of the ground state, Table \@ref(tab:phototrans)). 
+
+The technique is based off the single wavelength time resolved technique flash photolysis which was developed by, and won the Nobel Prize for, George Porter and Ronald Norrish (figure \@ref(fig:flash)). In flash photolysis a single wavelength probe is normally used, the monochromator in figure \@ref(fig:flash) is frequently just a band pass filter rather than the traditional multi component monochromator, other occasions a long pass filter is used with much the same effect.
+
+```{r echo=FALSE, flash, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Flash photolysis setup, with a pump light source exciting the sample orthogonally to the probe.'}
+knitr::include_graphics("images/flash.png")
+```
+
+The technique looks at either the bleaching and recovery of a ground state, or else at the formation and decay of an excited state, these decay or recovery curves may then be fitted to first order kinetics (figure \@ref(fig:flashdecay).
+
+```{r echo=FALSE, flashdecay, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Flash photolysis gives kinetic profiles which either show the formation and decay of an excited state (top) or bleach and recovery of a ground state (bottom).'}
+knitr::include_graphics("images/flashdecay.png")
+```
+
+The technique is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using ~infra~-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps & fs time domains. We will look at other lifetime techniques later in the course, and different lifetime teachniques are often used in conjunction to more fully understand a system.
 
 <iframe width="784" height="588" src="https://www.youtube.com/embed/bOY0vrLZIkQ?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Absorbance transitions
+
+In transient absorbtion we look at the absorption spectra from excited excited states, and under usual circumstances look at how this evolves over time, just like with a ground state absorbance you can have absorption to a number of different levels and these 
+
+Table: (\#tab:phototrans) The excitation pathways from the ground and excited states within a molecule.
+
+| | | |
+|:--------------|:-------------|:---------|
+|| *'Allowed  ground state absorptions'*| |
+|Singlet-singlet absorption || $S_0 + h \nu \longrightarrow S_1$ <br> $S_0 + h \nu \longrightarrow S_2$ $\dots$|
+||*'Forbidden ground state absorptions'*||
+|Singlet-triplet absorption | | $S_0 + h \nu \longrightarrow T_1$ <br> $S_0 + h \nu \longrightarrow T_2$ $\dots$|
+||*'Excited state absorptions'* | |
+|Singlet-singlet absorption <br><br>Triplet-triplet absorption| | $S_1 + h \nu \longrightarrow S_2$ <br> $S_1 + h \nu \longrightarrow S_3$ $\dots$<br>$T_1 + h \nu \longrightarrow T_2$ <br> $T_1 + h \nu \longrightarrow T_3$ $\dots$|
+
+However, the excited state is also lost by the usual deactivation pathways listed in Table \@ref(tab:photoem), and so we can use kinetics to follow the loss of excited state and either the reformation of the ground state or formation of products.
+
+Table: (\#tab:phototrans) The emission pathways from the excited states within a molecule.
+| | | |
+|:--------------|:-------------|:---------|
+|*'Allowed excited state emission'* | | |
+| Singlet-singlet emission| fluorescence | $S_1 \longrightarrow S_0 + h \nu '$|
+|*'Forbidden excited state emission'*|||
+| Triplet-singlet emission | phosphorescence |$T_1 \longrightarrow S_0 + h \nu ''$|
+|*'Other transitions'* | | |
+|Internal conversion <br> <Intersystem crossing> <br> <Intersystem crossing>  | (vibrational relaxation) <br> <br> (vibrational relaxation) | $S_1 \longrightarrow S_0 + heat$ <br> $S_1 \longrightarrow T_1 + heat$ <br> $T_1 \longrightarrow S_0 + heat$|
+|*Other pathways*| | |
+Quenching of excited state <br> <br> <br> Chemistry from excited state| | $S_1 + Q \longrightarrow S_0 + Q +heat$ <br> $S_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $S_1 \longrightarrow$ new/changed molecule |
+
+There are a number of transient excited states which may be observed in transient absorption spectrum which may not be accessible by direct absorption of a photon from the ground state, these states occur at different time delays, and we can often follow pathways of formation of different states.
+
+## Lifetimes in TA
+
+If we study the the TA spectrum with excitation pulses of different durations we get to see different information about the system.
+
+- fs - non-radiative relaxation of higher electronic states and the transition state formation
+- ps - vibrational relaxation
+- ps-ns - radiative relaxation of first excited singlet state (fluorescence)
+- µs - spin-forbidden relaxation of first excited triplet state (phosphorescence)
+- ms - fast photocycles (photolyase, phytochrome, rhodopsin)
+
+Photochemical reactions can occur on all of these time scales
+
+The time resolution is determined by the instrument response function (IRF) which is a response of the pump duration and the detector response and refresh rate.
+
+The decay profiles always follow (spontaneous) first order kinetics, however there may be more than one decay mechanism from any given state, each with their own unique lifetime (\@ref(eq:polyexp)).
+
+\begin{equation}
+[S*]=A \textrm{e}^{-k_1t}+ B \textrm{e}^{-k_2t} \dots
+(\#eq:polyexp)
+\end{equation}
+
+It is relatively easy to fit to bi-exponential decay, however if there are three or more components fitting the lifetimes gets increasingly difficult and so lifetimes with more than three components are only rarely reported.

@@ -24,7 +24,7 @@
 <meta name="author" content="Fiona Dickinson" />
 
 
-<meta name="date" content="2021-02-25" />
+<meta name="date" content="2021-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -101,7 +101,10 @@
 <li class="chapter" data-level="2.5" data-path="ch-UVvisfluorIR.html"><a href="ch-UVvisfluorIR.html#questions"><i class="fa fa-check"></i><b>2.5</b> Questions</a></li>
 <li class="chapter" data-level="2.6" data-path="ch-UVvisfluorIR.html"><a href="ch-UVvisfluorIR.html#answers"><i class="fa fa-check"></i><b>2.6</b> Answers</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="ch-TA.html"><a href="ch-TA.html"><i class="fa fa-check"></i><b>3</b> TA Transient Absorption</a></li>
+<li class="chapter" data-level="3" data-path="ch-TA.html"><a href="ch-TA.html"><i class="fa fa-check"></i><b>3</b> TA Transient Absorption</a><ul>
+<li class="chapter" data-level="3.1" data-path="ch-TA.html"><a href="ch-TA.html#absorbance-transitions"><i class="fa fa-check"></i><b>3.1</b> Absorbance transitions</a></li>
+<li class="chapter" data-level="3.2" data-path="ch-TA.html"><a href="ch-TA.html#lifetimes-in-ta"><i class="fa fa-check"></i><b>3.2</b> Lifetimes in TA</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -124,10 +127,95 @@
             <section class="normal" id="section-">
 <div id="ch:TA" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> TA Transient Absorption</h1>
-<p>Transient absorption is a technique which looks at the absorption of an excited state (and consequently also the loss (or bleaching) of the ground state). The technique is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using <sub>infra</sub>-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps &amp; fs time domains.</p>
+<p>Transient absorption is a technique which looks at the absorption of an excited state (and consequently also the loss (or bleaching) of the ground state, Table <a href="ch-UVvisfluorIR.html#tab:phototrans">1.1</a>).</p>
+<p>The technique is based off the single wavelength time resolved technique flash photolysis which was developed by, and won the Nobel Prize for, George Porter and Ronald Norrish (figure <a href="ch-TA.html#fig:flash">3.1</a>). In flash photolysis a single wavelength probe is normally used, the monochromator in figure <a href="ch-TA.html#fig:flash">3.1</a> is frequently just a band pass filter rather than the traditional multi component monochromator, other occasions a long pass filter is used with much the same effect.</p>
+<div class="figure" style="text-align: center"><span id="fig:flash"></span>
+<img src="images/flash.png" alt="Flash photolysis setup, with a pump light source exciting the sample orthogonally to the probe." width="60%" />
+<p class="caption">
+Figure 3.1: Flash photolysis setup, with a pump light source exciting the sample orthogonally to the probe.
+</p>
+</div>
+<p>The technique looks at either the bleaching and recovery of a ground state, or else at the formation and decay of an excited state, these decay or recovery curves may then be fitted to first order kinetics (figure <a href="ch-TA.html#fig:flashdecay">3.2</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:flashdecay"></span>
+<img src="images/flashdecay.png" alt="Flash photolysis gives kinetic profiles which either show the formation and decay of an excited state (top) or bleach and recovery of a ground state (bottom)." width="60%" />
+<p class="caption">
+Figure 3.2: Flash photolysis gives kinetic profiles which either show the formation and decay of an excited state (top) or bleach and recovery of a ground state (bottom).
+</p>
+</div>
+<p>The technique is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using <sub>infra</sub>-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps &amp; fs time domains. We will look at other lifetime techniques later in the course, and different lifetime teachniques are often used in conjunction to more fully understand a system.</p>
 <iframe width="784" height="588" src="https://www.youtube.com/embed/bOY0vrLZIkQ?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
+<div id="absorbance-transitions" class="section level2">
+<h2><span class="header-section-number">3.1</span> Absorbance transitions</h2>
+<p>In transient absorbtion we look at the absorption spectra from excited excited states, and under usual circumstances look at how this evolves over time, just like with a ground state absorbance you can have absorption to a number of different levels and these</p>
+<table>
+<caption><span id="tab:phototrans">Table 1.1: </span> The excitation pathways from the ground and excited states within a molecule.</caption>
+<colgroup>
+<col width="38%" />
+<col width="35%" />
+<col width="25%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><em>‘Allowed ground state absorptions’</em></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Singlet-singlet absorption</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(S_0 + h \nu \longrightarrow S_1\)</span> <br> <span class="math inline">\(S_0 + h \nu \longrightarrow S_2\)</span> <span class="math inline">\(\dots\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><em>‘Forbidden ground state absorptions’</em></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Singlet-triplet absorption</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(S_0 + h \nu \longrightarrow T_1\)</span> <br> <span class="math inline">\(S_0 + h \nu \longrightarrow T_2\)</span> <span class="math inline">\(\dots\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><em>‘Excited state absorptions’</em></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Singlet-singlet absorption <br><br>Triplet-triplet absorption</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(S_1 + h \nu \longrightarrow S_2\)</span> <br> <span class="math inline">\(S_1 + h \nu \longrightarrow S_3\)</span> <span class="math inline">\(\dots\)</span><br><span class="math inline">\(T_1 + h \nu \longrightarrow T_2\)</span> <br> <span class="math inline">\(T_1 + h \nu \longrightarrow T_3\)</span> <span class="math inline">\(\dots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>However, the excited state is also lost by the usual deactivation pathways listed in Table <a href="#tab:photoem"><strong>??</strong></a>, and so we can use kinetics to follow the loss of excited state and either the reformation of the ground state or formation of products.</p>
+<p>Table: (#tab:phototrans) The emission pathways from the excited states within a molecule.
+| | | |
+|:————–|:————-|:———|
+|<em>‘Allowed excited state emission’</em> | | |
+| Singlet-singlet emission| fluorescence | <span class="math inline">\(S_1 \longrightarrow S_0 + h \nu &#39;\)</span>|
+|<em>‘Forbidden excited state emission’</em>|||
+| Triplet-singlet emission | phosphorescence |<span class="math inline">\(T_1 \longrightarrow S_0 + h \nu &#39;&#39;\)</span>|
+|<em>‘Other transitions’</em> | | |
+|Internal conversion <br> <Intersystem crossing> <br> <Intersystem crossing> | (vibrational relaxation) <br> <br> (vibrational relaxation) | <span class="math inline">\(S_1 \longrightarrow S_0 + heat\)</span> <br> <span class="math inline">\(S_1 \longrightarrow T_1 + heat\)</span> <br> <span class="math inline">\(T_1 \longrightarrow S_0 + heat\)</span>|
+|<em>Other pathways</em>| | |
+Quenching of excited state <br> <br> <br> Chemistry from excited state| | <span class="math inline">\(S_1 + Q \longrightarrow S_0 + Q +heat\)</span> <br> <span class="math inline">\(S_1 + Q \longrightarrow S_0 + Q^\ast +heat\)</span> <br> <span class="math inline">\(T_1 + Q \longrightarrow S_0 + Q +heat\)</span> <br> <span class="math inline">\(T_1 + Q \longrightarrow S_0 + Q^\ast +heat\)</span> <br> <span class="math inline">\(S_1 \longrightarrow\)</span> new/changed molecule |</p>
+<p>There are a number of transient excited states which may be observed in transient absorption spectrum which may not be accessible by direct absorption of a photon from the ground state, these states occur at different time delays, and we can often follow pathways of formation of different states.</p>
+</div>
+<div id="lifetimes-in-ta" class="section level2">
+<h2><span class="header-section-number">3.2</span> Lifetimes in TA</h2>
+<p>If we study the the TA spectrum with excitation pulses of different durations we get to see different information about the system.</p>
+<ul>
+<li>fs - non-radiative relaxation of higher electronic states and the transition state formation</li>
+<li>ps - vibrational relaxation</li>
+<li>ps-ns - radiative relaxation of first excited singlet state (fluorescence)</li>
+<li>µs - spin-forbidden relaxation of first excited triplet state (phosphorescence)</li>
+<li>ms - fast photocycles (photolyase, phytochrome, rhodopsin)</li>
+</ul>
+<p>Photochemical reactions can occur on all of these time scales</p>
+<p>The time resolution is determined by the instrument response function (IRF) which is a response of the pump duration and the detector response and refresh rate.</p>
 
+</div>
 </div>
             </section>
 
