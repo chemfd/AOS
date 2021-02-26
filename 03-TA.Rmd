@@ -2,6 +2,8 @@
 
 Transient absorption is a technique which looks at the absorption of an excited state (and consequently also the loss (or bleaching) of the ground state, Table \@ref(tab:phototrans)). 
 
+## Flash photolysis
+
 The technique is based off the single wavelength time resolved technique flash photolysis which was developed by, and won the Nobel Prize for, George Porter and Ronald Norrish (figure \@ref(fig:flash)). In flash photolysis a single wavelength probe is normally used, the monochromator in figure \@ref(fig:flash) is frequently just a band pass filter rather than the traditional multi component monochromator, other occasions a long pass filter is used with much the same effect.
 
 ```{r echo=FALSE, flash, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Flash photolysis setup, with a pump light source exciting the sample orthogonally to the probe.'}
@@ -14,9 +16,7 @@ The technique looks at either the bleaching and recovery of a ground state, or e
 knitr::include_graphics("images/flashdecay.png")
 ```
 
-The technique is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using ~infra~-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps & fs time domains. We will look at other lifetime techniques later in the course, and different lifetime teachniques are often used in conjunction to more fully understand a system.
 
-<iframe width="784" height="588" src="https://www.youtube.com/embed/bOY0vrLZIkQ?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Absorbance transitions
 
@@ -71,3 +71,15 @@ The decay profiles always follow (spontaneous) first order kinetics, however the
 \end{equation}
 
 It is relatively easy to fit to bi-exponential decay, however if there are three or more components fitting the lifetimes gets increasingly difficult and so lifetimes with more than three components are only rarely reported.
+
+## Transient absorbance
+
+The technique of transient absorbance is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using ~infra~-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps & fs time domains. We will look at other lifetime techniques later in the course, and different lifetime teachniques are often used in conjunction to more fully understand a system.
+
+<iframe width="784" height="588" src="https://www.youtube.com/embed/bOY0vrLZIkQ?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The instrumental setup for a transient absorbance experiment is almost  exactly the same as that used in flash photolysis, however TA has the ability to scan wavelengths and so there is a monochromator instead of a bandpass filter, and consequently this means that the probe light source has to be a 'white light' source (figure \@ref(fig:TAsetup)).  
+
+```{r echo=FALSE,TAsetup, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Flash photolysis gives kinetic profiles which either show the formation and decay of an excited state (top) or bleach and recovery of a ground state (bottom).'}
+knitr::include_graphics("images/TA.setup.png")
+```
