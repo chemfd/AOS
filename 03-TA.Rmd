@@ -160,8 +160,18 @@ There are, however, a number of limitations with the technique of TA, some only 
 
 Firstly it must be ensured that the repetition rate of the laser is slower than the time taken for the ground state to recover, if this is not possible the sample maybe 'refreshed' by use of continuous flow of solution. It must also be ensured that not only about 10% of the molecules are excited with the pump pulse, this ensures that both the ground and excited state should still be in regions where they are obeying the Beer-Lambert law. If too much excited state is generated secondary effects such as excited state annihilation, orientational saturation (all molecules alligned are saturated), or saturation (where stimulated emmission can have effects) can complicate analysis
 
-Secondly use of the magic angle (at all time domains) reduces the effect of orientation dynamics (at this angle there should be no overlap of wave-vectors of pump or probe paths).
+Secondly use of the magic angle (at all time domains) reduces the effect of orientation dynamics (at this angle there should be no overlap of wave-vectors of pump or probe paths). Laser light is polarised, and so selectively excites transition dipoles aligned with the wave vector, depolarisation of this absorption occurs due ot later rotational diffusion within the system. The magic angle ensures that the 'average' of these depolarations is zero ultimately giving a better signal to noise - the same technique is also used in NMR spectroscopy.
 
 Specific to ultrafast spectroscopies is the effect of bandbroadening due to the Heisenberg uncertainty principle of the short light pulses, with supposedly 'monochromatic' laser pulses often having FWHM peak withs of 100 or more nm. This can mean it is difficult to only excite particular transitions.
 
 Finally there may be articfacts (such as scattering or emission) which can complicate spectra, especially at early time scales.
+
+## Workshop task
+
+I have made the full paper to the research task available on moodle, but have also included a second paper which I highly recommend reading, which was written by Ahmed Zewail, who won the Nobel Prize in chemistry for inventing fs spectroscopy, it is a paper designed for beginners and is a very easy read.
+
+You will find some slides on moodle which show the transient absorption spectra at different time delays of a model photosynthetic system. The slides also give details on the wavelength of ground state absorbance of the two chromophores in the system. Two sets of data are shown, the spectrum as it evolves over time, and the absorbances at two single wavelengths as the evolve over time.
+
+As before questions are posed next to the spectra - try to think what is excited when in the system, what factors complicate the spectra (additional transition states, chemical products etc) and try to build a model of how energy is moved around the system.
+
+As before my interpretation of the results (and in this case the energy profile model from the research paper)are also included in the discussion, but try and draw your own conclusions first.
