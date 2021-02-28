@@ -36,6 +36,7 @@ Table: (\#tab:phototrans) The excitation pathways from the ground and excited st
 However, the excited state is also lost by the usual deactivation pathways listed in Table \@ref(tab:photoem), and so we can use kinetics to follow the loss of excited state and either the reformation of the ground state or formation of products.
 
 Table: (\#tab:phototrans) The emission pathways from the excited states within a molecule.
+
 | | | |
 |:--------------|:-------------|:---------|
 |*'Allowed excited state emission'* | | |
