@@ -24,7 +24,7 @@
 <meta name="author" content="Fiona Dickinson" />
 
 
-<meta name="date" content="2021-02-26" />
+<meta name="date" content="2021-02-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -102,8 +102,13 @@
 <li class="chapter" data-level="2.6" data-path="ch-UVvisfluorIR.html"><a href="ch-UVvisfluorIR.html#answers"><i class="fa fa-check"></i><b>2.6</b> Answers</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="ch-TA.html"><a href="ch-TA.html"><i class="fa fa-check"></i><b>3</b> TA Transient Absorption</a><ul>
-<li class="chapter" data-level="3.1" data-path="ch-TA.html"><a href="ch-TA.html#absorbance-transitions"><i class="fa fa-check"></i><b>3.1</b> Absorbance transitions</a></li>
-<li class="chapter" data-level="3.2" data-path="ch-TA.html"><a href="ch-TA.html#lifetimes-in-ta"><i class="fa fa-check"></i><b>3.2</b> Lifetimes in TA</a></li>
+<li class="chapter" data-level="3.1" data-path="ch-TA.html"><a href="ch-TA.html#flash-photolysis"><i class="fa fa-check"></i><b>3.1</b> Flash photolysis</a></li>
+<li class="chapter" data-level="3.2" data-path="ch-TA.html"><a href="ch-TA.html#absorbance-transitions"><i class="fa fa-check"></i><b>3.2</b> Absorbance transitions</a></li>
+<li class="chapter" data-level="3.3" data-path="ch-TA.html"><a href="ch-TA.html#lifetimes-in-ta"><i class="fa fa-check"></i><b>3.3</b> Lifetimes in TA</a></li>
+<li class="chapter" data-level="3.4" data-path="ch-TA.html"><a href="ch-TA.html#transient-absorbance"><i class="fa fa-check"></i><b>3.4</b> Transient absorbance</a></li>
+<li class="chapter" data-level="3.5" data-path="ch-TA.html"><a href="ch-TA.html#methods-of-measuring-ta-spectra"><i class="fa fa-check"></i><b>3.5</b> Methods of measuring TA spectra</a></li>
+<li class="chapter" data-level="3.6" data-path="ch-TA.html"><a href="ch-TA.html#ultrafast-ta-spectroscopy"><i class="fa fa-check"></i><b>3.6</b> Ultrafast TA spectroscopy</a></li>
+<li class="chapter" data-level="3.7" data-path="ch-TA.html"><a href="ch-TA.html#limitations-of-ta"><i class="fa fa-check"></i><b>3.7</b> Limitations of TA</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -128,6 +133,8 @@
 <div id="ch:TA" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> TA Transient Absorption</h1>
 <p>Transient absorption is a technique which looks at the absorption of an excited state (and consequently also the loss (or bleaching) of the ground state, Table <a href="ch-UVvisfluorIR.html#tab:phototrans">1.1</a>).</p>
+<div id="flash-photolysis" class="section level2">
+<h2><span class="header-section-number">3.1</span> Flash photolysis</h2>
 <p>The technique is based off the single wavelength time resolved technique flash photolysis which was developed by, and won the Nobel Prize for, George Porter and Ronald Norrish (figure <a href="ch-TA.html#fig:flash">3.1</a>). In flash photolysis a single wavelength probe is normally used, the monochromator in figure <a href="ch-TA.html#fig:flash">3.1</a> is frequently just a band pass filter rather than the traditional multi component monochromator, other occasions a long pass filter is used with much the same effect.</p>
 <div class="figure" style="text-align: center"><span id="fig:flash"></span>
 <img src="images/flash.png" alt="Flash photolysis setup, with a pump light source exciting the sample orthogonally to the probe." width="60%" />
@@ -142,11 +149,9 @@ Figure 3.1: Flash photolysis setup, with a pump light source exciting the sample
 Figure 3.2: Flash photolysis gives kinetic profiles which either show the formation and decay of an excited state (top) or bleach and recovery of a ground state (bottom).
 </p>
 </div>
-<p>The technique is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using <sub>infra</sub>-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps &amp; fs time domains. We will look at other lifetime techniques later in the course, and different lifetime teachniques are often used in conjunction to more fully understand a system.</p>
-<iframe width="784" height="588" src="https://www.youtube.com/embed/bOY0vrLZIkQ?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+</div>
 <div id="absorbance-transitions" class="section level2">
-<h2><span class="header-section-number">3.1</span> Absorbance transitions</h2>
+<h2><span class="header-section-number">3.2</span> Absorbance transitions</h2>
 <p>In transient absorbtion we look at the absorption spectra from excited excited states, and under usual circumstances look at how this evolves over time, just like with a ground state absorbance you can have absorption to a number of different levels and these</p>
 <table>
 <caption><span id="tab:phototrans">Table 1.1: </span> The excitation pathways from the ground and excited states within a molecule.</caption>
@@ -203,7 +208,7 @@ Quenching of excited state <br> <br> <br> Chemistry from excited state| | <span 
 <p>There are a number of transient excited states which may be observed in transient absorption spectrum which may not be accessible by direct absorption of a photon from the ground state, these states occur at different time delays, and we can often follow pathways of formation of different states.</p>
 </div>
 <div id="lifetimes-in-ta" class="section level2">
-<h2><span class="header-section-number">3.2</span> Lifetimes in TA</h2>
+<h2><span class="header-section-number">3.3</span> Lifetimes in TA</h2>
 <p>If we study the the TA spectrum with excitation pulses of different durations we get to see different information about the system.</p>
 <ul>
 <li>fs - non-radiative relaxation of higher electronic states and the transition state formation</li>
@@ -214,6 +219,86 @@ Quenching of excited state <br> <br> <br> Chemistry from excited state| | <span 
 </ul>
 <p>Photochemical reactions can occur on all of these time scales</p>
 <p>The time resolution is determined by the instrument response function (IRF) which is a response of the pump duration and the detector response and refresh rate.</p>
+<p>The decay profiles always follow (spontaneous) first order kinetics, however there may be more than one decay mechanism from any given state, each with their own unique lifetime (<a href="ch-TA.html#eq:polyexp">(3.1)</a>).</p>
+<p><span class="math display" id="eq:polyexp">\[\begin{equation}
+[S*]=A \textrm{e}^{-k_1t}+ B \textrm{e}^{-k_2t} \dots
+\tag{3.1}
+\end{equation}\]</span></p>
+<p>It is relatively easy to fit to bi-exponential decay, however if there are three or more components fitting the lifetimes gets increasingly difficult and so lifetimes with more than three components are only rarely reported.</p>
+</div>
+<div id="transient-absorbance" class="section level2">
+<h2><span class="header-section-number">3.4</span> Transient absorbance</h2>
+<p>The technique of transient absorbance is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using <sub>infra</sub>-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps &amp; fs time domains. We will look at other lifetime techniques later in the course, and different lifetime teachniques are often used in conjunction to more fully understand a system.</p>
+<iframe width="784" height="588" src="https://www.youtube.com/embed/bOY0vrLZIkQ?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>The instrumental setup for a transient absorbance experiment is almost exactly the same as that used in flash photolysis, however TA has the ability to scan wavelengths and so there is a monochromator instead of a bandpass filter, and consequently this means that the probe light source has to be a ‘white light’ source (figure <a href="ch-TA.html#fig:TAsetup">3.3</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:TAsetup"></span>
+<img src="images/TAsetup.png" alt="A typical TA looks much the same as a flash photolysis setup however a white light probe is used so spectral detail may be observed." width="60%" />
+<p class="caption">
+Figure 3.3: A typical TA looks much the same as a flash photolysis setup however a white light probe is used so spectral detail may be observed.
+</p>
+</div>
+<p>The pump light source has to provide an efficient start of the dynamicss, consequently it should be a (relatively)short pulse relative to the time domain being studied and be of high intensity to generate measurable quantities of excited state. As such the pump light source is frequently a ‘q-switched’ laser of a suitable wavelength to be absorbed by the system, it doesn’t matter what wavelengths are being probed, it only matters that the pump light source can generate excited states.</p>
+<p>For ns and µs studies it is usual for the probe light source to be steady state, with a Xe arc lamp being suitable for the low energy UV, visable and near IR region. Other wavelength sources may be used for other techniques such as Raman, IR and EPR. ‘Ultrafast’ systems (ps and fs) have a more complicated probe light source which is described elsewhere.</p>
+<p>For TA experiments the optical density of the sample should be higher than for normal steady state absorbance, with typical absorbances of around 0.3-0.5 cm<sup>-1</sup> being typical, it is a balance between generating enough excited state to be measurable and keeping a linear response such that we can quantify the reactions taking place.</p>
+</div>
+<div id="methods-of-measuring-ta-spectra" class="section level2">
+<h2><span class="header-section-number">3.5</span> Methods of measuring TA spectra</h2>
+<p>There are two methods of measuring TA data: kinetic mode and spectral mode.</p>
+<p>Kinetic mode looks at a single wavelength and measures the evolution of the signal at that wavelength over time, then the process is repeated at another wavelength until all wavelengths of interest are covered and the spectrum is built.</p>
+<p>Spectral mode is where the whole spectrum is recorded at a given time delay, and then the time delay is changed and the spectrum recorded again, this is repeated until all time delays of interest have been studied.</p>
+<p>Spectral mode is limited on how quickly the whole spectrum can be recorded, however the increasing sensitivity and responsiveness of CCDs has increased their use in TA measurements in recent years.</p>
+<p>The transient absorption spectrum looks at the difference of absorbance at each wavelength between before an excitation pulse (with everythign in the ground state) and after. From the Beer-Lambert law:</p>
+<p>The absorbance of the ground state is:</p>
+<p><span class="math display" id="eq:TAground">\[\begin{equation}
+A_0=\varepsilon l [S]_0
+\tag{3.2}
+\end{equation}\]</span></p>
+<p>and the absorbance after excitation is:</p>
+<p><span class="math display" id="eq:TAex">\[\begin{equation}
+A_t=\varepsilon l ([S]_0-[S^*]) + \varepsilon^*l[S*]
+\tag{3.3}
+\end{equation}\]</span></p>
+<p>this is the sum of the absorbance of any remaining ground state and the absorbance of the excited state at the same wavelength.</p>
+<p>The transient absorbance signal is given by, <span class="math inline">\(\Delta A\)</span>, which is equation <a href="ch-TA.html#eq:TAex">(3.3)</a> - equation <a href="ch-TA.html#eq:TAground">(3.2)</a>:</p>
+<p><span class="math display" id="eq:TA">\[\begin{equation}
+\Delta A = A_t-A_0
+\tag{3.4}
+\end{equation}\]</span></p>
+<p>rearranging these equations gives:</p>
+<p><span class="math display" id="eq:TA">\[\begin{equation}
+\Delta A = (\varepsilon ^* - \varepsilon) l [S^*]
+\tag{3.4}
+\end{equation}\]</span></p>
+<p>in each of these cases <span class="math inline">\([S^*]\)</span> can be the concentration of any of the excited states.</p>
+<p>The TA spectrum therefore looks like evolving peaks (figure <a href="ch-TA.html#fig:TAevolution">3.4</a>)with positive peaks relating to new excited state absorptions, and negative peaks related to the loss of ground state. Just as with CD and LD where difference spectrum are also recorded it should not be forgotten that both ground and excited state peaks may occur in the same region of the spectrum.</p>
+<p>Any peaks which remain after a long time delay are likely ‘products’ of the reaction, it does not have to be that all of the ground state is recovered.</p>
+<div class="figure" style="text-align: center"><span id="fig:TAevolution"></span>
+<img src="images/TAevolution.png" alt="Positive peaks show formation of new bands, negative bands the loss of ground state, the profiles are followed over increasing time delays showing how energy moves around the system." width="60%" />
+<p class="caption">
+Figure 3.4: Positive peaks show formation of new bands, negative bands the loss of ground state, the profiles are followed over increasing time delays showing how energy moves around the system.
+</p>
+</div>
+</div>
+<div id="ultrafast-ta-spectroscopy" class="section level2">
+<h2><span class="header-section-number">3.6</span> Ultrafast TA spectroscopy</h2>
+<p>Ultrafast (ps and fs) TA spectroscopy is a special subset of TA because it is impossible to get this time resolution with a typical TA set up. Instead a single pulsed laser source is used for both pump and probe, in this case the time delay is produced by increasing slightly the length of the path of light of the probe light source (figure <a href="ch-TA.html#fig:fssetup">3.5</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:fssetup"></span>
+<img src="images/fssetup.png" alt="An ultrafast TA setup only includes a single light source, the ultrafast laser source, this acts as both pump and probe. The probe light is delayed by an extension in the light path and passed through a non-linear continuum generator before reaching the sample cell." width="60%" />
+<p class="caption">
+Figure 3.5: An ultrafast TA setup only includes a single light source, the ultrafast laser source, this acts as both pump and probe. The probe light is delayed by an extension in the light path and passed through a non-linear continuum generator before reaching the sample cell.
+</p>
+</div>
+<p>The probe light source is passed through a continuum generator (a non-linear optical device which gives and smooth white light output), this light is passed through the sample at different time delays to generate a spectral mode signal. In the case of ultrafast spectroscopy the two pulses do not arrive in the sample orthogonal to each other, but instead are offset by ‘the magic angle’ (approximately 54.7º (<span class="math inline">\(\arccos \frac{1}{\sqrt{3}}\)</span>)) this reduces any anisotropic effects (such as molecular rotations or polarisation) increasing the spectral resolution.</p>
+<p>The detector is usually a CCD, with a preceeding 2-dimensional diffraction grating to record the whole spectrum for each sampling.</p>
+</div>
+<div id="limitations-of-ta" class="section level2">
+<h2><span class="header-section-number">3.7</span> Limitations of TA</h2>
+<p>There are, however, a number of limitations with the technique of TA, some only particular to fs spectroscopy, and some are easier to account for than others.</p>
+<p>Firstly it must be ensured that the repetition rate of the laser is slower than the time taken for the ground state to recover, if this is not possible the sample maybe ‘refreshed’ by use of continuous flow of solution. It must also be ensured that not only about 10% of the molecules are excited with the pump pulse, this ensures that both the ground and excited state should still be in regions where they are obeying the Beer-Lambert law. If too much excited state is generated secondary effects such as excited state annihilation, orientational saturation (all molecules alligned are saturated), or saturation (where stimulated emmission can have effects) can complicate analysis</p>
+<p>Secondly use of the magic angle (at all time domains) reduces the effect of orientation dynamics (at this angle there should be no overlap of wave-vectors of pump or probe paths).</p>
+<p>Specific to ultrafast spectroscopies is the effect of bandbroadening due to the Heisenberg uncertainty principle of the short light pulses, with supposedly ‘monochromatic’ laser pulses often having FWHM peak withs of 100 or more nm. This can mean it is difficult to only excite particular transitions.</p>
+<p>Finally there may be articfacts (such as scattering or emission) which can complicate spectra, especially at early time scales.</p>
 
 </div>
 </div>

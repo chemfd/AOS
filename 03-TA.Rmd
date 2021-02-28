@@ -80,6 +80,88 @@ The technique of transient absorbance is used at a variety of wavelength ranges 
 
 The instrumental setup for a transient absorbance experiment is almost  exactly the same as that used in flash photolysis, however TA has the ability to scan wavelengths and so there is a monochromator instead of a bandpass filter, and consequently this means that the probe light source has to be a 'white light' source (figure \@ref(fig:TAsetup)).  
 
-```{r echo=FALSE,TAsetup, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Flash photolysis gives kinetic profiles which either show the formation and decay of an excited state (top) or bleach and recovery of a ground state (bottom).'}
-knitr::include_graphics("images/TA.setup.png")
+```{r echo=FALSE, TAsetup, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A typical TA looks much the same as a flash photolysis setup however a white light probe is used so spectral detail may be observed.'}
+knitr::include_graphics("images/TAsetup.png")
 ```
+
+The pump light source has to provide an efficient start of the dynamicss, consequently it should be a (relatively)short pulse relative to the time domain being studied and be of high intensity to generate measurable quantities of excited state. As such the pump light source is frequently a 'q-switched' laser of a suitable wavelength to be absorbed by the system, it doesn't matter what wavelengths are being probed, it only matters that the pump light source can generate excited states.
+
+For ns and µs studies it is usual for the probe light source to be steady state, with a Xe arc lamp being suitable for  the low energy UV, visable and near IR region. Other wavelength sources may be used for other techniques such as Raman, IR and EPR. 'Ultrafast' systems (ps and fs) have a more complicated probe light source which is described elsewhere.
+
+For TA experiments the optical density of the sample should be higher than for normal steady state absorbance, with typical absorbances of around 0.3-0.5 cm^-1^ being typical, it is a balance between generating enough excited state to be measurable and keeping a linear response such that we can quantify the reactions taking place.
+
+## Methods of measuring TA spectra
+
+There are two methods of measuring TA data: kinetic mode and spectral mode.
+
+Kinetic mode looks at a single wavelength and measures the evolution of the signal at that wavelength over time, then the process is repeated at another wavelength until all wavelengths of interest are covered and the spectrum is built.
+
+Spectral mode is where the whole spectrum is recorded at a given time delay, and then the time delay is changed and the spectrum recorded again, this is repeated until all time delays of interest have been studied.
+
+Spectral mode is limited on how quickly the whole spectrum can be recorded, however the increasing sensitivity and responsiveness of CCDs has increased their use in TA measurements in recent years.
+
+The transient absorption spectrum looks at the difference of absorbance at each wavelength between before an excitation pulse (with everythign in the ground state) and after. From the Beer-Lambert law:
+
+The absorbance of the ground state is:
+
+\begin{equation}
+A_0=\varepsilon l [S]_0
+(\#eq:TAground)
+\end{equation}
+
+and the absorbance after excitation is:
+
+\begin{equation}
+A_t=\varepsilon l ([S]_0-[S^*]) + \varepsilon^*l[S*]
+(\#eq:TAex)
+\end{equation}
+
+this is the sum of the absorbance of any remaining ground state and the absorbance of the excited state at the same wavelength.
+
+The transient absorbance signal is given by, $\Delta A$, which is equation \@ref(eq:TAex) - equation \@ref(eq:TAground):
+
+\begin{equation}
+\Delta A = A_t-A_0
+(\#eq:TA)
+\end{equation}
+
+rearranging these equations gives:
+
+\begin{equation}
+\Delta A = (\varepsilon ^* - \varepsilon) l [S^*]
+(\#eq:TA)
+\end{equation}
+
+in each of these cases $[S^*]$ can be the concentration of any of the excited states.
+
+The TA spectrum therefore looks like evolving peaks (figure \@ref(fig:TAevolution))with positive peaks relating to new excited state absorptions, and negative peaks related to the loss of ground state. Just as with CD and LD where difference spectrum are also recorded it should not be forgotten that both ground and excited state peaks may occur in the same region of the spectrum.
+
+Any peaks which remain after a long time delay are likely 'products' of the reaction, it does not have to be that all of the ground state is recovered.
+
+```{r echo=FALSE, TAevolution, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Positive peaks show formation of new bands, negative bands the loss of ground state, the profiles are followed over increasing time delays showing how energy moves around the system.'}
+knitr::include_graphics("images/TAevolution.png")
+```
+
+## Ultrafast TA spectroscopy
+
+Ultrafast (ps and fs) TA spectroscopy is a special subset of TA because it is impossible to get this time resolution with a typical TA set up. Instead a single pulsed laser source is used for both pump and probe, in this case the time delay is produced by increasing slightly the length of the path of light of the probe light source (figure \@ref(fig:fssetup)).
+
+```{r echo=FALSE, fssetup, out.width='60%', fig.show='hold', fig.align='center', fig.cap='An ultrafast TA setup only includes a single light source, the ultrafast laser source, this acts as both pump and probe. The probe light is delayed by an extension in the light path and passed through a non-linear continuum generator before reaching the sample cell.'}
+knitr::include_graphics("images/fssetup.png")
+```
+
+The probe light source is passed through a continuum generator (a non-linear optical device which gives and smooth white light output), this light is passed through the sample at different time delays to generate a spectral mode signal. In the case of ultrafast spectroscopy the two pulses do not arrive in the sample orthogonal to each other, but instead are offset by 'the magic angle' (approximately 54.7º ($\arccos \frac{1}{\sqrt{3}}$)) this reduces any anisotropic effects (such as molecular rotations or polarisation) increasing the spectral resolution.
+
+The detector is usually a CCD, with a preceeding 2-dimensional diffraction grating to record the whole spectrum for each sampling.
+
+## Limitations of TA
+
+There are, however, a number of limitations with the technique of TA, some only particular to fs spectroscopy,  and some are easier to account for than others. 
+
+Firstly it must be ensured that the repetition rate of the laser is slower than the time taken for the ground state to recover, if this is not possible the sample maybe 'refreshed' by use of continuous flow of solution. It must also be ensured that not only about 10% of the molecules are excited with the pump pulse, this ensures that both the ground and excited state should still be in regions where they are obeying the Beer-Lambert law. If too much excited state is generated secondary effects such as excited state annihilation, orientational saturation (all molecules alligned are saturated), or saturation (where stimulated emmission can have effects) can complicate analysis
+
+Secondly use of the magic angle (at all time domains) reduces the effect of orientation dynamics (at this angle there should be no overlap of wave-vectors of pump or probe paths).
+
+Specific to ultrafast spectroscopies is the effect of bandbroadening due to the Heisenberg uncertainty principle of the short light pulses, with supposedly 'monochromatic' laser pulses often having FWHM peak withs of 100 or more nm. This can mean it is difficult to only excite particular transitions.
+
+Finally there may be articfacts (such as scattering or emission) which can complicate spectra, especially at early time scales.

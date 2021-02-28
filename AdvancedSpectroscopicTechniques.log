@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.24)  26 FEB 2021 01:00
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.24)  28 FEB 2021 01:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -845,6 +845,9 @@ LaTeX Warning: Label `tab:phototrans' multiply defined.
 
 LaTeX Warning: Label `tab:phototrans' multiply defined.
 
+
+LaTeX Warning: Label `eq:TA' multiply defined.
+
 )
 \openout1 = `AdvancedSpectroscopicTechniques.aux'.
 
@@ -1260,31 +1263,38 @@ File: images/flash.png Graphic file (type QTm)
 File: images/flashdecay.png Graphic file (type QTm)
 <use  "images/flashdecay.png" > [31] [32]
 
-LaTeX Warning: Reference `tab:photoem' on page 33 undefined on input line 1463.
+LaTeX Warning: Reference `tab:photoem' on page 33 undefined on input line 1464.
 
 
-No file AdvancedSpectroscopicTechniques.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1504.
 [33]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1504.
+File: images/TAsetup.png Graphic file (type QTm)
+<use  "images/TAsetup.png" > [34] [35]
+File: images/TAevolution.png Graphic file (type QTm)
+<use  "images/TAevolution.png" >
+File: images/fssetup.png Graphic file (type QTm)
+<use  "images/fssetup.png" > [36] [37]
+No file AdvancedSpectroscopicTechniques.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1625.
+[38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1625.
 (./AdvancedSpectroscopicTechniques.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1504.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1504.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1625.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1625.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1504.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1625.
  ) 
 Here is how much of TeX's memory you used:
- 24782 strings out of 493005
- 442237 string characters out of 6134596
- 645629 words of memory out of 5000000
- 28478 multiletter control sequences out of 15000+600000
+ 24805 strings out of 493005
+ 442565 string characters out of 6134596
+ 646768 words of memory out of 5000000
+ 28498 multiletter control sequences out of 15000+600000
  9977 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  58i,7n,120p,10426b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on AdvancedSpectroscopicTechniques.pdf (33 pages).
+Output written on AdvancedSpectroscopicTechniques.pdf (38 pages).
