@@ -1,4 +1,4 @@
-# Fluorescence Lifetime {#ch:fluorlif}
+# Fluorescence Excitation and Lifetime {#ch:fluorlif}
 
 Whilst this technique is generally referred to as fluroescence lifetime the principles are equally applicable to longer lifetimes. You will already know fluorescence refers to emission of a photon without a change of spin, phosphorescence, emission of a photon with a change of spin, however I will also use the term emission which I will use either when the mode of emission is either irrelevant or unknown (such as with emission from quantum dots).
 
@@ -21,10 +21,10 @@ However, it can be the case that there is more than one emissive deactivation pr
 
 ## Steady State fluorescence
 
-Fluorimeters have two modes of operation, one mode where the excitation wavelength is fixed and the emission is scanned, the version of the technique which we usually think of. The second technique will be discussed later in the course, where the emission wavelength is fixed and the excitation is scanned.
+Fluorimeters have two modes of operation, one mode where the excitation wavelength is fixed and the emission is scanned, the version of the technique which we usually think of. The second technique is discussed in section \@ref(sec:excitation), where the emission wavelength is fixed and the excitation is scanned.
 
-```{r echo=FALSE, fluorch, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A fluorimeter with a scanning excitation and emission monochromator, sources are usually xenon arc lamps, and detectors PMTs.'}
-knitr::include_graphics("images/fluorescence.png")
+```{r echo=FALSE, fluorch, out.width='80%', fig.show='hold', fig.align='center', fig.cap='A fluorimeter with a scanning excitation and emission monochromator, sources are usually xenon arc lamps, and detectors PMTs.'}
+knitr::include_graphics("images/fluorimeter.png")
 ```
 
 This necessitates two monochromators, although the most simple instruments will just use band pass filters for excitaiton and emission (and you may have used these instruments in the lab). Fluorescence is measured orthogonally to the excitation, reducing optical artifacts and allowing easy separation of the incident and excident light. Monochromators include slits, which may be used to alter the intensity of incident light reaching the detector (or sample), but this also affects what fine details may be observed in the spectrum.
@@ -33,8 +33,28 @@ This necessitates two monochromators, although the most simple instruments will 
 knitr::include_graphics("images/waterramanslits.png")
 ```
 
-Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample.
+Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample. Conversely we can increase the signal using the same variables, this is the case with signal to noise where the signal increases with $\sqrt{t}$ (or other variable), so quadrupling the integration time would increase the signal relative to the noise by two.
 
-```{r echo=FALSE, saturation, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Both CCDs and PMTs are easily saturated where the emission recorded is lower than would be predicted by the Beer-Lambert law.'}
+```{r echo=FALSE, saturation, out.width='40%', fig.show='hold', fig.align='center', fig.cap='Both CCDs and PMTs are easily saturated where the emission recorded is lower than would be predicted by the Beer-Lambert law.'}
 knitr::include_graphics("images/saturation.png")
+```
+
+When we refer to fluorescence spectroscopy we are normally referring to steady state emisssion spectroscopy. This is the case where we have constant illumination of our sample and we generate a 'steady state' of excited molecules.
+
+### Kasha's rule
+
+We have already seen from earlier courses that the quantum yield of emission is independent of the excitation wavelength (this is Kasha's rule)
+
+```{r echo=FALSE, kasha, out.width='40%', fig.show='hold', fig.align='center', fig.cap='The absorbance (left) and emmission (right) of rhodamine 6G, the intensity of the emission depends on the absorbance at the excitation wavelength. The spectra have been normalised such that the absorbance at the maximum and emission at that excitation wavelength are the same size.'}
+knitr::include_graphics("images/kasha.png")
+```
+
+This also gives us another way to change the intensity of emission from a sample, by changing the excitation wavelength.
+
+## Excitation {#sec:excitation}
+
+In earlier courses we have come across energy transfer processes (FRET and Dexter) whereby we said that there could be energy transfer from a donor to an acceptor at a distance, all that was requried was an overlap integral between the emission of the donor and absorption of the acceptor and alignment of the transition dipole moments in each molecule.
+
+```{r echo=FALSE, FRET, out.width='40%', fig.show='hold', fig.align='center', fig.cap='The absorbance and emission of a donor and acceptor with the highlighted region being the spectral overlap integral which allows for energy transfer between the two species.'}
+knitr::include_graphics("images/FRET.png")
 ```
