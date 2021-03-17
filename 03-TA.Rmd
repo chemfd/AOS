@@ -35,7 +35,7 @@ Table: (\#tab:phototrans) The excitation pathways from the ground and excited st
 
 However, the excited state is also lost by the usual deactivation pathways listed in Table \@ref(tab:photoem), and so we can use kinetics to follow the loss of excited state and either the reformation of the ground state or formation of products.
 
-Table: (\#tab:phototrans) The emission pathways from the excited states within a molecule.
+Table: (\#tab:phototrans) The pathways which affect the excited state concentration of a molecule.
 
 | | | |
 |:--------------|:-------------|:---------|
@@ -84,6 +84,10 @@ The instrumental setup for a transient absorbance experiment is almost  exactly 
 ```{r echo=FALSE, TAsetup, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A typical TA looks much the same as a flash photolysis setup however a white light probe is used so spectral detail may be observed.'}
 knitr::include_graphics("images/TAsetup.png")
 ```
+
+*This is an interactive element.*
+
+<iframe src="http://workitoutwithapencil.xyz/wp-admin/admin-ajax.php?action=h5p_embed&id=2" width="522" height="309" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://workitoutwithapencil.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
 
 The pump light source has to provide an efficient start of the dynamicss, consequently it should be a (relatively)short pulse relative to the time domain being studied and be of high intensity to generate measurable quantities of excited state. As such the pump light source is frequently a 'q-switched' laser of a suitable wavelength to be absorbed by the system, it doesn't matter what wavelengths are being probed, it only matters that the pump light source can generate excited states.
 
@@ -176,3 +180,8 @@ You will find some slides on moodle which show the transient absorption spectra 
 As before questions are posed next to the spectra - try to think what is excited when in the system, what factors complicate the spectra (additional transition states, chemical products etc) and try to build a model of how energy is moved around the system.
 
 As before my interpretation of the results (and in this case the energy profile model from the research paper)are also included in the discussion, but try and draw your own conclusions first.
+
+## Questions
+<iframe src="http://workitoutwithapencil.xyz/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="522" height="419" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://workitoutwithapencil.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="http://workitoutwithapencil.xyz/wp-admin/admin-ajax.php?action=h5p_embed&id=1" width="522" height="528" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://workitoutwithapencil.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>

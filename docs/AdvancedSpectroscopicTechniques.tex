@@ -80,7 +80,7 @@
 
 \title{CH3/40227 Advanced Spectroscopic Techniques}
 \author{Fiona Dickinson}
-\date{2021-02-28}
+\date{2021-03-16}
 
 \begin{document}
 \maketitle
@@ -1466,7 +1466,7 @@ Singlet-singlet absorption Triplet-triplet absorption\strut
 However, the excited state is also lost by the usual deactivation pathways listed in Table \ref{tab:photoem}, and so we can use kinetics to follow the loss of excited state and either the reformation of the ground state or formation of products.
 
 \begin{longtable}[]{@{}lll@{}}
-\caption{\label{tab:phototrans} The emission pathways from the excited states within a molecule.}\tabularnewline
+\caption{\label{tab:phototrans} The pathways which affect the excited state concentration of a molecule.}\tabularnewline
 \toprule
 \endhead
 \begin{minipage}[t]{0.35\columnwidth}\raggedright
@@ -1578,6 +1578,8 @@ The instrumental setup for a transient absorbance experiment is almost exactly t
 \caption{A typical TA looks much the same as a flash photolysis setup however a white light probe is used so spectral detail may be observed.}\label{fig:TAsetup}
 \end{figure}
 
+\emph{This is an interactive element.}
+
 The pump light source has to provide an efficient start of the dynamicss, consequently it should be a (relatively)short pulse relative to the time domain being studied and be of high intensity to generate measurable quantities of excited state. As such the pump light source is frequently a `q-switched' laser of a suitable wavelength to be absorbed by the system, it doesn't matter what wavelengths are being probed, it only matters that the pump light source can generate excited states.
 
 For ns and µs studies it is usual for the probe light source to be steady state, with a Xe arc lamp being suitable for the low energy UV, visable and near IR region. Other wavelength sources may be used for other techniques such as Raman, IR and EPR. `Ultrafast' systems (ps and fs) have a more complicated probe light source which is described elsewhere.
@@ -1683,6 +1685,79 @@ You will find some slides on moodle which show the transient absorption spectra 
 As before questions are posed next to the spectra - try to think what is excited when in the system, what factors complicate the spectra (additional transition states, chemical products etc) and try to build a model of how energy is moved around the system.
 
 As before my interpretation of the results (and in this case the energy profile model from the research paper)are also included in the discussion, but try and draw your own conclusions first.
+
+\hypertarget{questions}{%
+\section{Questions}\label{questions}}
+
+\hypertarget{ch:fluorlif}{%
+\chapter{Fluorescence Lifetime}\label{ch:fluorlif}}
+
+Whilst this technique is generally referred to as fluroescence lifetime the principles are equally applicable to longer lifetimes. You will already know fluorescence refers to emission of a photon without a change of spin, phosphorescence, emission of a photon with a change of spin, however I will also use the term emission which I will use either when the mode of emission is either irrelevant or unknown (such as with emission from quantum dots).
+
+You will already be familiar with the fluorescence, and how emission from an excited state is a spontaneous process following first order kinetics.
+
+\begin{longtable}[]{@{}lll@{}}
+\caption{\label{tab:photoem} The emission pathways from the excited states within a molecule.}\tabularnewline
+\toprule
+\endhead
+\begin{minipage}[t]{0.35\columnwidth}\raggedright
+\emph{`Allowed excited state emission'}\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.35\columnwidth}\raggedright
+Singlet-singlet emission\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+fluorescence\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(S_1 \longrightarrow S_0 + h \nu '\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.35\columnwidth}\raggedright
+\emph{`Forbidden excited state emission'}\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.35\columnwidth}\raggedright
+Triplet-singlet emission\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+phosphorescence\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(T_1 \longrightarrow S_0 + h \nu ''\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.35\columnwidth}\raggedright
+\emph{`Other transitions'}\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.35\columnwidth}\raggedright
+Internal conversion \strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+(vibrational relaxation) (vibrational relaxation)\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(S_1 \longrightarrow S_0 + heat\) \(S_1 \longrightarrow T_1 + heat\) \(T_1 \longrightarrow S_0 + heat\)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.35\columnwidth}\raggedright
+\emph{Other pathways}\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.35\columnwidth}\raggedright
+Quenching of excited state Chemistry from excited state\strut
+\end{minipage} & \begin{minipage}[t]{0.33\columnwidth}\raggedright
+\strut
+\end{minipage} & \begin{minipage}[t]{0.23\columnwidth}\raggedright
+\(S_1 + Q \longrightarrow S_0 + Q +heat\) \(S_1 + Q \longrightarrow S_0 + Q^\ast +heat\) \(T_1 + Q \longrightarrow S_0 + Q +heat\) \(T_1 + Q \longrightarrow S_0 + Q^\ast +heat\) \(S_1 \longrightarrow\) new/changed molecule\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
 
   \bibliography{book.bib,packages.bib}
 

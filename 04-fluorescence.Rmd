@@ -1,0 +1,40 @@
+# Fluorescence Lifetime {#ch:fluorlif}
+
+Whilst this technique is generally referred to as fluroescence lifetime the principles are equally applicable to longer lifetimes. You will already know fluorescence refers to emission of a photon without a change of spin, phosphorescence, emission of a photon with a change of spin, however I will also use the term emission which I will use either when the mode of emission is either irrelevant or unknown (such as with emission from quantum dots).
+
+You will already be familiar with the fluorescence, and how emission from an excited state is a spontaneous process following first order kinetics (Table \@ref(tab:photoem)).
+
+Table: (\#tab:photoem) The emission pathways from the excited states within a molecule.
+
+| | | |
+|:--------------|:-------------|:---------|
+|*'Allowed excited state emission'* | | |
+| Singlet-singlet emission| fluorescence | $S_1 \longrightarrow S_0 + h \nu '$|
+|*'Forbidden excited state emission'*|||
+| Triplet-singlet emission | phosphorescence |$T_1 \longrightarrow S_0 + h \nu ''$|
+|*'Other transitions'* | | |
+|Internal conversion <br> <Intersystem crossing> <br> <Intersystem crossing>  | (vibrational relaxation) <br> <br> (vibrational relaxation) | $S_1 \longrightarrow S_0 + heat$ <br> $S_1 \longrightarrow T_1 + heat$ <br> $T_1 \longrightarrow S_0 + heat$|
+|*Other pathways*| | |
+Quenching of excited state <br> <br> <br> Chemistry from excited state| | $S_1 + Q \longrightarrow S_0 + Q +heat$ <br> $S_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $S_1 \longrightarrow$ new/changed molecule |
+
+However, it can be the case that there is more than one emissive deactivation process from an excited state, each being a first order process.
+
+## Steady State fluorescence
+
+Fluorimeters have two modes of operation, one mode where the excitation wavelength is fixed and the emission is scanned, the version of the technique which we usually think of. The second technique will be discussed later in the course, where the emission wavelength is fixed and the excitation is scanned.
+
+```{r echo=FALSE, fluorch, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A fluorimeter with a scanning excitation and emission monochromator, sources are usually xenon arc lamps, and detectors PMTs.'}
+knitr::include_graphics("images/fluorescence.png")
+```
+
+This necessitates two monochromators, although the most simple instruments will just use band pass filters for excitaiton and emission (and you may have used these instruments in the lab). Fluorescence is measured orthogonally to the excitation, reducing optical artifacts and allowing easy separation of the incident and excident light. Monochromators include slits, which may be used to alter the intensity of incident light reaching the detector (or sample), but this also affects what fine details may be observed in the spectrum.
+
+```{r echo=FALSE, waterramanslits, out.width='60%', fig.show='hold', fig.align='center', fig.cap='The slits in a monochromator affect the both the intensity of light reaching a detector but also the band pass.'}
+knitr::include_graphics("images/waterramanslits.png")
+```
+
+Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample.
+
+```{r echo=FALSE, saturation, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Both CCDs and PMTs are easily saturated where the emission recorded is lower than would be predicted by the Beer-Lambert law.'}
+knitr::include_graphics("images/saturation.png")
+```

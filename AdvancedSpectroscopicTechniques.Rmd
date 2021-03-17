@@ -1,0 +1,769 @@
+--- 
+title: "CH3/40227 Advanced Spectroscopic Techniques"
+author: "Fiona Dickinson"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: chemfd/CH3040227
+description: "Advanced Spectroscopic Techniques"
+---
+
+# CH3/40227 Advanced Spectroscopic Techniques {-}
+
+## Welcome & Preliminary Infomation {-}
+
+Welcome to the coursepage for CH30227 & CH40227 Advanced Spectroscopic Techniques. The notes have been prepared in a package called BookDown for RStudio so that the equations are accessible to screen readers. However, by providing the notes as a .html webpage I can also embed short videos to further describe some of the topics. Further you can download the material in a format that suits you (either pdf or epub) to view offline, or change the way this document appears for ease of reading.
+
+The course is entirely taught by Dr Fiona Dickinson.
+
+
+
+### Prerequisite knowledge {-}
+
+The course relies extensively on concepts from CH30129 (or CH30217) Photochemistry as well as material from the spectroscopy section of CH10137/8, and the quantum mechanics of CH20151/2. However more generic skills, such as experiment planning, and drawing conclusions on data will form an important strand to this course. 
+
+### Assessment for this course {-}
+
+The course is assessed by a '1 hour' exam, this is to say it should take an hour to complete, exam details will be shared centrally later in the semester.
+
+The exam format will contain 2 x 25 mark questions. The questions will likely contain two or more of the following: data to examine, description of a spectrometer or spectrometer component, and design of experiments.
+
+### Feedback for this course {-}
+
+Much of the work will be peer based in small groups, and you will provide feedback to each other. In wrapping up these discussions I will also provide feedback to discussions.
+
+I appreciate your understanding that feedback may be delayed during these uncertain times as I have childcare responsibilities.
+
+I will not provide model answers for past exam questions, this is because there will be multiple ways in which marks may be achieved. Instead I will happily provide feedback on your attempts at past papers. All I ask is:
+
+- papers are received in good time
+- when you attempt papers you try and replicate the exam conditions (i.e. do it alone, in one sitting in a limited period)
+- you do not submit more than one past paper at a time (I am happy to go through more than one feedback cycle, but want you to reflect on the feedback you have received)
+- you highlight sections where you particularly want feedback
+- you provide the file as a .pdf, with the file name containing your username, the year of paper attempted and the unit code
+- please space out work enough so that I can write feedback
+
+## Week 1 tasks {-}
+
+I set a number of week 1 tasks.
+
+- For the 'spectrometer components document' on Teams, please divide the work between you, and write a few sentences (and include figures if relevant) for your chosen component(s). This is a shared document and is hosted on Teams because I can't work out how to do it on Moodle... (the CH40227 class will act as editors to this body or work).
+
+- Think about the spectroscopic techniques you have used previously (you should all have used at least one of UV/vis, IR and fluorescence), think about what components may have been in the 'beige box' and how these differ between different spectrometers...
+
+- Remember to let me know if you want particular groups in the zoom chat (CH30227 only)
+
+
+## Report errors {-}
+
+If you spot any errors, please message me in Teams or (if this works), report on the error log below
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc83b-C0FsgDr5eQxvT-2NWwEtvOEwYU1WbLE4j53wWfUDIXQ/viewform?embedded=true" width="640" height="1242" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
+
+
+## Edit log {-}
+
+Most Chapter 3 content finished 280221
+
+Chapter 3 continues 260221
+
+Chapter 3 started 240221
+
+Typos fixed (end of section 1.1.2 for clarity, section 2.3 for bad coding of links) 160221
+
+Chapters 1 & 2 130221
+
+Initial commit 010221
+
+<!--chapter:end:index.Rmd-->
+
+# Basic Spectroscopies {#ch:UVvisfluorIR}
+
+Please scroll to the bottom to find a summary video on UV/vis and fluroescence spectroscopy.
+
+## UV/Vis {#sec:UV}
+
+### The Beer-Lambert Law
+
+The intensity of incident light ($I_0$) passing through a sample falls exponentially, this is described by the Beer-Lambert Law. The empirical equation (equation \@ref(eq:BeerLambert), figure \@ref(fig:BeerLambert)) implies that the probability of a photon being absorbed at any point is the same (much like first order kinetics), and the amount of the total absorption depends upon the the concentration of the sample, c, and the ‘path length’, l. 
+
+The amount of absorbance, A, is dependent upon the wavelength of the incident light, and the constant of proportionality, $\varepsilon$ (here called the molar extinction coefficient), is consequently also wavelength dependent.
+
+\begin{equation}
+\log \frac{I_0}{I}=A=\varepsilon cl
+(\#eq:BeerLambert)
+\end{equation}
+
+The wavelength of a particular value of the molar exctinction coefficient is often represted as a subscript, $\varepsilon _\lambda$
+
+```{r echo=FALSE, BeerLambert, out.width='50%', fig.show='hold', fig.align='center', fig.cap='The decay of intensity of monochromatic incident light through a uniformly absorbing medium. The decay follows an exponential pattern as elucidated in the Beer-Lambert equation.'}
+knitr::include_graphics("images/BeerLambert.png")
+```
+
+The Beer-Lambert law makes a number of assumptions, and this exponential decay of the intensity of light is an important factor.When using the Beer-Lambert law you consider the intensity of the incident radiation, there is an assumption that the intensity of the radiation reaching each part of the sample does not deviate much from this. Hence high absorbing samples tend to show strong deviation from the Beer-Lambert’s linear relationship.
+
+The Beer-Lambert law also has to make a number of other ‘reasonable’ considerations: 
+
+- The solutions is well mixed, and absorbers are homogeneously distributed in solution.
+- The absorbers do not scatter radiation (all particles will Rayleigh and Raman scatter but this is normally considerably less intense than absorption). Consequently solutions should be optically transparent as optically opaque solutions (such as colloidal solutions) have considerably stronger scattering. 
+- The absorbers acts independently of each other, this means solutions need to be at a reasonably low concentration (typically less than 0.01 M, or maybe even less depending on the species) so as to avoid electrostatic or $\pi$ stacking interactions between the chromophores.This is in part important because light is only absorbed when the polarisation of the light is aligned with the transition dipole moment. 
+- The incident radiation is collimated, and each photon should pass through the same path length. 
+- The sample holder (cuvette) is optically ‘pure’ such that reflections are avoided (linked to the assumption above). 
+- The incident radiation is monochromatic, or at the very least has a band width more narrow than the band width of the absorbing transition (this is usually not an issue for molecular systems as bandwidths are usually 10s or more of nm wide, but for atomic or ion spectroscopy where bandwidths are <0.02 nm this is a factor which must be carefully considered. 
+- The incident radiation does not noticeably affect the concentration of the ground state, in other words the amount of excited states generated must be kept small as when we are talking about the absorption of a chromophore the concentration of that chromophore that appears in the Beer-Lambert equation is the ground state concentration. 
+- There is no measurable emission from the sample.
+
+
+
+### Using UV/Vis {#sec:usingUV}
+
+These assumptions become important as we start to consider more complicated techniques than the most basic absorption spectrometery, however to ensure we are following these limits on the Beer-Lambert law it is rare for spectroscopists to work with sample absorbances above 0.1 (the point where ~20 \% of the light is absorbed).
+
+To do this either the path length ($l$) is reduced or the concentration ($c$) of the sample is reduced.
+
+UV/vis is simplest to use on solution based systems as one of the assumptions of the Beer-Lambert law is that the transition dipole moments are randomly aligned. The use of non-randomly aligned transition dipole moments is the basis of the technique linear dichroism (LD) \@ref(sec:LD).
+
+### The UV/Vis instrument {#sec:UVinstrument}
+
+```{r echo=FALSE, UV, out.width='100%', fig.show='hold', fig.align='center', fig.cap='The UV/Visible spectrophotometer consists of a source of light, wavelength selector, cell holder and detector, however the complexity of each of these is very much dependent upon the instrument used.'}
+knitr::include_graphics("images/UVvis.png")
+```
+
+Figure \@ref(fig:UV) shows the schematic of a 'dual beam' UV/Vis spectrophotometer, this would be a higher end instrument.
+
+The most basic versions (and the version you may have used in the lab) are single beam instruments, whereby $I_0$ is determined indirectly. Some instruments use a 'blank path' which does not allow for a 'blank' reference cuvette, to allow light to reach the detector, in this case it is a single detector for both paths, with the beam of light beign selected by use of a rotaing chopper. Historically photodiodes were used as the detectors, however the use of 'echelle' (2-dimensional) diffraction gratings have increasingly meant that CCDs may be used for optaining the whole spectrum instantly.
+
+The use of a heating block for the sample means that a range of interesting studies may occur from the melting of DNA and proteins (see CH30129/CH30217 notes on hypochromicity), and the temperature dependent release of drug molecules. However, this feature again is only on higher end instruments.
+
+## Fluorimeters {#sec:fluorimeter}
+
+```{r echo=FALSE, fluorimeter, out.width='100%', fig.show='hold', fig.align='center', fig.cap='A fluorimeter consists of a source of light, wavelength selector, cell holder and detector, however, just like with UV/Vis instruments the complexity of each of these is very much dependent upon the instrument used.'}
+knitr::include_graphics("images/UVvis.png")
+```
+
+Figure \@ref(fig:fluorimeter) shows the schematic of higher end fluorimeter with scanning monochromators for both the excitation and emission. Some lower end instruments may use band pass filters to select a 'single' excitation (and emission) wavelength, or else use a diode as an excitation source. The university uses both of these instrument types in the teaching labs, with the diode instrument using a two dimensional echelle grating such that the full emission spectrum is recorded 'instantly'. The CCD detector is considerably less sensitive than the PMT, but the cost is considerably lower and so they are used in some instruments.
+
+```{r echo=FALSE, sat, out.width='40%', fig.show='hold', fig.align='center', fig.cap='The detectors in fluorimeters may be easily saturated showing a deviation from the linear (Beer-Lambert) relationship you would expect with increasing concentration, this same effect is also seen as you increase the applied potential on the PMT or increase the slitwidth or integration time.'}
+knitr::include_graphics("images/sat.png")
+```
+
+The detectors in fluorescence spectrometers are easily over saturated (figure \@ref{fig:sat}), therefore it is important to ensure that the response remains within the linear region of the instrument. To do this there are a number of ways that the signal may be reduced, these include:
+
+- reducing the applied potential on the PMT
+- closing either the emission and/or excitation slits
+- reducing the concentration of the sample
+- reducing the path length of the sample
+- reducing the integration time (the time each 'sample' is gathered for)
+- change the excitation wavelength
+
+PMTs are less sensitive at long wavelengths and so 'corrections' are usually used in this wavelength regime. 
+
+Emission light is recorded at 90º to the incident wavelength radiation to minimise optical artifacts and to separate out the emission from the intense excitation beam. The are usually scattering signals in the emission (from both Raman (inelastically scattered) and frequency halved elastic scattering) these are usually only observed at low fluorescence intensities.
+
+### Emission fluorimetery
+
+When we are talking about fluorescence spectroscopy we are talking about emitted photons, whether they are fluorescent photons, or phosphorescent photons.
+
+
+Table: (\#tab:phototrans) The excitation and decay pathways in molecules.
+
+| | | |
+|:--------------|:---------|:---------|
+|*'Allowed transitions'*| | |
+|Singlet-singlet absorption <br> Singlet-singlet emission|<br> fluorescence | $S_0 + h \nu \longrightarrow S_1$ <br> $S_1 \longrightarrow S_0 + h \nu '$|
+|*'Forbidden transitions'*|||
+|Singlet-triplet absorption <br> Triplet-singlet emission|<br> phosphorescence | $S_0 + h \nu \longrightarrow T_1$ <br> $T_1 \longrightarrow S_0 + h \nu ''$|
+|*'Other transitions'* | | |
+|Internal conversion <br> <Intersystem crossing> <br> <Intersystem crossing>  | (vibrational relaxation) <br> <br> (vibrational relaxation) | $S_1 \longrightarrow S_0 + heat$ <br> $S_1 \longrightarrow T_1 + heat$ <br> $T_1 \longrightarrow S_0 + heat$|
+|*Other pathways*| | |
+Quenching of excited state <br> <br> <br> Chemistry from excited state| | $S_1 + Q \longrightarrow S_0 + Q +heat$ <br> $S_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $S_1 \longrightarrow$ new/changed molecule |
+
+Any process that has either emission or scattering of a photon can be seen in the fluorimeter, however scatting is usually considerably weaker and is only an issue at very low emission intensities.
+
+When we think about fluorescence spectroscopy it is usually steady state (constant illumination)emission mode that we think of. In this technique the excitation wavelength is fixed and the emission is scanned.
+
+It is a difficult technique to quantify, and so if comparing samples the same settings (slit width, PMT voltage, $\lambda_{ex}$, scan rate) should be used, and the absorbance of each sample noted at $\lambda_{ex}$.
+
+The wavelength of emmission is calibrated using a water Raman. This is useful as it doesn't matter the purity of the water, and any excitation wavelength may be used (although if 350 nm ($\lambda$~max,em~ = 397 nm) is available this is frequently used for no other reason than tradition). The Raman is an inelastic scattering and so always appears at a well defined wavelength (equation \@ref{eq:waterRaman}).
+
+\begin{equation}
+\frac{1}{\lambda_{\textrm{em, µm}}}=\frac{1}{\lambda_{\textrm{ex, µm}}}-0.340 \textrm{ µm}^{-1}
+(\#eq:waterRaman)
+\end{equation}
+
+Figure \@ref{fig:slitwidth} shows the effect of slit width of the appearance of a water Raman calibration spectrum, the peak is Gaussian in profile and relatively intense so narrow slit widths may be used. This peak can overlay on the emission spectrum, but can manually be removed if necessary.
+
+```{r echo=FALSE, waterRaman, out.width='40%', fig.show='hold', fig.align='center', fig.cap='The Gaussian profile of a water Raman spectrum used to calibrate the emission wavlength in fluorimeters.'}
+knitr::include_graphics("images/waterRaman.png")
+```
+
+Increasing the integration time improves the signal to noise ratio, but the signal only improves relative to the noise in a $\sqrt{n}$ ratio, so as the integration time increases by four, the signal to noise ratio increases by 2.
+
+### Excitation spectroscopy
+
+More on this technique will be discussed later in the course, but it is a measure of how the emission intensity varies with the excitaiton (or absorbance) of the sample - the technique can show where the excited states in a system come from.
+
+What we do know though is that the emission intensity is very dependent upon the wavelength you excite, as the amount of absorption (and therefore excited states generated) is very dependent on wavelength (figure \@ref{fig:normabs}).
+
+
+```{r echo=FALSE, normabs, out.width='40%', fig.show='hold', fig.align='center', fig.cap='The intensity of emission depends upon the amount of absorption at the excitation wavelength, however if each of these emission spectra, of rhodamine 6G (right), are divided by the amount of absorbance (left), then the normalised emission is the same in each case.'}
+knitr::include_graphics("images/normabs.png")
+```
+
+The intensity of the source varies a lot with wavelength, and so the excitation detector is used to 'normalise' the emission intensity against the intensity of light generating the excited states.
+
+<iframe width="749" height="421" src="https://www.youtube.com/embed/kx8-nB6D1lU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Questions
+
+1. Why are emission spectra recorded at 90º to the incident light?
+  a. emission intensity is most intense normal (at 90º) to the excitation source
+  b. 90º is the best angle to separate the Raman signal from the emission signal
+  c. it is a good angle to ensure no excitation light makes it to the emission detector
+  d. it reduces the amount to reabsorption of light by minimising the path length
+  e. it maximises internal reflections, ensuring the most emission from the sample
+
+
+2. Which of the following is not an assumption of the Beer-Lambert law?
+
+  a. The absorbing molecules must be homogeneously distributed in solution
+  b. Incident radiation must be normal to the transition dipole of the molecule
+  c. The absorbers must act independently of each other
+  d. The incident radiation must be collimated (parallel rays) and pass through the same path length
+  e. The incident radiation must have a band width that is more narrow than the absorbing transition
+  f. The intensity of incident light must be low to ensure the population of an excited state is negligible
+  
+  
+3. Why does a molecule absorb light; what conditions are needed?
+
+  a. only the energy gap ΔE matters
+  b. only the intensity of light matters, with enough light it will always absorb
+  c. the extinction coefficient governs how much light will be absorbed
+  d. the energy gap and polarisation of the electromagnetic field matter
+  e. the solvent molecules must be aligned with the magnetic field
+  f. only the polarisation of the magnetic field matters
+
+## Answers
+1. Why are emission spectra recorded at 90º to the incident light?
+  a. emission intensity is most intense normal (at 90º) to the excitation source
+  - Fluorescence should be isotropic in the steady state so no angle has a higher emission intensity
+  b. 90º is the best angle to separate the Raman signal from the emission signal
+  - Raman like emission is isotropic - the only way you can separate them is using time resolved methods, but Raman is usually considerably less intense than the emission signal.
+  c. <span style="color: crimson;"> it is a good angle to ensure no excitation light makes it to the emission detector </span>
+  - Incident light passes straight through, any other angle which can separate this would be fine, but 90º is usually used because of the shape of the cuvettes (square)
+  d. <span style="color: light coral;"> it reduces the amount to reabsorption of light by minimising the path length</span>
+  - This is called the inner filter effect - it can be a problem, and recording at 90º will minimise the path length but the best thing to do is ensure that the concentration, or intensity of incident light (slit width) is reduced
+  e. it maximises internal reflections, ensuring the most emission from the sample
+  - In a square cuvette it should minimise the effect of internal reflections, this is not something we want as we are assuming the light only travels through the sample once
+
+
+2. Which of the following is not an assumption of the Beer-Lambert law?
+
+  a. The absorbing molecules must be homogeneously distributed in solution
+  b. <span style="color: crimson;">  Incident radiation must be normal to the transition dipole of the molecule </span>
+  - This statement is the exact opposite of being homogeneously distributed, only molecules with the transition dipole moment aligned correctly will absorb, but it shouldn’t be that all molecules are aligned 
+  c. The absorbers must act independently of each other
+  d.The incident radiation must be collimated (parallel rays) and pass through the same path length
+  e. The incident radiation must have a band width that is more narrow than the absorbing transition
+  f. The intensity of incident light must be low to ensure the population of an excited state is negligible
+  
+  
+3. Why does a molecule absorb light; what conditions are needed?
+
+  a. only the energy gap ΔE matters
+  - It matters, it isn’t the only thing…
+  b. only the intensity of light matters, with enough light it will always absorb
+  - Nope… more power doesn’t work, although you can get some cool non-linear two photon effects with enough power it still has to be the right energy
+  c. the extinction coefficient governs how much light will be absorbed
+  - Yes, but it isn’t a condition required
+  d. <span style="color: crimson;"> the energy gap and polarisation of the electromagnetic field matter </span>
+  - Yes the energy gap (wavelength) needs to be appropriate, but the transition dipole moment of that transition of the chromophore must be aligned with the polarisation of the EM light
+  e. the solvent molecules must be aligned with the magnetic field
+  - The solvent has nothing to do with the transition dipole, it may affect ΔE
+  f. only the polarisation of the magnetic field matters
+  - Again, it matters that the transition dipole moment and the polarisation of light are matched but for UV/Vis the incident light should be unpolarised
+
+<!--chapter:end:01-BasicSpectroscopiesRmd.Rmd-->
+
+# LD (linear dichroism) and CD (circular dichroism) {#ch:LDCD}
+
+## Linear dichroism {#sec:LD}
+
+<iframe width="749" height="562" src="https://www.youtube.com/embed/D-fpt94OtUc?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+If we consider the Beer-Lambert law, we have previously said that one of the assumptions of this law is that absorbers are distributed randomly in solution... however, when we look at dichroism techniques, they are actively looking at only exciting molecules aligned with the polarisation.
+
+You will recall that light is only absorbed by a molecule when the polarisation of the light is aligned with the transition dipole moment.
+
+Light is only absorbed by a molecule if the polarisation of the light aligns with the transition dipole moment on the molecule.  Figure \@ref(fig:CS2) shows CS~2~ a simple linear molecule - where the transition dipole moment runs along the long axis of the molecule.
+
+```{r echo=FALSE, CS2, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Carbon disulfide (CS~2~) is a linear molecule -  due to the shape of the molecule there is a transition dipole which runs down the length of the long axis. Light aligned such that the electric field runs parallel with the long axis of the molecule E~||~ will be absorbed, light which in which the electric field runs perpendicular to the long axis of the molecule E~⊥~ will not be absorbed.'}
+knitr::include_graphics("images/CS2.png")
+```
+
+For more complicated molecules each of the transitions from the HOMO, HOMO-1 to the LUMO *etc.* occur with different transition dipole moments across the chromophore, figure \@ref{fig:adenosine}. Each transition is only excited when light is aligned with that transition; in most cases this isn’t something we need to consider as most incident light we consider is isotropic, but alignment of transition dipoles  (either between light and molecules - or between two different molecules) is an important consideration.
+
+```{r echo=FALSE, adenosine, out.width='100%', fig.show='hold', fig.align='center', fig.cap='The three lowest energy transitions of adenosine each indicated with their transition dipole moment (all in the plane of the molecule, calculated values).These match with the observed spectrum with a weak transition around 310 nm, a much stronger transition around 260 nm and a third transition starting at the edge of the measured spectrum. Spectrum Adapted from OMLC ( https:// omlc.org/spectra/PhotochemCAD/html/033.html), 31st October 2018'}
+knitr::include_graphics("images/adenosine.png")
+```
+
+As already discussed the transition dipole moment is derived from the difference in electron density of the ground and excited state. 
+
+Linear dichroism uses linearly polarised light and is a measure of the difference in absorbance of the sample between plane polarised light parallel and perpendicular to a reference axis (equation \@ref(eq:LD), figure \@ref(fig:LD)).
+
+\begin{equation}
+LD = A_{\parallel} - A_{\perp}
+(\#eq:LD)
+\end{equation}
+
+```{r echo=FALSE, LD, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A generic LD spectrum to illustrate features of a sample with regions of the spectrum showing a postive LD. An isotropic sample would show 0 LD.'}
+knitr::include_graphics("images/LD.png")
+```
+
+So if we consider a simple molecular system, that of CS~2~ (figure \@ref(fig:CS2), then light which is polarised in alignment with the long axis of the molecule, $E_{\parallel}$, (which is aligned with the transition dipole moment on the molecule) will be absorbed, whereas light normal to this, $E_{perp}$, will be transmitted as light is passed through the sample. Our dichroism, $LD$, is the difference between these two absorbance values.
+
+This is how polaroid film works where there is a large transition dipole moment along one axis, and a negligable transition dipole along the orthoganol axis.
+
+Adenosine (figure \@ref(fig:adenosine)) is a more typical example, this is an example of a molecule with different transition dipole moments, each with a particular energy and polarisation. We can observe that the different dipole moments absorb more strongly at if we can allign our structure somehow, like in a crystal...
+
+We can relate the linear dichroism to the angle from the reference axis as follows (equation \@ref:LDiso):
+
+\begin{equation}
+LD = \frac{3}{2}A_{\textrm{iso}}S(3 \cos^2 \alpha - 1)
+(\#eq:LDiso)
+\end{equation}
+
+The reduced LD, $LD^r$ is often used as it is concentration indpendent and so differences in the spectrum are easily observed:
+
+\begin{equation}
+LD = \frac{A_{\parallel} - A_{\perp}}{A_\textrm{iso}} \frac{3}{2}S(3 \cos^2 \alpha - 1)
+(\#eq:LDred)
+\end{equation}
+
+The LD spectrophotometer looks a lot like the UV/vis (figure \@ref(fig:LDspec)), however we need to add a two position polarising filter (horizontal and vertical), again just like with the UV there is a blank path (or a dummy blank path and a chopper), with similar light sources to the UV/vis (Xe arc and ^2^D~2~ arc), with the detector again usually being a photodiode.
+
+```{r echo=FALSE, LDspec, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A block diagram of a LD spectrometer including the two position polarising filter.'}
+knitr::include_graphics("images/LDspec.png")
+```
+
+If the sample is solution based it will be isotropic unless there is something to help align the molecules, and consequently there will be no LD signal detected. Consequently there needs to be some form of smple alignment, which is usually achieved in one of two methods (figure \@ref{fig:LDcell}):
+
+- small molecules are embedded in a polymer film, which is then stretched in a single direction, this then coaligns the small molecules along the direction of the stretch
+- large molecules (such as polymers, DNA and proteins) can be aligned *via* laminar flow. In this case the cuvette is a hollow cylinder with an internal bar which rotates rapidly, this causes laminar flow 
+
+```{r echo=FALSE, LDcell, out.width='60%', fig.show='hold', fig.align='center', fig.cap='In order to show an LD signal there needs to be some alignment of the molecules, two methods are usually used, embedding the molecules in a polymer film and stretching the film, such that the molecules are pulled into alignment (top), or laminar flow, whereby a thin film of solvent is rapidly stired and the molecules align with this flow (like stirring spagetti (bottom)'}
+knitr::include_graphics("images/LDcell.png")
+```
+
+## Circular Dichroism
+
+Circular dichroism uses circularly polarised light and looks at the difference between the absorption of left and right hand polarised light. It is much like the use of polarimetry to look at R- and S- enantiomers, but we are combining it with UV, in that a spectrum is scanned and the CD measured over a range of wavelengths.
+
+An excel resource has been provided on moodle (under 'Other Resources') to try to help you understand how two plane waves may be combined to generate circularly polarised light.
+
+<iframe width="749" height="562" src="https://www.youtube.com/embed/P3U9Hhs_eTc?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+To generate circularly polarised light two orthogonal paths of monochromatic light is passed through a birefringent material (a material with two different refractive indicies depending on the crystal plane). This retards one wave more than the other and when they combine they are out of phase and so combine to form circularly or eliptically polarised light. Calcite is an example of a birefringent material.
+
+The phase offset will depend upon the thickness of the waveplate, the thickness of this plate can be changed by applying an alternating current causing a change in crystal shape due to teh piezoelectric effect. The bigger the potential difference the bigger the change in the size of the crystal, consequently the crystal can always be adjusted (no matter the wavelength) so that the resultant waves are always π/2 (for a quarter wave plate), or π (for a half wave plate) different in phase. This crystal oscillation is caused by a device called the photoelastic modulator.
+
+```{r echo=FALSE, CD, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A block diagram of a CD spectrometer including the coupled monochromator and photoelastic modulator.'}
+knitr::include_graphics("images/CD.png")
+```
+
+In each 50 Hz cycle we get a measurement of  -λ/4 (L) and +λ/4 (R) light. After passing through a sample the R & L circularly polarised light become eliptical (and when we deconvolute the horizontal and vertical waves are no longer of equal amplitude) these combine to give the CD (equation \@ref(fig:CD)).
+
+\begin{equation}
+CD = A_{\textrm{L}} - A_{\textrm{R}}
+(\#eq:CD)
+\end{equation}
+
+It should be noted that there is a difference of opinion as to what reference frame constitutes left and right as far as the polarisation of light goes, papers will always state their convention.
+
+## Induced Dichroism
+
+Some molecules may themselves not show either LD or CD themselves, but they may have induced dichroism because they are bound to a molecule which does.
+
+```{r echo=FALSE, DNAbinders, out.width='60%', fig.show='hold', fig.align='center', fig.cap='The DNA binders ethidium bromide (left) which intercalates between the base pairs of DNA, and Hoechst 33258 (right) which binds in the minor groove of DNA, by curving around the tertiary structure'}
+knitr::include_graphics("images/DNAbinders.png")
+```
+
+An example of this would be small dye molecules such as YO-Pro-1 (see photochemisry notes and the later workshop materials, and those listed in figure \@ref(fig:DNAbinders) which is a small fluorescent dye molecule which binds to DNA. This molecule itself is achrial, and if introduced into LD with laminar flow is too small to align and so the LD should also be zero. However, when bound to DNA both an LD and CD is observed from the sample because it is now in an environment big enough to align with the laminar flow, and the DNA tertiary structure is chiral and so the dye is binding into a chrial environment and therefore an induced CD is also observed.
+
+For induced LD, if the molecule remains in free solution the transition dipoles are aligned isotopically and no LD is observed. However if we look at binding to DNA as an example, if the molecule intercalates the transition dipole moment will be *more* aligned to be perpendicular to the long axis of the molecule and will therefore display a negative LD. If the molecule has a transition dipole moment principally aligned with the long axis of the molecule then it will display a positive LD (figure \@ref(fig:inducedLD). 
+
+We can determine the binding angle (with a few added assumptions) by using equation \@ref(eq:LDiso).
+
+```{r echo=FALSE, inducedLD, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Small molecules under laminar flow are too small to align and so they are aranged isotropically and therefore no LD is observed, however on binding to macromolecules such as DNA the species display an induced LD'}
+knitr::include_graphics("images/inducedLD.png")
+```
+
+CD may show 'unwinding' (less chirality in the sample) indicating an intercalation of a molecule between the bases of DNA.
+
+Behaviour like this can tell us a lot about drugs binding to biological molecules, in a manner which is relatively quick and simple. 
+
+## Workshop task
+
+You will find some slides containing absorbance, LD and CD of YO-Pro-1 and it's dimer YOYO-1 on Moodle under the CD and LD, alongside these are some questions I want you to think about and answer when looking at the spectra. You should think about general trends and not be too hung up about individual spectra.
+
+When we meet in our next LOIL we will discuss this case study and I will be breaking you into your selected (or assigned) break out groups to discuss our ideas further, we will then wrap up the session with you sharing your group thoughts (so think about nominating a spokesperson).
+
+I do not expect you to know a lot about DNA, just know the following:
+  - DNA has a negatively charged backbone
+  - By intercalating between the basepais the DNA has to stretch (get longer) and unwind slighly
+  - A helix repeats about once every 10 bases, with the bases separated by the van der Waals distance (3.4 Å)
+  - The bases are about about 86º to the long axis of the molecule
+
+
+## Questions
+
+These questions can be used to check your understanding of the material, beware I periodically include star trek inspired technobabble in the distractors...
+
+
+1. If a molecule is illuminated with polarised light, for it to absorb light:
+
+    a. only the energy gap ΔE matters
+    b. only the intensity of light matters, with enough light it will always absorb
+    c. the extinction coefficient governs how much light will be absorbed
+    d. the energy gap and the orientation of the transition dipole moment matter
+    e. the solvent molecules must be aligned with the magnetic field
+    f. only the polarisation of the magnetic field matters
+
+2. For a molecule to display CD absorption then:
+  a. it must first be excited with polarised light
+  b. it must be able to be aligned with the electric field
+  c. it must have an inversion centre, i
+  d. the instantaneous transition dipole moment must be circularly polarised
+  e. the molecule must display a quadrupole in both magnetic and electric fields
+  f. there must be chirality in the molecule
+
+3. For a chromophore to display induced CD absorption then:
+  a. there must be a strong matrix coupling element between the chromophore and the molecule to which it is binding
+  b. the chromophore must have a chiral centre
+  c. the instantaneous dipole on the chromophore must interact with the electric field of the molecule to which it is binding
+  d. the absorption wavelengths of both the chromophore and chiral molecule must overlap
+  e. there must be a strong overlap integral between the emission of the chiral molecule and the absorption of the molecule to which it is binding
+  f. it must be free in solution
+  g. the chromophore must be bound in such a way to a chiral molecule that it takes on chiral optical properties
+
+4. If a molecule has an absorbance and LD as shown below then:
+
+```{r echo=FALSE, LDquestion, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Isotopic absorbance (top) and LD (bottom)'}
+knitr::include_graphics("images/LDquestion.png")
+```
+
+  a. the molecule is isotropically distributed in solution
+  b. there is only a single transition within the molecule
+  c. the molecule is principally aligned parallel to the plane of polarised light
+  d. the molecule is principally aligned perpendicular to the plane of polarised light
+  e. the transition moments are aligned more parallel to the plane of polarised light
+  f. the transition moments are aligned more perpendicular to the plane of polarised light
+  g. the sample is degrading under UV light
+
+
+
+## Answers
+
+1. If a molecule is illuminated with polarised light, for it to absorb light:
+
+  a. only the energy gap ΔE matters
+  - Again, it matters, it isn’t the only thing…
+  b. only the intensity of light matters, with enough light it will always absorb
+  - Still not true
+  c. the extinction coefficient governs how much light will be absorbed
+  - It does, but it isn’t what matters most it just says how much light will be absorbed
+  d. the energy gap and the orientation of the transition dipole moment matter
+  - This is the one
+  e. the solvent molecules must be aligned with the magnetic field
+  - Still drivel 
+  f. only the polarisation of the magnetic field matters
+  - This time this one matters, but it isn’t the only thing…
+
+2. For a molecule to display CD absorption then:
+  a. it must first be excited with polarised light
+  - If it was first excited with polarised light we would be looking at a transient species not the ground state
+  b. it must be able to be aligned with the electric field
+  - For a molecule to absorb there must be alignment of the transition dipole moment with the incident light, but nothing in particular with the CD is unique
+  c. it must have an inversion centre, i
+  - If a molecule has an inversion centre it is NOT chiral
+  d. the instantaneous transition dipole moment must be circularly polarised
+  - Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer
+  e. the molecule must display a quadrupole in both magnetic and electric fields
+  - Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer - oooh two!
+  f. there must be chirality in the molecule
+  - Yup - CD only works with chiral molecules (or molecules in a chiral environment (induced CD))
+
+3. For a chromophore to display induced CD absorption then:
+  a. there must be a strong matrix coupling element between the chromophore and the molecule to which it is binding
+  - Ooooh-oooooooooh-oh-oh-oh-oh-oooooh the gibberish star trek answer
+  b. the chromophore must have a chiral centre
+  - This will display CD not induced CD
+  c. the instantaneous dipole on the chromophore must interact with the electric field of the molecule to which it is binding
+  - This would be a dipole induced dipole interaction - back to first year bonding theory
+  d. the absorption wavelengths of both the chromophore and chiral molecule must overlap
+  - No reason for this to be true, if they are it would just complicate the spectrum
+  e. there must be a strong overlap integral between the emission of the chiral molecule and the absorption of the molecule to which it is binding
+  - Nope, no reason for this to be true
+  f. it must be free in solution
+  - No induced CD if free in solution
+  g. the chromophore must be bound in such a way to a chiral molecule that it takes on chiral optical properties
+  - Yes the chiral choromophore must be in a chiral environment
+  
+4. If a molecule has an absorbance and LD as shown below then:
+  a. the molecule is isotropically distributed in solution
+  - the LD would be 0
+  b. there is only a single transition within the molecule
+  - this is more likely to be observed by multiple distinct bands in the spectrum
+  c. the molecule is principally aligned parallel to the plane of polarised light
+  - the transition dipole in the molecule has to be aligned with the plane of polarised to absorb
+  d. the molecule is principally aligned perpendicular to the plane of polarised light
+  - ditto
+  e. the transition moments are aligned more parallel to the plane of polarised light
+  - this would have a postive LD
+  f. the transition moments are aligned more perpendicular to the plane of polarised light
+  - yes this one
+  g. the sample is degrading under UV light
+  - gibberish
+
+
+<!--chapter:end:02-CDandLD.Rmd-->
+
+# TA Transient Absorption {#ch:TA}
+
+Transient absorption is a technique which looks at the absorption of an excited state (and consequently also the loss (or bleaching) of the ground state, Table \@ref(tab:phototrans)). 
+
+## Flash photolysis
+
+The technique is based off the single wavelength time resolved technique flash photolysis which was developed by, and won the Nobel Prize for, George Porter and Ronald Norrish (figure \@ref(fig:flash)). In flash photolysis a single wavelength probe is normally used, the monochromator in figure \@ref(fig:flash) is frequently just a band pass filter rather than the traditional multi component monochromator, other occasions a long pass filter is used with much the same effect.
+
+```{r echo=FALSE, flash, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Flash photolysis setup, with a pump light source exciting the sample orthogonally to the probe.'}
+knitr::include_graphics("images/flash.png")
+```
+
+The technique looks at either the bleaching and recovery of a ground state, or else at the formation and decay of an excited state, these decay or recovery curves may then be fitted to first order kinetics (figure \@ref(fig:flashdecay).
+
+```{r echo=FALSE, flashdecay, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Flash photolysis gives kinetic profiles which either show the formation and decay of an excited state (top) or bleach and recovery of a ground state (bottom).'}
+knitr::include_graphics("images/flashdecay.png")
+```
+
+
+
+## Absorbance transitions
+
+In transient absorbtion we look at the absorption spectra from excited excited states, and under usual circumstances look at how this evolves over time, just like with a ground state absorbance you can have absorption to a number of different levels and these 
+
+Table: (\#tab:phototrans) The excitation pathways from the ground and excited states within a molecule.
+
+| | | |
+|:--------------|:-------------|:---------|
+|| *'Allowed  ground state absorptions'*| |
+|Singlet-singlet absorption || $S_0 + h \nu \longrightarrow S_1$ <br> $S_0 + h \nu \longrightarrow S_2$ $\dots$|
+||*'Forbidden ground state absorptions'*||
+|Singlet-triplet absorption | | $S_0 + h \nu \longrightarrow T_1$ <br> $S_0 + h \nu \longrightarrow T_2$ $\dots$|
+||*'Excited state absorptions'* | |
+|Singlet-singlet absorption <br><br>Triplet-triplet absorption| | $S_1 + h \nu \longrightarrow S_2$ <br> $S_1 + h \nu \longrightarrow S_3$ $\dots$<br>$T_1 + h \nu \longrightarrow T_2$ <br> $T_1 + h \nu \longrightarrow T_3$ $\dots$|
+
+However, the excited state is also lost by the usual deactivation pathways listed in Table \@ref(tab:photoem), and so we can use kinetics to follow the loss of excited state and either the reformation of the ground state or formation of products.
+
+Table: (\#tab:phototrans) The pathways which affect the excited state concentration of a molecule.
+
+| | | |
+|:--------------|:-------------|:---------|
+|*'Allowed excited state emission'* | | |
+| Singlet-singlet emission| fluorescence | $S_1 \longrightarrow S_0 + h \nu '$|
+|*'Forbidden excited state emission'*|||
+| Triplet-singlet emission | phosphorescence |$T_1 \longrightarrow S_0 + h \nu ''$|
+|*'Other transitions'* | | |
+|Internal conversion <br> <Intersystem crossing> <br> <Intersystem crossing>  | (vibrational relaxation) <br> <br> (vibrational relaxation) | $S_1 \longrightarrow S_0 + heat$ <br> $S_1 \longrightarrow T_1 + heat$ <br> $T_1 \longrightarrow S_0 + heat$|
+|*Other pathways*| | |
+Quenching of excited state <br> <br> <br> Chemistry from excited state| | $S_1 + Q \longrightarrow S_0 + Q +heat$ <br> $S_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $S_1 \longrightarrow$ new/changed molecule |
+
+There are a number of transient excited states which may be observed in transient absorption spectrum which may not be accessible by direct absorption of a photon from the ground state, these states occur at different time delays, and we can often follow pathways of formation of different states.
+
+## Lifetimes in TA
+
+If we study the the TA spectrum with excitation pulses of different durations we get to see different information about the system.
+
+- fs - non-radiative relaxation of higher electronic states and the transition state formation
+- ps - vibrational relaxation
+- ps-ns - radiative relaxation of first excited singlet state (fluorescence)
+- µs - spin-forbidden relaxation of first excited triplet state (phosphorescence)
+- ms - fast photocycles (photolyase, phytochrome, rhodopsin)
+
+Photochemical reactions can occur on all of these time scales
+
+The time resolution is determined by the instrument response function (IRF) which is a response of the pump duration and the detector response and refresh rate.
+
+The decay profiles always follow (spontaneous) first order kinetics, however there may be more than one decay mechanism from any given state, each with their own unique lifetime (\@ref(eq:polyexp)).
+
+\begin{equation}
+[S*]=A \textrm{e}^{-k_1t}+ B \textrm{e}^{-k_2t} \dots
+(\#eq:polyexp)
+\end{equation}
+
+It is relatively easy to fit to bi-exponential decay, however if there are three or more components fitting the lifetimes gets increasingly difficult and so lifetimes with more than three components are only rarely reported.
+
+## Transient absorbance
+
+The technique of transient absorbance is used at a variety of wavelength ranges only changing the probe wavelength to the range of interest. The most common versions of this teachnique are using ~infra~-red probes and UV/visable probes, and usually the technique is time-resolved, frequently in the ns, ps & fs time domains. We will look at other lifetime techniques later in the course, and different lifetime teachniques are often used in conjunction to more fully understand a system.
+
+<iframe width="784" height="588" src="https://www.youtube.com/embed/bOY0vrLZIkQ?list=PLLssadGefUKXSIWzqm3iYX12cP1Jh2pYn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The instrumental setup for a transient absorbance experiment is almost  exactly the same as that used in flash photolysis, however TA has the ability to scan wavelengths and so there is a monochromator instead of a bandpass filter, and consequently this means that the probe light source has to be a 'white light' source (figure \@ref(fig:TAsetup)).  
+
+```{r echo=FALSE, TAsetup, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A typical TA looks much the same as a flash photolysis setup however a white light probe is used so spectral detail may be observed.'}
+knitr::include_graphics("images/TAsetup.png")
+```
+
+*This is an interactive element.*
+
+<iframe src="http://workitoutwithapencil.xyz/wp-admin/admin-ajax.php?action=h5p_embed&id=2" width="522" height="309" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://workitoutwithapencil.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+The pump light source has to provide an efficient start of the dynamicss, consequently it should be a (relatively)short pulse relative to the time domain being studied and be of high intensity to generate measurable quantities of excited state. As such the pump light source is frequently a 'q-switched' laser of a suitable wavelength to be absorbed by the system, it doesn't matter what wavelengths are being probed, it only matters that the pump light source can generate excited states.
+
+For ns and µs studies it is usual for the probe light source to be steady state, with a Xe arc lamp being suitable for  the low energy UV, visable and near IR region. Other wavelength sources may be used for other techniques such as Raman, IR and EPR. 'Ultrafast' systems (ps and fs) have a more complicated probe light source which is described elsewhere.
+
+For TA experiments the optical density of the sample should be higher than for normal steady state absorbance, with typical absorbances of around 0.3-0.5 cm^-1^ being typical, it is a balance between generating enough excited state to be measurable and keeping a linear response such that we can quantify the reactions taking place.
+
+## Methods of measuring TA spectra
+
+There are two methods of measuring TA data: kinetic mode and spectral mode.
+
+Kinetic mode looks at a single wavelength and measures the evolution of the signal at that wavelength over time, then the process is repeated at another wavelength until all wavelengths of interest are covered and the spectrum is built.
+
+Spectral mode is where the whole spectrum is recorded at a given time delay, and then the time delay is changed and the spectrum recorded again, this is repeated until all time delays of interest have been studied.
+
+Spectral mode is limited on how quickly the whole spectrum can be recorded, however the increasing sensitivity and responsiveness of CCDs has increased their use in TA measurements in recent years.
+
+The transient absorption spectrum looks at the difference of absorbance at each wavelength between before an excitation pulse (with everythign in the ground state) and after. From the Beer-Lambert law:
+
+The absorbance of the ground state is:
+
+\begin{equation}
+A_0=\varepsilon l [S]_0
+(\#eq:TAground)
+\end{equation}
+
+and the absorbance after excitation is:
+
+\begin{equation}
+A_t=\varepsilon l ([S]_0-[S^*]) + \varepsilon^*l[S*]
+(\#eq:TAex)
+\end{equation}
+
+this is the sum of the absorbance of any remaining ground state and the absorbance of the excited state at the same wavelength.
+
+The transient absorbance signal is given by, $\Delta A$, which is equation \@ref(eq:TAex) - equation \@ref(eq:TAground):
+
+\begin{equation}
+\Delta A = A_t-A_0
+(\#eq:TA)
+\end{equation}
+
+rearranging these equations gives:
+
+\begin{equation}
+\Delta A = (\varepsilon ^* - \varepsilon) l [S^*]
+(\#eq:TA)
+\end{equation}
+
+in each of these cases $[S^*]$ can be the concentration of any of the excited states.
+
+The TA spectrum therefore looks like evolving peaks (figure \@ref(fig:TAevolution))with positive peaks relating to new excited state absorptions, and negative peaks related to the loss of ground state. Just as with CD and LD where difference spectrum are also recorded it should not be forgotten that both ground and excited state peaks may occur in the same region of the spectrum.
+
+Any peaks which remain after a long time delay are likely 'products' of the reaction, it does not have to be that all of the ground state is recovered.
+
+```{r echo=FALSE, TAevolution, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Positive peaks show formation of new bands, negative bands the loss of ground state, the profiles are followed over increasing time delays showing how energy moves around the system.'}
+knitr::include_graphics("images/TAevolution.png")
+```
+
+## Ultrafast TA spectroscopy
+
+Ultrafast (ps and fs) TA spectroscopy is a special subset of TA because it is impossible to get this time resolution with a typical TA set up. Instead a single pulsed laser source is used for both pump and probe, in this case the time delay is produced by increasing slightly the length of the path of light of the probe light source (figure \@ref(fig:fssetup)).
+
+```{r echo=FALSE, fssetup, out.width='60%', fig.show='hold', fig.align='center', fig.cap='An ultrafast TA setup only includes a single light source, the ultrafast laser source, this acts as both pump and probe. The probe light is delayed by an extension in the light path and passed through a non-linear continuum generator before reaching the sample cell.'}
+knitr::include_graphics("images/fssetup.png")
+```
+
+The probe light source is passed through a continuum generator (a non-linear optical device which gives and smooth white light output), this light is passed through the sample at different time delays to generate a spectral mode signal. In the case of ultrafast spectroscopy the two pulses do not arrive in the sample orthogonal to each other, but instead are offset by 'the magic angle' (approximately 54.7º ($\arccos \frac{1}{\sqrt{3}}$)) this reduces any anisotropic effects (such as molecular rotations or polarisation) increasing the spectral resolution.
+
+The detector is usually a CCD, with a preceeding 2-dimensional diffraction grating to record the whole spectrum for each sampling.
+
+## Limitations of TA
+
+There are, however, a number of limitations with the technique of TA, some only particular to fs spectroscopy,  and some are easier to account for than others. 
+
+Firstly it must be ensured that the repetition rate of the laser is slower than the time taken for the ground state to recover, if this is not possible the sample maybe 'refreshed' by use of continuous flow of solution. It must also be ensured that not only about 10% of the molecules are excited with the pump pulse, this ensures that both the ground and excited state should still be in regions where they are obeying the Beer-Lambert law. If too much excited state is generated secondary effects such as excited state annihilation, orientational saturation (all molecules alligned are saturated), or saturation (where stimulated emmission can have effects) can complicate analysis
+
+Secondly use of the magic angle (at all time domains) reduces the effect of orientation dynamics (at this angle there should be no overlap of wave-vectors of pump or probe paths). Laser light is polarised, and so selectively excites transition dipoles aligned with the wave vector, depolarisation of this absorption occurs due ot later rotational diffusion within the system. The magic angle ensures that the 'average' of these depolarations is zero ultimately giving a better signal to noise - the same technique is also used in NMR spectroscopy.
+
+Specific to ultrafast spectroscopies is the effect of bandbroadening due to the Heisenberg uncertainty principle of the short light pulses, with supposedly 'monochromatic' laser pulses often having FWHM peak withs of 100 or more nm. This can mean it is difficult to only excite particular transitions.
+
+Finally there may be articfacts (such as scattering or emission) which can complicate spectra, especially at early time scales.
+
+## Workshop task
+
+I have made the full paper to the research task available on moodle, but have also included a second paper which I highly recommend reading, which was written by Ahmed Zewail, who won the Nobel Prize in chemistry for inventing fs spectroscopy, it is a paper designed for beginners and is a very easy read.
+
+You will find some slides on moodle which show the transient absorption spectra at different time delays of a model photosynthetic system. The slides also give details on the wavelength of ground state absorbance of the two chromophores in the system. Two sets of data are shown, the spectrum as it evolves over time, and the absorbances at two single wavelengths as the evolve over time.
+
+As before questions are posed next to the spectra - try to think what is excited when in the system, what factors complicate the spectra (additional transition states, chemical products etc) and try to build a model of how energy is moved around the system.
+
+As before my interpretation of the results (and in this case the energy profile model from the research paper)are also included in the discussion, but try and draw your own conclusions first.
+
+## Questions
+<iframe src="http://workitoutwithapencil.xyz/wp-admin/admin-ajax.php?action=h5p_embed&id=3" width="522" height="419" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://workitoutwithapencil.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="http://workitoutwithapencil.xyz/wp-admin/admin-ajax.php?action=h5p_embed&id=1" width="522" height="528" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://workitoutwithapencil.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<!--chapter:end:03-TA.Rmd-->
+
+# Fluorescence Lifetime {#ch:fluorlif}
+
+Whilst this technique is generally referred to as fluroescence lifetime the principles are equally applicable to longer lifetimes. You will already know fluorescence refers to emission of a photon without a change of spin, phosphorescence, emission of a photon with a change of spin, however I will also use the term emission which I will use either when the mode of emission is either irrelevant or unknown (such as with emission from quantum dots).
+
+You will already be familiar with the fluorescence, and how emission from an excited state is a spontaneous process following first order kinetics (Table \@ref(tab:photoem)).
+
+Table: (\#tab:photoem) The emission pathways from the excited states within a molecule.
+
+| | | |
+|:--------------|:-------------|:---------|
+|*'Allowed excited state emission'* | | |
+| Singlet-singlet emission| fluorescence | $S_1 \longrightarrow S_0 + h \nu '$|
+|*'Forbidden excited state emission'*|||
+| Triplet-singlet emission | phosphorescence |$T_1 \longrightarrow S_0 + h \nu ''$|
+|*'Other transitions'* | | |
+|Internal conversion <br> <Intersystem crossing> <br> <Intersystem crossing>  | (vibrational relaxation) <br> <br> (vibrational relaxation) | $S_1 \longrightarrow S_0 + heat$ <br> $S_1 \longrightarrow T_1 + heat$ <br> $T_1 \longrightarrow S_0 + heat$|
+|*Other pathways*| | |
+Quenching of excited state <br> <br> <br> Chemistry from excited state| | $S_1 + Q \longrightarrow S_0 + Q +heat$ <br> $S_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q +heat$ <br> $T_1 + Q \longrightarrow S_0 + Q^\ast +heat$ <br> $S_1 \longrightarrow$ new/changed molecule |
+
+However, it can be the case that there is more than one emissive deactivation process from an excited state, each being a first order process.
+
+## Steady State fluorescence
+
+Fluorimeters have two modes of operation, one mode where the excitation wavelength is fixed and the emission is scanned, the version of the technique which we usually think of. The second technique will be discussed later in the course, where the emission wavelength is fixed and the excitation is scanned.
+
+```{r echo=FALSE, fluorch, out.width='60%', fig.show='hold', fig.align='center', fig.cap='A fluorimeter with a scanning excitation and emission monochromator, sources are usually xenon arc lamps, and detectors PMTs.'}
+knitr::include_graphics("images/fluorescence.png")
+```
+
+This necessitates two monochromators, although the most simple instruments will just use band pass filters for excitaiton and emission (and you may have used these instruments in the lab). Fluorescence is measured orthogonally to the excitation, reducing optical artifacts and allowing easy separation of the incident and excident light. Monochromators include slits, which may be used to alter the intensity of incident light reaching the detector (or sample), but this also affects what fine details may be observed in the spectrum.
+
+```{r echo=FALSE, waterramanslits, out.width='60%', fig.show='hold', fig.align='center', fig.cap='The slits in a monochromator affect the both the intensity of light reaching a detector but also the band pass.'}
+knitr::include_graphics("images/waterramanslits.png")
+```
+
+Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample.
+
+```{r echo=FALSE, saturation, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Both CCDs and PMTs are easily saturated where the emission recorded is lower than would be predicted by the Beer-Lambert law.'}
+knitr::include_graphics("images/saturation.png")
+```
+
+<!--chapter:end:04-fluorescence.Rmd-->
+
