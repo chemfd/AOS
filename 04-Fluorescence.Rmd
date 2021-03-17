@@ -1,0 +1,5 @@
+# Time Resolved Fluorescence {#ch:fluorlif)
+
+Whilst I will refer to all of these techniques as fluorescence" I am using this term to cover all types of emission from chromophores. I will variously refer to fluorescence as emission with no change of electron spin, phosphorescence, with a change in an electron spin, and emission where I am making no assertion as to the change of spin of the system.
+
+ 
