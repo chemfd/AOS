@@ -45,7 +45,7 @@ When we refer to fluorescence spectroscopy we are normally referring to steady s
 
 We have already seen from earlier courses that the quantum yield of emission is independent of the excitation wavelength (this is Kasha's rule)
 
-```{r echo=FALSE, kasha, out.width='40%', fig.show='hold', fig.align='center', fig.cap='The absorbance (left) and emmission (right) of rhodamine 6G, the intensity of the emission depends on the absorbance at the excitation wavelength. The spectra have been normalised such that the absorbance at the maximum and emission at that excitation wavelength are the same size.'}
+```{r echo=FALSE, kasha, out.width='800%', fig.show='hold', fig.align='center', fig.cap='The absorbance (left) and emmission (right) of rhodamine 6G, the intensity of the emission depends on the absorbance at the excitation wavelength. The spectra have been normalised such that the absorbance at the maximum and emission at that excitation wavelength are the same size.'}
 knitr::include_graphics("images/kasha.png")
 ```
 
@@ -55,6 +55,13 @@ This also gives us another way to change the intensity of emission from a sample
 
 In earlier courses we have come across energy transfer processes (FRET and Dexter) whereby we said that there could be energy transfer from a donor to an acceptor at a distance, all that was requried was an overlap integral between the emission of the donor and absorption of the acceptor and alignment of the transition dipole moments in each molecule.
 
-```{r echo=FALSE, FRET, out.width='40%', fig.show='hold', fig.align='center', fig.cap='The absorbance and emission of a donor and acceptor with the highlighted region being the spectral overlap integral which allows for energy transfer between the two species.'}
+```{r echo=FALSE, FRET, out.width='60%', fig.show='hold', fig.align='center', fig.cap='The absorbance and emission of a donor and acceptor with the highlighted region being the spectral overlap integral which allows for energy transfer between the two species.'}
 knitr::include_graphics("images/FRET.png")
 ```
+
+Excitation spectroscopy can be used to see if this energy transfer is occuring because if we fix our emission monochromator to a wavelength only emitted by the acceptor and scan our absorbance we may see a spectrum which matches up to that of the donor molecule.
+
+```{r echo=FALSE, FRET2, out.width='60%', fig.show='hold', fig.align='center', fig.cap='If energy transfer is occuring in a system we can see this by looking at the emission of the acceptor and scanning the excitation wavelengths, if the donor profile is observed it must be absorbing energy and transferring it to the donor.'}
+knitr::include_graphics("images/FRET2.png")
+```
+
