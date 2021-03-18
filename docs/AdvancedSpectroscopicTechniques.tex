@@ -875,8 +875,8 @@ I do not expect you to know a lot about DNA, just know the following:
 - A helix repeats about once every 10 bases, with the bases separated by the van der Waals distance (3.4 Å)
 - The bases are about about 86º to the long axis of the molecule
 
-\hypertarget{questions}{%
-\section{Questions}\label{questions}}
+\hypertarget{questions-1}{%
+\section{Questions}\label{questions-1}}
 
 These questions can be used to check your understanding of the material, beware I periodically include star trek inspired technobabble in the distractors\ldots{}
 
@@ -985,8 +985,8 @@ These questions can be used to check your understanding of the material, beware 
   the sample is degrading under UV light
 \end{enumerate}
 
-\hypertarget{answers}{%
-\section{Answers}\label{answers}}
+\hypertarget{answers-1}{%
+\section{Answers}\label{answers-1}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1412,7 +1412,7 @@ The technique looks at either the bleaching and recovery of a ground state, or e
 \hypertarget{absorbance-transitions}{%
 \section{Absorbance transitions}\label{absorbance-transitions}}
 
-In transient absorbtion we look at the absorption spectra from excited excited states, and under usual circumstances look at how this evolves over time, just like with a ground state absorbance you can have absorption to a number of different levels and these
+In transient absorbtion we look at the absorption spectra from excited excited states, and under usual circumstances look at how this evolves over time, just like with a ground state absorbance you can have absorption to a number of different levels and these each have their own values for molar extinction coefficient (\(\varepsilon\)) and their own lifetimes.
 
 \begin{longtable}[]{@{}lll@{}}
 \caption{\label{tab:phototrans} The excitation pathways from the ground and excited states within a molecule.}\tabularnewline
@@ -1675,8 +1675,8 @@ Specific to ultrafast spectroscopies is the effect of bandbroadening due to the 
 
 Finally there may be articfacts (such as scattering or emission) which can complicate spectra, especially at early time scales.
 
-\hypertarget{workshop-task}{%
-\section{Workshop task}\label{workshop-task}}
+\hypertarget{workshop-task-1}{%
+\section{Workshop task}\label{workshop-task-1}}
 
 I have made the full paper to the research task available on moodle, but have also included a second paper which I highly recommend reading, which was written by Ahmed Zewail, who won the Nobel Prize in chemistry for inventing fs spectroscopy, it is a paper designed for beginners and is a very easy read.
 
@@ -1686,8 +1686,8 @@ As before questions are posed next to the spectra - try to think what is excited
 
 As before my interpretation of the results (and in this case the energy profile model from the research paper)are also included in the discussion, but try and draw your own conclusions first.
 
-\hypertarget{questions}{%
-\section{Questions}\label{questions}}
+\hypertarget{questions-2}{%
+\section{Questions}\label{questions-2}}
 
 \hypertarget{ch:fluorlif}{%
 \chapter{Fluorescence Excitation and Lifetime}\label{ch:fluorlif}}
@@ -1786,7 +1786,7 @@ This necessitates two monochromators, although the most simple instruments will 
 \caption{The slits in a monochromator affect the both the intensity of light reaching a detector but also the band pass.}\label{fig:waterramanslits}
 \end{figure}
 
-Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample. Conversely we can increase the signal using the same variables, this is the case with signal to noise where the signal increases with \(\sqrt{t}\) (or other variable), so quadrupling the integration time would increase the signal relative to the noise by two.
+Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample. Conversely we can increase the signal using the same variables, this is the case with signal to noise where the signal increases with \(\sqrt{t}\) (or other variable), so quadrupling the integration time would increase the signal relative to the noise by two. However, care should be taken to ensure concentrations always fall in the linear region of the Beer-Lambert law.
 
 \begin{figure}
 
@@ -1802,7 +1802,7 @@ When we refer to fluorescence spectroscopy we are normally referring to steady s
 \hypertarget{kashas-rule}{%
 \subsection{Kasha's rule}\label{kashas-rule}}
 
-We have already seen from earlier courses that the quantum yield of emission is independent of the excitation wavelength (this is Kasha's rule)
+We have already seen from earlier courses that the quantum yield of emission is independent of the excitation wavelength (this is Kasha's rule).
 
 \begin{figure}
 
@@ -1838,6 +1838,26 @@ Excitation spectroscopy can be used to see if this energy transfer is occuring b
 }
 
 \caption{If energy transfer is occuring in a system we can see this by looking at the emission of the acceptor and scanning the excitation wavelengths, if the donor profile is observed it must be absorbing energy and transferring it to the donor.}\label{fig:FRET2}
+\end{figure}
+
+The stronger the coupling between donor and acceptor the larger the observed peak of the donor in the excitation spectra (figure\ref{fig:FRET2}).If you recall from your \href{https://chemfd.github.io/Photochemistry_2/ch-Quench.html\#sec:forster}{previous photochemistry studies} the rate of energy transfer is distance dependent, and so we can use FRET to study structure, such as the melting of DNA.
+
+\hypertarget{time-resolved-fluorescence}{%
+\section{Time resolved fluorescence}\label{time-resolved-fluorescence}}
+
+Emission from an excited state is a spontaneous first order process, what we haven't considered before is the possibility of more than one first order component of decay due to a difference in environment or differences in the chromophore.
+
+Bi- and multi- exponential decays are infact quite normal, and there may also be components from second order quenching. When we are refering to lifetime it is the time taken for the concentration of excited state to fall to 1/e of its initial concentration.
+
+There should be correlation between the steady state intensity and lifetime, for example in figure \ref{fig:lifetimeSS} the large increase in intensity of the steady state emission intensity of YO-Pro-1 corresponds to an increase in the measured lifetime of the same size (and consequently an identical increase in the quantum yield of emission).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/lifetimeSS} 
+
+}
+
+\caption{The emission of YO-Pro-1 iodide when bound to DNA (pink) and when in free solution (blue), the steady state intensity  when bound to DNA is 1200 times larger than in free solution, this corresponds to an increase in the fluorescence lifetime from 2 ps in free solution to 2.4 ns when bound to DNA.}\label{fig:lifetimeSS}
 \end{figure}
 
   \bibliography{book.bib,packages.bib}

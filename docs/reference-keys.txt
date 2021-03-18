@@ -29,6 +29,14 @@ eq:TAex
 eq:TA
 fig:TAevolution
 fig:fssetup
+tab:photoem
+fig:fluorch
+fig:waterramanslits
+fig:saturation
+fig:kasha
+fig:FRET
+fig:FRET2
+fig:lifetimeSS
 ch:UVvisfluorIR
 sec:UV
 the-beer-lambert-law
@@ -56,3 +64,8 @@ ultrafast-ta-spectroscopy
 limitations-of-ta
 workshop-task-1
 questions-2
+ch:fluorlif
+steady-state-fluorescence
+kashas-rule
+sec:excitation
+time-resolved-fluorescence

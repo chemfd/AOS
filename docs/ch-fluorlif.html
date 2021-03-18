@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Fluorescence Excitation and Lifetime | CH3/40227 Advanced Spectroscopic Techniques</title>
   <meta name="description" content="Advanced Spectroscopic Techniques" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Fluorescence Excitation and Lifetime | CH3/40227 Advanced Spectroscopic Techniques" />
   <meta property="og:type" content="book" />
@@ -51,6 +51,8 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 
@@ -98,8 +100,8 @@
 <li class="chapter" data-level="2.2" data-path="ch-LDCD.html"><a href="ch-LDCD.html#circular-dichroism"><i class="fa fa-check"></i><b>2.2</b> Circular Dichroism</a></li>
 <li class="chapter" data-level="2.3" data-path="ch-LDCD.html"><a href="ch-LDCD.html#induced-dichroism"><i class="fa fa-check"></i><b>2.3</b> Induced Dichroism</a></li>
 <li class="chapter" data-level="2.4" data-path="ch-LDCD.html"><a href="ch-LDCD.html#workshop-task"><i class="fa fa-check"></i><b>2.4</b> Workshop task</a></li>
-<li class="chapter" data-level="2.5" data-path="ch-UVvisfluorIR.html"><a href="ch-UVvisfluorIR.html#questions"><i class="fa fa-check"></i><b>2.5</b> Questions</a></li>
-<li class="chapter" data-level="2.6" data-path="ch-UVvisfluorIR.html"><a href="ch-UVvisfluorIR.html#answers"><i class="fa fa-check"></i><b>2.6</b> Answers</a></li>
+<li class="chapter" data-level="2.5" data-path="ch-LDCD.html"><a href="ch-LDCD.html#questions-1"><i class="fa fa-check"></i><b>2.5</b> Questions</a></li>
+<li class="chapter" data-level="2.6" data-path="ch-LDCD.html"><a href="ch-LDCD.html#answers-1"><i class="fa fa-check"></i><b>2.6</b> Answers</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="ch-TA.html"><a href="ch-TA.html"><i class="fa fa-check"></i><b>3</b> TA Transient Absorption</a><ul>
 <li class="chapter" data-level="3.1" data-path="ch-TA.html"><a href="ch-TA.html#flash-photolysis"><i class="fa fa-check"></i><b>3.1</b> Flash photolysis</a></li>
@@ -109,14 +111,15 @@
 <li class="chapter" data-level="3.5" data-path="ch-TA.html"><a href="ch-TA.html#methods-of-measuring-ta-spectra"><i class="fa fa-check"></i><b>3.5</b> Methods of measuring TA spectra</a></li>
 <li class="chapter" data-level="3.6" data-path="ch-TA.html"><a href="ch-TA.html#ultrafast-ta-spectroscopy"><i class="fa fa-check"></i><b>3.6</b> Ultrafast TA spectroscopy</a></li>
 <li class="chapter" data-level="3.7" data-path="ch-TA.html"><a href="ch-TA.html#limitations-of-ta"><i class="fa fa-check"></i><b>3.7</b> Limitations of TA</a></li>
-<li class="chapter" data-level="3.8" data-path="ch-LDCD.html"><a href="ch-LDCD.html#workshop-task"><i class="fa fa-check"></i><b>3.8</b> Workshop task</a></li>
-<li class="chapter" data-level="3.9" data-path="ch-UVvisfluorIR.html"><a href="ch-UVvisfluorIR.html#questions"><i class="fa fa-check"></i><b>3.9</b> Questions</a></li>
+<li class="chapter" data-level="3.8" data-path="ch-TA.html"><a href="ch-TA.html#workshop-task-1"><i class="fa fa-check"></i><b>3.8</b> Workshop task</a></li>
+<li class="chapter" data-level="3.9" data-path="ch-TA.html"><a href="ch-TA.html#questions-2"><i class="fa fa-check"></i><b>3.9</b> Questions</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html"><i class="fa fa-check"></i><b>4</b> Fluorescence Excitation and Lifetime</a><ul>
 <li class="chapter" data-level="4.1" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#steady-state-fluorescence"><i class="fa fa-check"></i><b>4.1</b> Steady State fluorescence</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#kashas-rule"><i class="fa fa-check"></i><b>4.1.1</b> Kasha’s rule</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#sec:excitation"><i class="fa fa-check"></i><b>4.2</b> Excitation</a></li>
+<li class="chapter" data-level="4.3" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#time-resolved-fluorescence"><i class="fa fa-check"></i><b>4.3</b> Time resolved fluorescence</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -209,7 +212,7 @@ Figure 4.1: A fluorimeter with a scanning excitation and emission monochromator,
 Figure 4.2: The slits in a monochromator affect the both the intensity of light reaching a detector but also the band pass.
 </p>
 </div>
-<p>Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample. Conversely we can increase the signal using the same variables, this is the case with signal to noise where the signal increases with <span class="math inline">\(\sqrt{t}\)</span> (or other variable), so quadrupling the integration time would increase the signal relative to the noise by two.</p>
+<p>Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample. Conversely we can increase the signal using the same variables, this is the case with signal to noise where the signal increases with <span class="math inline">\(\sqrt{t}\)</span> (or other variable), so quadrupling the integration time would increase the signal relative to the noise by two. However, care should be taken to ensure concentrations always fall in the linear region of the Beer-Lambert law.</p>
 <div class="figure" style="text-align: center"><span id="fig:saturation"></span>
 <img src="images/saturation.png" alt="Both CCDs and PMTs are easily saturated where the emission recorded is lower than would be predicted by the Beer-Lambert law." width="40%" />
 <p class="caption">
@@ -219,7 +222,7 @@ Figure 4.3: Both CCDs and PMTs are easily saturated where the emission recorded 
 <p>When we refer to fluorescence spectroscopy we are normally referring to steady state emisssion spectroscopy. This is the case where we have constant illumination of our sample and we generate a ‘steady state’ of excited molecules.</p>
 <div id="kashas-rule" class="section level3">
 <h3><span class="header-section-number">4.1.1</span> Kasha’s rule</h3>
-<p>We have already seen from earlier courses that the quantum yield of emission is independent of the excitation wavelength (this is Kasha’s rule)</p>
+<p>We have already seen from earlier courses that the quantum yield of emission is independent of the excitation wavelength (this is Kasha’s rule).</p>
 <div class="figure" style="text-align: center"><span id="fig:kasha"></span>
 <img src="images/kasha.png" alt="The absorbance (left) and emmission (right) of rhodamine 6G, the intensity of the emission depends on the absorbance at the excitation wavelength. The spectra have been normalised such that the absorbance at the maximum and emission at that excitation wavelength are the same size." width="800%" />
 <p class="caption">
@@ -243,6 +246,19 @@ Figure 4.5: The absorbance and emission of a donor and acceptor with the highlig
 <img src="images/FRET2.png" alt="If energy transfer is occuring in a system we can see this by looking at the emission of the acceptor and scanning the excitation wavelengths, if the donor profile is observed it must be absorbing energy and transferring it to the donor." width="60%" />
 <p class="caption">
 Figure 4.6: If energy transfer is occuring in a system we can see this by looking at the emission of the acceptor and scanning the excitation wavelengths, if the donor profile is observed it must be absorbing energy and transferring it to the donor.
+</p>
+</div>
+<p>The stronger the coupling between donor and acceptor the larger the observed peak of the donor in the excitation spectra (figure<a href="ch-fluorlif.html#fig:FRET2">4.6</a>).If you recall from your <a href="https://chemfd.github.io/Photochemistry_2/ch-Quench.html#sec:forster">previous photochemistry studies</a> the rate of energy transfer is distance dependent, and so we can use FRET to study structure, such as the melting of DNA.</p>
+</div>
+<div id="time-resolved-fluorescence" class="section level2">
+<h2><span class="header-section-number">4.3</span> Time resolved fluorescence</h2>
+<p>Emission from an excited state is a spontaneous first order process, what we haven’t considered before is the possibility of more than one first order component of decay due to a difference in environment or differences in the chromophore.</p>
+<p>Bi- and multi- exponential decays are infact quite normal, and there may also be components from second order quenching. When we are refering to lifetime it is the time taken for the concentration of excited state to fall to 1/e of its initial concentration.</p>
+<p>There should be correlation between the steady state intensity and lifetime, for example in figure <a href="ch-fluorlif.html#fig:lifetimeSS">4.7</a> the large increase in intensity of the steady state emission intensity of YO-Pro-1 corresponds to an increase in the measured lifetime of the same size (and consequently an identical increase in the quantum yield of emission).</p>
+<div class="figure" style="text-align: center"><span id="fig:lifetimeSS"></span>
+<img src="images/lifetimeSS.png" alt="The emission of YO-Pro-1 iodide when bound to DNA (pink) and when in free solution (blue), the steady state intensity  when bound to DNA is 1200 times larger than in free solution, this corresponds to an increase in the fluorescence lifetime from 2 ps in free solution to 2.4 ns when bound to DNA." width="60%" />
+<p class="caption">
+Figure 4.7: The emission of YO-Pro-1 iodide when bound to DNA (pink) and when in free solution (blue), the steady state intensity when bound to DNA is 1200 times larger than in free solution, this corresponds to an increase in the fluorescence lifetime from 2 ps in free solution to 2.4 ns when bound to DNA.
 </p>
 </div>
 

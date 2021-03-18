@@ -33,7 +33,7 @@ This necessitates two monochromators, although the most simple instruments will 
 knitr::include_graphics("images/waterramanslits.png")
 ```
 
-Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample. Conversely we can increase the signal using the same variables, this is the case with signal to noise where the signal increases with $\sqrt{t}$ (or other variable), so quadrupling the integration time would increase the signal relative to the noise by two.
+Detectors in fluorimetry are usually PMTs, however some instruments now use CCDs. Both may be easily saturated, if this occurs there are a number of possible methods to affect the intensity of the signal, including changing the slit widths, changing the voltage on the PMT, reducing the integration time (steady state), slowing the incident pulse rate (time resolved), or changing the concentration of the sample. Conversely we can increase the signal using the same variables, this is the case with signal to noise where the signal increases with $\sqrt{t}$ (or other variable), so quadrupling the integration time would increase the signal relative to the noise by two. However, care should be taken to ensure concentrations always fall in the linear region of the Beer-Lambert law.
 
 ```{r echo=FALSE, saturation, out.width='40%', fig.show='hold', fig.align='center', fig.cap='Both CCDs and PMTs are easily saturated where the emission recorded is lower than would be predicted by the Beer-Lambert law.'}
 knitr::include_graphics("images/saturation.png")
@@ -43,13 +43,13 @@ When we refer to fluorescence spectroscopy we are normally referring to steady s
 
 ### Kasha's rule
 
-We have already seen from earlier courses that the quantum yield of emission is independent of the excitation wavelength (this is Kasha's rule)
+We have already seen from earlier courses that the quantum yield of emission is independent of the excitation wavelength (this is Kasha's rule).
 
 ```{r echo=FALSE, kasha, out.width='800%', fig.show='hold', fig.align='center', fig.cap='The absorbance (left) and emmission (right) of rhodamine 6G, the intensity of the emission depends on the absorbance at the excitation wavelength. The spectra have been normalised such that the absorbance at the maximum and emission at that excitation wavelength are the same size.'}
 knitr::include_graphics("images/kasha.png")
 ```
 
-This also gives us another way to change the intensity of emission from a sample, by changing the excitation wavelength.
+This also gives us another way to change the intensity of emission from a sample, by changing the excitation wavelength. 
 
 ## Excitation {#sec:excitation}
 
@@ -65,3 +65,16 @@ Excitation spectroscopy can be used to see if this energy transfer is occuring b
 knitr::include_graphics("images/FRET2.png")
 ```
 
+The stronger the coupling between donor and acceptor the larger the observed peak of the donor in the excitation spectra (figure\@ref(fig:FRET2)).If you recall from your [previous photochemistry studies](https://chemfd.github.io/Photochemistry_2/ch-Quench.html#sec:forster) the rate of energy transfer is distance dependent, and so we can use FRET to study structure, such as the melting of DNA.
+
+## Time resolved fluorescence
+
+Emission from an excited state is a spontaneous first order process, what we haven't considered before is the possibility of more than one first order component of decay due to a difference in environment or differences in the chromophore.
+
+Bi- and multi- exponential decays are infact quite normal, and there may also be components from second order quenching. When we are refering to lifetime it is the time taken for the concentration of excited state to fall to 1/e of its initial concentration.
+
+There should be correlation between the steady state intensity and lifetime, for example in  figure \@ref(fig:lifetimeSS) the large increase in intensity of the steady state emission intensity of YO-Pro-1 corresponds to an increase in the measured lifetime of the same size (and consequently an identical increase in the quantum yield of emission).
+
+```{r echo=FALSE, lifetimeSS, out.width='60%', fig.show='hold', fig.align='center', fig.cap='The emission of YO-Pro-1 iodide when bound to DNA (pink) and when in free solution (blue), the steady state intensity  when bound to DNA is 1200 times larger than in free solution, this corresponds to an increase in the fluorescence lifetime from 2 ps in free solution to 2.4 ns when bound to DNA.'}
+knitr::include_graphics("images/lifetimeSS.png")
+```

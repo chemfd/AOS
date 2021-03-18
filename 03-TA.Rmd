@@ -20,7 +20,7 @@ knitr::include_graphics("images/flashdecay.png")
 
 ## Absorbance transitions
 
-In transient absorbtion we look at the absorption spectra from excited excited states, and under usual circumstances look at how this evolves over time, just like with a ground state absorbance you can have absorption to a number of different levels and these 
+In transient absorbtion we look at the absorption spectra from excited excited states, and under usual circumstances look at how this evolves over time, just like with a ground state absorbance you can have absorption to a number of different levels and these each have their own values for molar extinction coefficient ($\varepsilon$) and their own lifetimes.
 
 Table: (\#tab:phototrans) The excitation pathways from the ground and excited states within a molecule.
 
