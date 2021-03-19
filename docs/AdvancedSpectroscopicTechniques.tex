@@ -80,7 +80,7 @@
 
 \title{CH3/40227 Advanced Spectroscopic Techniques}
 \author{Fiona Dickinson}
-\date{2021-03-18}
+\date{2021-03-19}
 
 \begin{document}
 \maketitle
@@ -167,6 +167,8 @@ Loading\ldots{}
 \hypertarget{edit-log}{%
 \section*{Edit log}\label{edit-log}}
 \addcontentsline{toc}{section}{Edit log}
+
+Chapter 4 finished, reported typos fixed 190321
 
 Most Chapter 3 content finished 280221
 
@@ -1859,6 +1861,61 @@ There should be correlation between the steady state intensity and lifetime, for
 
 \caption{The emission of YO-Pro-1 iodide when bound to DNA (pink) and when in free solution (blue), the steady state intensity  when bound to DNA is 1200 times larger than in free solution, this corresponds to an increase in the fluorescence lifetime from 2 ps in free solution to 2.4 ns when bound to DNA.}\label{fig:lifetimeSS}
 \end{figure}
+
+Fluorescence lifetimes are just a linear combination of the exponential decays just as we saw in equation \eqref{eq:polyexp} with the flash photolysis.
+
+There are four principle ways of undertaking fluorescence lifetime measurements:
+
+\begin{itemize}
+\item
+  time domain: measure the intensity of teh signal after an excitation pulse, this technique is usually only used for long (phosphorescent) lifetimes
+\item
+  phase domain: looking at how modulation ratio changes\ldots{} this technique is very mathematical to understand and very fiddly to work with, there is a good description in Lackowicz, Principles of Fluorescence Spectroscopy
+\item
+  pulse streak : cameras offset the signal over an area detector this technique can work with very fast emission lifetimes (ps)
+\item
+  TCSPC (time correlated single photon counting): the arrival of single photons is detected after each excitation pulse with many thousands of measurements taken. This technique is slow but is very accurate and sensitive
+\end{itemize}
+
+the final common method of measuring emission lifetimes is only used for ultrafast (fs-ps) measurements
+
+\begin{itemize}
+\tightlist
+\item
+  fluorescence up conversion: fluorescence is `gated' (using a Kerr gate) to only be allowed through after certain time delays
+\end{itemize}
+
+\hypertarget{tcspc}{%
+\subsection{TCSPC}\label{tcspc}}
+
+TCSPC counts individual emitted photons and measures the time delay from the excitation pulse to the photon arriving at the detector. Since we only want a single photon to arrive at the detector at any time many measurements will not record any photon arriving.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{images/singlephoton} 
+
+}
+
+\caption{Single photon counting data, each pulse shows the time delay of a single photon arriving at the detector, as can be seen many measurments do not record any photon arriving at the detector.}\label{fig:singlephoton}
+\end{figure}
+
+\hypertarget{case-study-where-lifetime-and-steady-state-dont-match}{%
+\section{Case study where lifetime and steady state don't match}\label{case-study-where-lifetime-and-steady-state-dont-match}}
+
+It can be the case that the changes in measured lifetime and steady state emission do not match, however there are a couple of cases which help explain this disparity.
+
+The first of these is due to the difficulty of measuring and fitting poly-exponential decays.
+
+The second is the limitations of the equipment in that if you are measuring ns lifetimes you will not be able to also record fs lifetimes.
+
+This is seen in the case reactions such as energy or electron transfer which are strongly distant dependent, if you look at `average' behaviour in the steady state and measure the lifetimes the data do not match. However if you model the lifetime of the system it does match (but has very short, unmeasurable, lifetimes that cannot be recorded).
+
+\hypertarget{workshop-task-2}{%
+\section{Workshop task}\label{workshop-task-2}}
+
+You will find some slides on moodle which contain some data from a a paper by Netzel et al.~which looks at the fluorescnece behaviours of a family of dyes in free solution and when bound to DNA.
+
+As with previous workshops the a discussion is included but try to work through the questions on your own before the workshop session. I have also included intro (and discussion) videos on moodle too.
 
   \bibliography{book.bib,packages.bib}
 

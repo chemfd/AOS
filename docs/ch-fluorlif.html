@@ -24,7 +24,7 @@
 <meta name="author" content="Fiona Dickinson" />
 
 
-<meta name="date" content="2021-03-18" />
+<meta name="date" content="2021-03-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -119,7 +119,11 @@
 <li class="chapter" data-level="4.1.1" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#kashas-rule"><i class="fa fa-check"></i><b>4.1.1</b> Kasha’s rule</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#sec:excitation"><i class="fa fa-check"></i><b>4.2</b> Excitation</a></li>
-<li class="chapter" data-level="4.3" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#time-resolved-fluorescence"><i class="fa fa-check"></i><b>4.3</b> Time resolved fluorescence</a></li>
+<li class="chapter" data-level="4.3" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#time-resolved-fluorescence"><i class="fa fa-check"></i><b>4.3</b> Time resolved fluorescence</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#tcspc"><i class="fa fa-check"></i><b>4.3.1</b> TCSPC</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#case-study-where-lifetime-and-steady-state-dont-match"><i class="fa fa-check"></i><b>4.4</b> Case study where lifetime and steady state don’t match</a></li>
+<li class="chapter" data-level="4.5" data-path="ch-fluorlif.html"><a href="ch-fluorlif.html#workshop-task-2"><i class="fa fa-check"></i><b>4.5</b> Workshop task</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -144,6 +148,8 @@
 <div id="ch:fluorlif" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Fluorescence Excitation and Lifetime</h1>
 <p>Whilst this technique is generally referred to as fluroescence lifetime the principles are equally applicable to longer lifetimes. You will already know fluorescence refers to emission of a photon without a change of spin, phosphorescence, emission of a photon with a change of spin, however I will also use the term emission which I will use either when the mode of emission is either irrelevant or unknown (such as with emission from quantum dots).</p>
+<iframe width="555" height="416" src="https://www.youtube.com/embed/auRAt-gRTX4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 <p>You will already be familiar with the fluorescence, and how emission from an excited state is a spontaneous process following first order kinetics (Table <a href="ch-fluorlif.html#tab:photoem">4.1</a>).</p>
 <table>
 <caption><span id="tab:photoem">Table 4.1: </span> The emission pathways from the excited states within a molecule.</caption>
@@ -261,6 +267,42 @@ Figure 4.6: If energy transfer is occuring in a system we can see this by lookin
 Figure 4.7: The emission of YO-Pro-1 iodide when bound to DNA (pink) and when in free solution (blue), the steady state intensity when bound to DNA is 1200 times larger than in free solution, this corresponds to an increase in the fluorescence lifetime from 2 ps in free solution to 2.4 ns when bound to DNA.
 </p>
 </div>
+<p>Fluorescence lifetimes are just a linear combination of the exponential decays just as we saw in equation <a href="ch-TA.html#eq:polyexp">(3.1)</a> with the flash photolysis.</p>
+<p>There are four principle ways of undertaking fluorescence lifetime measurements:</p>
+<ul>
+<li><p>time domain: measure the intensity of teh signal after an excitation pulse, this technique is usually only used for long (phosphorescent) lifetimes</p></li>
+<li><p>phase domain: looking at how modulation ratio changes… this technique is very mathematical to understand and very fiddly to work with, there is a good description in Lackowicz, Principles of Fluorescence Spectroscopy</p></li>
+<li><p>pulse streak : cameras offset the signal over an area detector this technique can work with very fast emission lifetimes (ps)</p></li>
+<li><p>TCSPC (time correlated single photon counting): the arrival of single photons is detected after each excitation pulse with many thousands of measurements taken. This technique is slow but is very accurate and sensitive</p></li>
+</ul>
+<p>the final common method of measuring emission lifetimes is only used for ultrafast (fs-ps) measurements</p>
+<ul>
+<li>fluorescence up conversion: fluorescence is ‘gated’ (using a Kerr gate) to only be allowed through after certain time delays</li>
+</ul>
+<div id="tcspc" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> TCSPC</h3>
+<iframe width="555" height="416" src="https://www.youtube.com/embed/gWuCHRGNTAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<p>TCSPC counts individual emitted photons and measures the time delay from the excitation pulse to the photon arriving at the detector. Since we only want a single photon to arrive at the detector at any time many measurements will not record any photon arriving.</p>
+<div class="figure" style="text-align: center"><span id="fig:singlephoton"></span>
+<img src="images/singlephoton.png" alt="Single photon counting data, each pulse shows the time delay of a single photon arriving at the detector, as can be seen many measurments do not record any photon arriving at the detector." width="60%" />
+<p class="caption">
+Figure 4.8: Single photon counting data, each pulse shows the time delay of a single photon arriving at the detector, as can be seen many measurments do not record any photon arriving at the detector.
+</p>
+</div>
+</div>
+</div>
+<div id="case-study-where-lifetime-and-steady-state-dont-match" class="section level2">
+<h2><span class="header-section-number">4.4</span> Case study where lifetime and steady state don’t match</h2>
+<p>It can be the case that the changes in measured lifetime and steady state emission do not match, however there are a couple of cases which help explain this disparity.</p>
+<p>The first of these is due to the difficulty of measuring and fitting poly-exponential decays.</p>
+<p>The second is the limitations of the equipment in that if you are measuring ns lifetimes you will not be able to also record fs lifetimes.</p>
+<p>This is seen in the case reactions such as energy or electron transfer which are strongly distant dependent, if you look at ‘average’ behaviour in the steady state and measure the lifetimes the data do not match. However if you model the lifetime of the system it does match (but has very short, unmeasurable, lifetimes that cannot be recorded).</p>
+</div>
+<div id="workshop-task-2" class="section level2">
+<h2><span class="header-section-number">4.5</span> Workshop task</h2>
+<p>You will find some slides on moodle which contain some data from a a paper by Netzel et al. which looks at the fluorescnece behaviours of a family of dyes in free solution and when bound to DNA.</p>
+<p>As with previous workshops the a discussion is included but try to work through the questions on your own before the workshop session. I have also included intro (and discussion) videos on moodle too.</p>
 
 </div>
 </div>

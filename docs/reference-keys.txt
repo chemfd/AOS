@@ -37,6 +37,7 @@ fig:kasha
 fig:FRET
 fig:FRET2
 fig:lifetimeSS
+fig:singlephoton
 ch:UVvisfluorIR
 sec:UV
 the-beer-lambert-law
@@ -69,3 +70,6 @@ steady-state-fluorescence
 kashas-rule
 sec:excitation
 time-resolved-fluorescence
+tcspc
+case-study-where-lifetime-and-steady-state-dont-match
+workshop-task-2

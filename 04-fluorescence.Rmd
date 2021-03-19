@@ -2,6 +2,8 @@
 
 Whilst this technique is generally referred to as fluroescence lifetime the principles are equally applicable to longer lifetimes. You will already know fluorescence refers to emission of a photon without a change of spin, phosphorescence, emission of a photon with a change of spin, however I will also use the term emission which I will use either when the mode of emission is either irrelevant or unknown (such as with emission from quantum dots).
 
+<iframe width="555" height="416" src="https://www.youtube.com/embed/auRAt-gRTX4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 You will already be familiar with the fluorescence, and how emission from an excited state is a spontaneous process following first order kinetics (Table \@ref(tab:photoem)).
 
 Table: (\#tab:photoem) The emission pathways from the excited states within a molecule.
@@ -78,3 +80,45 @@ There should be correlation between the steady state intensity and lifetime, for
 ```{r echo=FALSE, lifetimeSS, out.width='60%', fig.show='hold', fig.align='center', fig.cap='The emission of YO-Pro-1 iodide when bound to DNA (pink) and when in free solution (blue), the steady state intensity  when bound to DNA is 1200 times larger than in free solution, this corresponds to an increase in the fluorescence lifetime from 2 ps in free solution to 2.4 ns when bound to DNA.'}
 knitr::include_graphics("images/lifetimeSS.png")
 ```
+
+Fluorescence lifetimes are just a linear combination of the exponential decays just as we saw in equation \@ref(eq:polyexp) with the flash photolysis.
+
+There are four principle ways of undertaking fluorescence lifetime measurements:
+
+- time domain: measure the intensity of teh signal after an excitation pulse, this technique is usually only used for long (phosphorescent) lifetimes
+
+- phase domain: looking at how modulation ratio changes... this technique is very mathematical to understand and very fiddly to work with, there is a good description in Lackowicz, Principles of Fluorescence Spectroscopy
+
+- pulse streak : cameras offset the signal over an area detector this technique can work with very fast emission lifetimes (ps)
+
+- TCSPC (time correlated single photon counting): the arrival of single photons is detected after each excitation pulse with many thousands of measurements taken. This technique is slow but is very accurate and sensitive
+
+the final common method of measuring emission lifetimes is only used for ultrafast (fs-ps) measurements
+
+- fluorescence up conversion: fluorescence is 'gated' (using a Kerr gate) to only be allowed through after certain time delays
+
+### TCSPC
+
+<iframe width="555" height="416" src="https://www.youtube.com/embed/gWuCHRGNTAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+TCSPC counts individual emitted photons and measures the time delay from the excitation pulse to the photon arriving at the detector. Since we only want a single photon to arrive at the detector at any time many measurements will not record any photon arriving.
+
+```{r echo=FALSE, singlephoton, out.width='60%', fig.show='hold', fig.align='center', fig.cap='Single photon counting data, each pulse shows the time delay of a single photon arriving at the detector, as can be seen many measurments do not record any photon arriving at the detector.'}
+knitr::include_graphics("images/singlephoton.png")
+```
+
+## Case study where lifetime and steady state don't match
+
+It can be the case that the changes in measured lifetime and steady state emission do not match, however there are a couple of cases which help explain this disparity.
+
+The first of these is due to the difficulty of measuring and fitting poly-exponential decays.
+
+The second is the limitations of the equipment in that if you are measuring ns lifetimes you will not be able to also record fs lifetimes.
+
+This is seen in the case reactions such as energy or electron transfer which are strongly distant dependent, if you look at 'average' behaviour in the steady state and measure the lifetimes the data do not match. However if you model the lifetime of the system it does match (but has very short, unmeasurable, lifetimes that cannot be recorded).
+
+## Workshop task
+
+You will find some slides on moodle which contain some data from a a paper by Netzel et al. which looks at the fluorescnece behaviours of a family of dyes in free solution and when bound to DNA.
+
+As with previous workshops the a discussion is included but try to work through the questions on your own before the workshop session. I have also included intro (and discussion) videos on moodle too.
