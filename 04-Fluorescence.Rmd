@@ -122,3 +122,10 @@ This is seen in the case reactions such as energy or electron transfer which are
 You will find some slides on moodle which contain some data from a a paper by Netzel et al. which looks at the fluorescnece behaviours of a family of dyes in free solution and when bound to DNA.
 
 As with previous workshops the a discussion is included but try to work through the questions on your own before the workshop session. I have also included intro (and discussion) videos on moodle too.
+
+
+## Questions  
+
+<iframe src="http://workitoutwithapencil.xyz/wp-admin/admin-ajax.php?action=h5p_embed&id=4" width="522" height="438" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://workitoutwithapencil.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
+
+<iframe src="http://workitoutwithapencil.xyz/wp-admin/admin-ajax.php?action=h5p_embed&id=5" width="522" height="475" frameborder="0" allowfullscreen="allowfullscreen"></iframe><script src="http://workitoutwithapencil.xyz/wp-content/plugins/h5p/h5p-php-library/js/h5p-resizer.js" charset="UTF-8"></script>
