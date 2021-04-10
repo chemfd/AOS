@@ -80,7 +80,7 @@
 
 \title{CH3/40227 Advanced Spectroscopic Techniques}
 \author{Fiona Dickinson}
-\date{2021-03-23}
+\date{2021-04-10}
 
 \begin{document}
 \maketitle
@@ -167,6 +167,8 @@ Loading\ldots{}
 \hypertarget{edit-log}{%
 \section*{Edit log}\label{edit-log}}
 \addcontentsline{toc}{section}{Edit log}
+
+Chapter 5 finished 090421
 
 Chapter 4 finished, reported typos fixed 190321
 
@@ -1919,6 +1921,194 @@ As with previous workshops the a discussion is included but try to work through 
 
 \hypertarget{questions}{%
 \section{Questions}\label{questions}}
+
+\hypertarget{ch:fluorother}{%
+\chapter{Fluorescence Anisotropy \& Applications of Fluorescence}\label{ch:fluorother}}
+
+\hypertarget{fluorescence-anisotropy}{%
+\section{Fluorescence anisotropy}\label{fluorescence-anisotropy}}
+
+Just as we modified our basic spectroscopy of absorbance to look at the effect of polarisation, we can also modifiy fluorescence to look at the effect of polarisation, this modified technique is called `fluorescence anisotropy'. The technique can be used in both the steady state and in lifetime studies.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{images/anisotropy} 
+
+}
+
+\caption{A standard or lifetime fluorimeter may be modified by the addition of two two-position polarising filters -  incident light is polarised in eithter a vertical (V) or horizontal (H) direction, excident light is then measured in each of these two polarisations.}\label{fig:anisotropy}
+\end{figure}
+
+In fluorescence anisotropy the fluorimeter is modified by the inclusion of two `two-position' polarising filters (figure \ref{fig:anisotropy}), each of which can be in either a horizontal (H) or vertical (V) position. Spectra are measured in each of the four combinations (HH, HV, VH \& VV). The fluorescence anisotropy (\(r\)) can then be calculated:
+
+\begin{equation}
+r=\frac{I_{VV}-GI_{VH}}{I_{VV}+2GI_{VH}}
+\label{eq:anisotropy}
+\end{equation}
+
+(the other `set' of measurements (HH \& HV) are used as comparison to ensure that `unbiased' intensities of fluorescent light are recorded with no artifacts of the response of either the monochromator or other optics in the system).
+
+The term \(G\) in equation \eqref{eq:anisotropy} is a response factor for the instrument which normalises the detector for any differences in response against the sensitivity of the detector for light polarised in the horizontal and vertical directions. Instruments do not return individual intensities of polarisation, but instead just report values of \(r\) directly.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{images/transdipoles} 
+
+}
+
+\caption{The chromaphore rhoadamine 6G has a small offset in the transition dipole omoment of HOMO-LUMO absorbance and fluorescence emisison..}\label{fig:transdipoles}
+\end{figure}
+
+We have seen previously that each of the absorbance transitions (from S\textsubscript{0} to S\textsubscript{1}, S\textsubscript{2}, S\textsubscript{3}\ldots) occurs at a different angle (relative to the principle axis in the molecule), and that Kasha's rule states that all emission occurs from the vibrationally relaxed lowest excited state of that spin multiplicity (or there is just a single emission transition).
+
+Anisotropy measurements can be used to determine the offset in the transition dipoles of the absorbance and emission transitions within a molecule. The largest `anisotropy' measurements occur when these transitions are `co-linear'.
+
+\begin{equation}
+r_0=\frac{2}{5}\left(\frac{3 \cos ^2 \beta -1}{2} \right)
+\label{eq:anisotropyeqn}
+\end{equation}
+
+\begin{longtable}[]{@{}cc@{}}
+\caption{\label{tab:anisotropyangle} The measured anisotropy for a selectrion of different angles between the transition dipole moments of excitation and emission, (\(\beta\))}\tabularnewline
+\toprule
+\(\beta\) / \(^\circ\) & \(r_0\)\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\(\beta\) / \(^\circ\) & \(r_0\)\tabularnewline
+\midrule
+\endhead
+0 & 0.40\tabularnewline
+45 & 0.10\tabularnewline
+54.7 & 0.00\tabularnewline
+90 & -0.20\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{time-resolved-anisotropy}{%
+\subsection{Time-resolved anisotropy}\label{time-resolved-anisotropy}}
+
+Time-resolved anisotropy can be used to study the depolarisation of emission from a rotating chromophore, when we excite chromophores using polarised light only chromophores with the transition dipole moment aligned with the excitation light are excited. Molecules are always in motion, large molecules move more slowly than small molecules.
+
+After excitation the molecules in motion rotate, very small molecules (like chromophores) rotate very quickly and any isotropic information is lost very quickly (usually more fast than the fluorescence emission), however large molecules like proteins rotate much more slowly, and the rate of depolarisation is consequently considerably slower.
+
+To give some context, small molecules (like most typical chromophores) will rotate in around 50-100 ps, and most fluorescence lifetimes are in the 1-5 ns region.
+
+The rate of this depolarisation depends upon the temperature of the system (\(T\)), the viscosity of the solution (\(\eta\)) and the volume of excited species(V).
+
+\begin{equation}
+r(t)=r_\infty + (r_0-r_\infty)e^{-\frac{t}{\theta}}
+\label{eq:anisotropytime}
+\end{equation}
+
+where:
+
+\begin{equation}
+\theta = \frac{\eta V}{RT}
+\label{eq:correlationtime}
+\end{equation}
+
+Equation \eqref{eq:correlationtime} has been simplified for a spherical molecule, but with small changes to this equation it it possible to model for non-spherical systems.
+
+The Perrin equation shows the time dependence of rotational deactivation for a spherical rotor, where \(\tau\) is the fluorescence lifetime:
+
+\begin{equation}
+\frac{r_0}{r}=1+\frac{\tau}{\theta}
+\label{eq:perrin}
+\end{equation}
+
+Globular proteins have a correlation time which may be approximated to be proportional to the molecular weight of the protein.
+
+Steady state anisotropy only gives `average' anisotropy of the sample, considerably more information may be determined with fluorescence lifetime anisotropy studies, and since laser sources are already polarised experiments are very simple.
+
+\hypertarget{fret}{%
+\subsection{FRET}\label{fret}}
+
+Another use of anisotropy is in resonance energy transfer studies. Energy transfer relies on a dipole dipole interaction between a donor \& acceptor chromophore, but showing that it is an energy transfer and not emission and reabsorption of a photon can be shown by anisotripic studies.
+
+The depolarisation of anisotripic light is far more efficient in energy transfer systems than would be expected for systems which involve emission and reabsorption.
+
+\hypertarget{application-of-fluorescence}{%
+\section{Application of fluorescence}\label{application-of-fluorescence}}
+
+Both isotropic fluroescence and fluorescence anisotropy may be used to determine thermodynamic properties of the binding between chromophores and other molecules (typically DNA or proteins), this only works if there is an enhancement of the emisison upon binding to the target molecule (figure \ref{fig:emissionenhancement}).
+
+There exists and equilibrium between the complex (DNA used as an example, but it is true of all systems), and the free molecules:
+
+\begin{equation}
+K_b=\frac{[\textrm{dye:DNA}]}{[\textrm{dye}][\textrm{DNA}]}
+\label{eq:scatcheqbm}
+\end{equation}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{images/emissionenhancement} 
+
+}
+
+\caption{The enhancement of emisison when binding to a second molecule may be used to determine the thermodynamics of binding, and the number of binding sites in the system.}\label{fig:emissionenhancement}
+\end{figure}
+
+If we consider the emission at a single wavelength then we can combine information about the emission of unbound dye (\(I_0\)), the emission when all dye is bound (which is estimated from an asymptotic model, \(I_b\)) with the measured emission at that point (\(I_x\)) to determine the proportion of dye in complex (equation \eqref{eq:binding}, figure \ref{fig:enhancement}).
+
+If we want to undertake these experiments it is important that the concentration of dye is constant so that there are no concentration effects on the emission intensity.
+
+Recall P/D is the ratio of `phosphate' (or DNA bases) and dye.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{images/enhancement} 
+
+}
+
+\caption{At a fixed wavelength if we plot the emission intensity against P/D ratio the emission intensity increases as the proportion of bound dye increases, this reaches a maximum when all dye is bound to the DNA.}\label{fig:enhancement}
+\end{figure}
+
+\begin{equation}
+\alpha = \frac{I_x - I_0}{I_b-I_0}
+\label{eq:binding}
+\end{equation}
+
+From this we can say that the concentration of bound dye, \([D]_b=\alpha [D]t\) (where \([D]_t\) is the total concentration of dye), and consequently the concentration of unbound (or free) dye is \([D]_f=(1-\alpha) [D]t\).
+
+We can then define \(r\) (this is a different r from anisotropy - I know it's a pain) as (where {[}DNA\} is the concentration of DNA bases):
+
+\begin{equation}
+r = \frac{[D]_b}{[\textrm{DNA}]}=\alpha \frac{[D]_t}{[DNA]}
+\label{eq:r}
+\end{equation}
+
+The Scatchard plot then gives information on the equilibrium constant of binding (\(K_b\)), and number of binding sites (\(B\)) per base.
+
+\begin{equation}
+\frac{r}{[D]_f} = K_b B - K_b r
+\label{eq:scatchard}
+\end{equation}
+
+\hypertarget{workshop-task}{%
+\section{Workshop task}\label{workshop-task}}
+
+The final workshop of this course looks at the binding of a chromophore to a protein and uses a Scatchard analysis on fluorescence anisotropy data. This paper has been published in an education journal and so is consequently much more accessible than many research papers; consequently I would like for you to read this (very short) paper, which can be found on Moodle.
+
+When reading the paper consider the following questions:
+
+\begin{itemize}
+\tightlist
+\item
+  What are the key findings?
+\item
+  What was the experimental configuration?
+\item
+  Characteristics of the binders?
+\item
+  What do steady state and time resolved measurements tell you?
+\item
+  Can you explain the findings in your own words?
+\item
+  How are the conclusions arrived at?
+\end{itemize}
+
+As before we will discuss this as a group (and I will summarise our discussions).
 
   \bibliography{book.bib,packages.bib}
 
